@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style1000.css"> -->
 </head>
+
 <body>
-    
+    <form action="">
+        <input type="text" name="your_name" id="name" placeholder="Имя">
+        <input type="text" name="your_surname" id="surname" placeholder="Фамилия">
+        <input type="text" name="Job" placeholder="Ваша работа">
+        <input type="submit">
+    </form>
+
+    <div id="text"></div>
+    <style>
+        #text {
+            background-color: lightcyan;
+            width: 155px;
+            padding: 10px;
+        }
+    </style>
+
+
+
+    <div style="display: flex; gap: 10px;">
+        <div>Сегодня у нас:</div>
+        <div id="today"></div>
+    </div>
+    <br>
+
+<div id="days">
+    <div style="background: transparent !important;"></div>
+    <div>Понедельник</div>
+    <div>Вторник</div>
+    <div>Среда</div>
+    <div>Четверг</div>
+    <div>Пятница</div>
+    <div>Суббота</div>
+    <div>Воскресенье</div>
+</div>
+<style>
+#days div {
+    background: lightgray;
+    width: 120px;
+    text-align: center;
+    padding: 2px;
+    transition: .3s;
+}    
+
+#days div:hover {
+    background-color: pink !important;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.newClass {
+    background: red !important;
+    color: white;
+    padding: 5px !important;
+    margin-left: -3px !important;
+}
+
+</style>
+
+
+
+
+        
 
 
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
