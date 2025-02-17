@@ -18,7 +18,6 @@ import '/src/style.scss'
 //! npm create vite
 
 
-
 console.log(333 + 123);
 
 let pol = 'vova'
@@ -78,6 +77,7 @@ console.log((23-hours) + ' часов' + ' и ' + (60 - minutes) + ' минут'
 
 let memory = 10000
 console.log(memory/820 - (memory%820)/820 );
+
 console.log(Math.floor(memory/820));
 
 
@@ -153,7 +153,13 @@ let y
 console.log(y);
 
 
+console.log(Boolean(1));
+console.log(Boolean(0));
+console.log(true + false);
 
 
+let age2 = 27
+
+age2<18 ? console.log('вы маленький'):console.log('вы взрослый');
 
 
