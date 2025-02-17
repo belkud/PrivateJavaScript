@@ -158,6 +158,13 @@ console.log(Boolean(0));
 console.log(true + false);
 
 
+
+
+
+
+
+
+// тернарный оператор
 let age2 = 27
 
 age2<18 ? console.log('вы маленький'):console.log('вы взрослый');
