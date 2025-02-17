@@ -78,7 +78,9 @@ console.log(Math.floor(memory/820));
 
 //! мини календари
 
-let todays = new Date
+// 1-ый способ
+let todays = new Date()
+console.log(todays);
 
 let today = document.querySelector('#today')
 today.innerHTML == todays.getDay()
@@ -110,13 +112,21 @@ switch (todays.getDay()) {
         break;
     }
     
-
+// 2-ой способ
 let days = document.querySelector('#days')
 if (todays.getDay()==0) {
     days.children[todays.getDay()+7].classList.add('newClass')
 }
 
 days.children[todays.getDay()].classList.add('newClass') 
+
+// 3-ий способ
+let d = new Date();
+let days2 = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+console.log(days2[d.getDay()])
+
+//! мини календари, завершение
+
 
 
 console.log(window.screen);
@@ -125,45 +135,18 @@ console.log(todays.getDay());
 console.log(days.nextElementSibling);
 console.log(days.baseURI);
 
-//! мини календари, завершение
-
-
-
-
-let info = window.location.search
-console.log(info);
-
-let extra_info = info.split('&')
-console.log(extra_info);
-
-for (let i = 0; i < extra_info.length; i++) {
-    let inf = extra_info[i].split('=')
-    text.innerHTML += inf[1] + '\n'
+let age =32
+let education = 'higher'
+if(age>=30 && age<=40 && education=='higher') {
+    console.log('проверка');
 }
 
 
-// let use = prompt('Введите логин')
-// let password = prompt('Введите пароль')
-// if (use=='admin' || password=='admin') {
-//     console.log('пользователь/пароль совпали');
-// } else {
-//     console.log('пользователь/пароль неверны');
-// }
-
-
-let obj = [5, 7, 'abc']
-console.log(typeof obj);
+let y 
+console.log(y);
 
 
 
-
-console.log(window.location);
-console.log(window.history);
-console.log(window.navigator);
-console.log(window.screen);
-
-let u = 6
-console.log(++u);
 
 
 
