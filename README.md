@@ -23,9 +23,26 @@ Package name: » (оставляем название как есть)
 
 выбираем Vanilla -> Typescript
 
+ДАЛЕЕ:
+
+Если все правильно, то выйдет окно:
+Done. Now run:
+
+  cd (название проекта БЕЗ заглавных букв) privatejavascript
+    C:\Users\Admin\Desktop> cd privatejavascript
+  
+  npm install
+  npm run dev
+
+
+
+
+
 
 Если возникает ошибка, то:
 // через пуск зайти в PowerShell (нажимаем правой кнопкой мыши -> запуск от имени администратора)
 // Get-ExecutionPolicy
 // Set-ExecutionPolicy unrestricted
 // подтвердить Y
+
+
