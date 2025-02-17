@@ -1,4 +1,4 @@
-import '/src/style.css'
+import '/src/style.scss'
 
 
 
@@ -19,7 +19,7 @@ import '/src/style.css'
 
 
 
-console.log(333 +123);
+console.log(333 + 123);
 
 let pol = 'vova'
 
