@@ -165,8 +165,23 @@ console.log(true + false);
 
 
 // тернарный оператор
-let age2 = 27
+5<1 ? console.log('true'):console.log('false');
 
-age2<18 ? console.log('вы маленький'):console.log('вы взрослый');
+let q = 13
+q%2==0 ? console.log('число четноё'): console.log('число  НЕ четноё');
+
+let age2 = 27
+age2<18 ? console.log('вы несовешеннолетний'):console.log('вы взрослый');
+
+let num = Number(prompt('введите число'))
+if(num>=0){
+    console.log('Число положительное');
+} else if(num<=0){
+    console.log('Число отрицательное');
+} else {
+    console.log('Вы ввели не число');
+}
+
+
 
 
