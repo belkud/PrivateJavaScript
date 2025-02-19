@@ -255,3 +255,17 @@ if (sss=' ') {
     console.log('sss');
     
 }
+
+let yearss = 5 as number
+if (yearss<12) {
+    console.log('Вы ребенок');
+} else if(yearss<18) {
+    console.log('Вы несовершеннолетний');
+} else if (yearss<100) {
+    console.log('Вы взрослый')
+} else {
+    console.log('Введите корректную цифру');
+    
+}
+
+
