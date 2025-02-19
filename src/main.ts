@@ -216,3 +216,14 @@ if (dayOfweek ==1) {
 if (dayOfweek ==2) {
      console.log('вторник');
 }
+
+let year = 2025
+if (year%400==0){
+    console.log('год високосный');
+} else if (year%100==0) {
+    console.log('год НЕ високосный');
+} else if (year%4==0) {
+    console.log('год високосный');
+} else {
+    console.log('год не високосный')
+}
