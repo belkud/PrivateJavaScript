@@ -232,6 +232,26 @@ if (year%400==0){
 let parity = (year%2==0)?'Четное':'Нечётное';
 console.log(parity);
 
- 
+let protocol  = 'FTP'
+switch (protocol) {
+    case 'HTTP':
+        console.log('HTTP');
+        break;
+    case 'HTTPS':
+        console.log('HTTPS');
+        break;
+    case 'FTP':
+        console.log('FTP');
+        break;
 
+    default:
+        console.log('Протокола нет');
+        
+        break;
+}
 
+let sss = ' '
+if (sss=' ') {
+    console.log('sss');
+    
+}
