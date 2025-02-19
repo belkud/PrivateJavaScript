@@ -170,18 +170,49 @@ console.log(true + false);
 let q = 13
 q%2==0 ? console.log('число четноё'): console.log('число  НЕ четноё');
 
-let age2 = 27
-age2<18 ? console.log('вы несовешеннолетний'):console.log('вы взрослый');
+// let age2 = 27
+// age2<18 ? console.log('вы несовешеннолетний'):console.log('вы взрослый');
 
-let num = Number(prompt('введите число'))
-if(num>=0){
-    console.log('Число положительное');
-} else if(num<=0){
-    console.log('Число отрицательное');
+// let num = Number(prompt('введите число'))
+// if(num>=0){
+//     console.log('Число положительное');
+// } else if(num<=0){
+//     console.log('Число отрицательное');
+// } else {
+//     console.log('Вы ввели не число');
+// }
+
+let v = 100
+v>0? console.log(v):console.log(-v);
+
+if (v>0) {
+    console.log('второй вариант ' + v)
 } else {
-    console.log('Вы ввели не число');
+    console.log('второй вариант ' + -v)
 }
 
+let earth = 'Венера' as any
+earth=='Земля' || earth=='земля' ? 
+console.log('привет землянин'):
+console.log('привет инопланетянин');
 
+let dayOfweek = 2 as any
 
-
+switch (dayOfweek) {
+    case 1:
+        console.log('понедельник');
+        break;
+    case 2:
+        console.log('вторник');
+        break;
+    default:
+        console.log('Данные неизвестны');
+        break;
+}
+    
+if (dayOfweek ==1) {
+    console.log('понедельник');
+}
+if (dayOfweek ==2) {
+     console.log('вторник');
+}
