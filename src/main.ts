@@ -227,3 +227,11 @@ if (year%400==0){
 } else {
     console.log('год не високосный')
 }
+
+
+let parity = (year%2==0)?'Четное':'Нечётное';
+console.log(parity);
+
+ 
+
+
