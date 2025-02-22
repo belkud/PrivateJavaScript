@@ -14,7 +14,7 @@
     "noEmit": true,
 
     /* Linting */
-    "strict": true,
+    "strict": true, //строгий режим уже включен
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -22,3 +22,4 @@
   },
   "include": ["src", "src/main.ts"]
 }
+

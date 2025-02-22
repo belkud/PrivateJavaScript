@@ -3,8 +3,16 @@ import '/src/style.scss'
 
 
 
+ // @ts-ignore
+let rrr
 
-
+const strictFunction = ()=>{
+    'use strict';
+    let rrr
+    const nestedFunction = ()=>{
+      // эта функция тоже использует строгий режим
+    }
+  }
 
 
 
@@ -265,7 +273,248 @@ if (yearss<12) {
     console.log('Вы взрослый')
 } else {
     console.log('Введите корректную цифру');
+}
+    
+
+ const answer = 8 as any
+ switch (answer) {
+    case 1: 
+        console.log('число 1');
+        break;
+    case 2:
+    case 3:
+        console.log ('число 3 или 2');
+        break;
+    default:
+        console.log (`числа ${answer} нет в диапазоне`);
+ }
+
+
+
+let Infinity
+console.log(Infinity);
+
+console.clear()
+console.log(212);
+let rrr3 = undefined
+console.log(rrr3);
+
+let min = 0
+let max = 100
+for (let i = min; i <= max; i++) {
+    if (i%5==0) {
+        console.log(i);
+    }
+        
+}
+
+
+// возвести число само на себя
+
+function squareOfNumber (number:number) {
+    return console.log(`${number} в квадрате = ${number*number}`)
+}
+squareOfNumber(30)
+squareOfNumber(10)
+squareOfNumber(40)
+squareOfNumber(31)
+squareOfNumber(3)
+
+
+
+
+function diapazone(firstNum:number, secondNum:number) {
+    for (let i = firstNum; i <=secondNum; i++) {
+        if(i%100==0) {
+            console.log(i);
+        }
+    }
+}
+
+diapazone(0, 10)
+diapazone(0, 1000)
+
+
+console.log('===========');
+
+
+
+
+// Вывести все числа от 1 до 100, которые кратные указанному 
+// пользователем числу.
+    function multipleNumber (multNum:number) {
+        for (let i = 1; i < 100; i++) {
+                if(i%multNum==0) {
+            console.log(i);
+            
+        }
+    }
+}
+
+// multipleNumber(3)
+
+
+//  4. Вывести каждый 4-й элемент из указанного пользователем 
+// диапазона. Пользователь указывает минимальное и мак
+// симальное значения диапазона. 
+
+function multipleNumber4 (minNum:number, maxNum:number) {
+    for (let i = minNum; i < maxNum; i++) {
+       if(i%4==0) {
+         console.log(i);
+      }
+   } 
+}
+multipleNumber4(80,100)
+
+
+
+
+// 5. Запросить число и проверить, простое ли оно. Простое 
+// число делится без остатка только на себя и на единицу.
+
+let simpleNumber = 1225
+for(let i=2; i<simpleNumber;i++) {
+        if (simpleNumber%i==0) {       
+            console.log(i);
+            console.log('Число ' + simpleNumber + ' НЕ простое');
+            break;
+        } else {
+            console.log('Число ' + simpleNumber + ' простое');
+            break;
+        }
+}
+
+// Вывести # столько раз, сколько указал пользователь.
+let lattice = 25
+let mass = []
+let acc= 0
+
+for (let i = 1; i <= lattice; i++) {
+    mass.push('#')    
+    acc++
+}
+mass.push(acc+' повторений #')
+
+console.log(mass);
+
+
+
+
+
+let a
+console.log(a);
+
+//@ts-ignore
+a = ((1 + 2), (3 + 4));
+console.log(a);
+
+
+
+
+
+
+let numStr = 123
+console.log(typeof numStr.toFixed().split(''));
+
+let numStr2 = '123' 
+console.log(numStr2.length);
+
+console.log(typeof Number(numStr2));
+
+let numStr3 = '123' as any
+console.log(typeof (numStr3 * 1));
+
+console.log(undefined == null);
+console.log(null == 0);
+console.log(undefined == 0);
+
+
+
+
+// 'В каком году была опубликована спецификация ECMAScript-2015?'
+
+// let ages = prompt('В каком году была опубликована спецификация ECMAScript-2015?')
+
+// //@ts-ignore
+// ages==2015 ? console.log('все правильно'): console.log('ответ неверный');
+// ;
+
+// холодно тепло жарко горячо
+let temperature = 198
+let infoOfTemperature =
+temperature<15 ?  'холодно':
+temperature<30 ?  'тепло':
+temperature<45 ?  'жарко':
+temperature<100 ? 'горячо': 'диапазон температуры неверный';
+console.log(infoOfTemperature);
+
+ 
+
+let login='Директор'
+let message = (login == 'Сотрудник') ? 'привет':
+(login == 'Директор') ? 'здравствуйте':
+(login == '') ? 'нет логина': ''
+console.log(message);
+
+
+let message2 = (login == 'Сотрудник') ? 'Привет' :
+(login == 'Директор') ? 'Здравствуйте' :
+(login == '') ? 'Нет логина' :
+'';
+console.log(message2);
+
+
+
+// if (login == 'Сотрудник') {
+//   message = 'Привет';
+// } else if (login == 'Директор') {
+//   message = 'Здравствуйте';
+// } else if (login == '') {
+//   message = 'Нет логина';
+// } else {
+//   message = '';
+// }
+
+let x = 3
+if (x>=3 && x<=10 ) {
+    console.log(x);
     
 }
+
+let value1 = true as any
+let value2 = true as any
+let value3 = true as any
+
+let result = value1 + value2 + value3;
+console.log(result);
+
+//@ts-ignore
+console.log(result!=value1);
+
+ 
+
+
+
+
+let oddEvenNumber = 23 as any
+switch(oddEvenNumber) {
+    case '':
+        console.log('Введите данные');
+        break
+    case 1:
+    case 3:
+    case 5:
+        console.log('число не чётное');
+        break
+    case 2:
+    case 4:
+    case 6:
+        console.log('число чётное');
+        break
+    default: 
+        console.log('число вне диапазона')
+}
+
 
 
