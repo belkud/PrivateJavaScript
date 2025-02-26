@@ -163,7 +163,7 @@ console.log(y);
 
 console.log(Boolean(1));
 console.log(Boolean(0));
-console.log(true + false);
+// console.log(true + false);
 
 
 
@@ -458,13 +458,6 @@ let message = (login == 'Сотрудник') ? 'привет':
 console.log(message);
 
 
-let message2 = (login == 'Сотрудник') ? 'Привет' :
-(login == 'Директор') ? 'Здравствуйте' :
-(login == '') ? 'Нет логина' :
-'';
-console.log(message2);
-
-
 
 // if (login == 'Сотрудник') {
 //   message = 'Привет';
@@ -482,25 +475,18 @@ if (x>=3 && x<=10 ) {
     
 }
 
-let value1 = true as any
-let value2 = true as any
-let value3 = true as any
 
-let result = value1 + value2 + value3;
-console.log(result);
 
-//@ts-ignore
-console.log(result!=value1);
 
  
+ console.clear()
+ 
+ 
 
-
-
-
-let oddEvenNumber = 23 as any
-switch(oddEvenNumber) {
-    case '':
-        console.log('Введите данные');
+ let oddEvenNumber = 2 as any
+ switch(oddEvenNumber) {
+     case '':
+         console.log('Введите данные');
         break
     case 1:
     case 3:
@@ -512,9 +498,299 @@ switch(oddEvenNumber) {
     case 6:
         console.log('число чётное');
         break
-    default: 
+        default: 
         console.log('число вне диапазона')
 }
 
+
+
+let years = 10
+if(years<5){
+    console.log('ребенок');
+} else if(years<18){
+    console.log('подросток');
+} else if(years<100){
+    console.log('взрослый');   
+} else {
+    console.log('введите корректные данные');   
+}
+
+
+let checkDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ] as any 
+console.log(checkDays);
+
+let newNewdaya = document.querySelector('#newNewdaya') as HTMLDivElement
+newNewdaya.style.color = 'red'
+
+for (let i = 0; i < checkDays.length; i++) {
+    newNewdaya.innerHTML += checkDays[i] + '\n'
+    console.log(checkDays[i])
+    
+}
+
+let a1 = ''
+let a2 = 'Значение'
+
+
+a1 = a1 == '' ? a2 : a1
+console.log(a1);
+ 
+
+
+
+
+
+
+
+
+let value1 = 1 
+let value2 = 0 
+let value3 = 3
+ 
+let result = +value1 + +value2 + +value3;
+console.log(result);
+
+let result2 = value1 && value2 && value3;
+console.log(result2);
+
+//@ts-ignore
+console.log(Boolean(0) == 0);
+console.log(typeof !!1);
+console.log(typeof Boolean(1));
+console.log(!!1 == Boolean(1));
+
+console.log(console.log(console.log('123')))
+
+// || - ищет первое истинное значение
+// && - ищет первое ложное значение
+
+
+
+//! 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 ва
+//! рианта ответа. За каждый правильный ответ начисляется 2 
+//! балла. После вопросов выведите пользователю количество 
+//! набранных баллов.
+
+// let answer1= prompt('Какой формы Земля?') 
+// let answer2= Number(prompt('Какой сейчас год?'))
+// let answer3= prompt('Как по-английски будет "жёлтый"?')
+
+// let answerSumm = 0
+// if (answer1 == 'круглая') {
+//     answerSumm+=2
+// }
+// if (answer2==2025) {
+//     answerSumm+=2
+// }
+// if (answer3=='yellow') {
+//     answerSumm+=2
+// }
+// console.log(answerSumm);
+
+
+let quantaty = 5
+if (quantaty<10 && quantaty>100) {
+    console.log(quantaty); //выражение никогда не сработает
+}
+
+if (quantaty<10 || quantaty>100) {
+    console.log(`quantaty = ${quantaty}`); 
+}
+
+
+
+    
+
+
+let k = 5
+let factorial = 1
+while (k>1) {
+    factorial=k*factorial
+    k--
+    console.log(factorial);
+    
+}
+
+
+
+
+
+// font-size 
+function changeRegisterletter(symbol:any) {
+
+}
+
+
+//!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
+
+//! 1. Подсчитать сумму всех чисел в заданном пользователем 
+//! диапазоне. 
+
+let minNum = 3
+let maxNum = 7
+let ctt = 0
+
+
+for (let i = minNum; i <= maxNum; i++) {
+    ctt+=i
+    // console.log(ctt, 'i = ' + i);
+}
+console.log(ctt);
+
+
+//! 2. Запросить 2 числа и найти только наибольший общий 
+//! делитель.
+
+let num1 = 20
+let num2 = 15
+
+let numMass = [] as any
+for (let i = 0; i <=num1 && i<=num2; i++){
+    if (num1%i==0 && num2%i==0) {
+        numMass.push(i)
+    }
+}
+console.log(numMass.pop());
+
+
+//! 3. Запросить у пользователя число и вывести все делители 
+//! этого числа.
+
+let userNum = 10
+for (let i = 0; i <= userNum; i++) {
+    if (userNum%i==0)
+        console.log(i);
+}
+
+//! 4. Определить количество цифр в введенном числе.
+let x_num = '12345'
+console.log(x_num.length);
+
+let x_num2 = String(123456).length
+console.log(x_num2);
+
+let x_num3 = '12345777'
+let count3 = 0
+for (let i = 1; i <=x_num3.length; i++) {
+    count3++
+}
+console.log( `число состоит из: ${count3} цифр`);
+
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
+//! он ввел положительных, отрицательных и нулей. При этом 
+//! также посчитать, сколько четных и нечетных. Вывести 
+//! статистику на экран. Учтите, что достаточно одной пере
+//! менной (не 10) для ввода чисел пользователем.
+
+// let negative = 0;
+// let positive = 0;
+// let even = 0;
+// let odd = 0;
+// let zero = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   const num = Number(prompt("Введите число"));
+//   if (num > 0) {
+//     positive++;
+//   }
+//   if (num < 0) {
+//     negative++;
+//   }
+//   if (num == 0) {
+//     zero++;
+//   }
+//   if (num % 2 == 1) {
+//     odd++;
+//   }
+//   if (num % 2 == 0) {
+//     even++;
+//   }
+// }
+// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+
+
+//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
+//! и знак, решить пример, вывести результат и спросить, хо
+//! чет ли он решить еще один пример. И так до тех пор, пока 
+//! пользователь не откажется.
+
+// do {
+//     var ab = +prompt('Введите первое число');
+//     var bb = +prompt('Введите второе число');
+//     var ib = prompt('Выберите знак - + / *');
+
+//     switch (ib) {
+//         case '+':
+//             alert(ab + bb);
+//             break;
+//         case '-':
+//             alert(ab - bb);
+//             break;
+//         case '/':
+//             alert(ab / bb);
+//             break;
+//         case '*':
+//             alert(ab * bb);
+//         default:
+//             break;
+//     }
+
+// } while (confirm('Хотите ли вы решить еще один пример?'));
+
+
+
+
+//! 7. Запросить у пользователя число и на сколько цифр его 
+//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
+//! число 123456 сдвинуть на 2 цифры, то получится 345612).
+
+let newNum = '123456'
+let shiftNum = 2
+let num = newNum.slice(0, shiftNum)
+let num3 = newNum.slice(shiftNum,6)
+console.log(num3 + num);
+
+
+
+
+
+//!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
+
+// Задания, в которых необходимо использовать WHILE.
+//  1. Вывести # столько раз, сколько указал пользователь.
+
+let enterNum = 5
+// while (condition) {
+    
+// }
+let loc = []
+
+for (let i = 0; i < enterNum; i++) {
+    const element = array[i];
+    
+}
+
+
+
+
+//! цикл с предусловием
+// let i = 0
+// while (i<5) {
+//     i++
+//     console.log(i);
+// }
+
+// console.log('================');
+
+
+//! цикл с постусловием (выполнится хотя бы 1 раз)
+// i=0
+
+// do{
+//     i++
+//     console.log(i);
+// }
+// while (i<-5)
 
 
