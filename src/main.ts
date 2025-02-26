@@ -1,18 +1,19 @@
+import { Value } from 'sass';
 import '/src/style.scss'
 
 
 
 
- // @ts-ignore
+// @ts-ignore
 let rrr
 
-const strictFunction = ()=>{
+const strictFunction = () => {
     'use strict';
     let rrr
-    const nestedFunction = ()=>{
-      // эта функция тоже использует строгий режим
+    const nestedFunction = () => {
+        // эта функция тоже использует строгий режим
     }
-  }
+}
 
 
 
@@ -45,10 +46,10 @@ let array = [10, 11, 12, 13, 14, 15]
 let array2 = [1, 1, 2, 3, 4, 5]
 
 
-function summer(p:any) {
+function summer(p: any) {
     let summ = 0
-    for (let i = 0; i < p.length; i++) {   
-        summ+=p[i]
+    for (let i = 0; i < p.length; i++) {
+        summ += p[i]
     }
     console.log(summ);
 }
@@ -57,13 +58,13 @@ summer(array)
 summer(array2)
 
 
-function balance (a:number, b:number) {
-    if(a>b) {
-        console.log(Math.round(((a/b)-(+a/b))*b));
-        
+function balance(a: number, b: number) {
+    if (a > b) {
+        console.log(Math.round(((a / b) - (+a / b)) * b));
+
     } else {
         console.log('Делитель больше делимого числа');
-        
+
     }
 }
 
@@ -75,18 +76,18 @@ balance(15, 9)
 
 
 
- 
+
 let hours = 10
 let minutes = 15
 // let time = 24*60 - hours*60 - minutes
 console.log('время до конца дня: ')
-console.log((23-hours) + ' часов' + ' и ' + (60 - minutes) + ' минут');
+console.log((23 - hours) + ' часов' + ' и ' + (60 - minutes) + ' минут');
 
 
 let memory = 10000
-console.log(memory/820 - (memory%820)/820 );
+console.log(memory / 820 - (memory % 820) / 820);
 
-console.log(Math.floor(memory/820));
+console.log(Math.floor(memory / 820));
 
 
 
@@ -98,7 +99,7 @@ let todays = new Date()
 console.log(todays);
 
 let today = document.querySelector('#today') as any
-today.innerHTML == todays.getDay() 
+today.innerHTML == todays.getDay()
 
 switch (todays.getDay()) {
     case 0:
@@ -121,19 +122,19 @@ switch (todays.getDay()) {
         break;
     case 6:
         today.innerHTML = 'Суббота'
-        break;    
+        break;
     default:
         today.innerHTML = 'Неверный диапазон'
         break;
-    }
-    
-// 2-ой способ
-let days = document.querySelector('#days') as any
-if (todays.getDay()==0) {
-    days.children[todays.getDay()+7].classList.add('newClass')
 }
 
-days.children[todays.getDay()].classList.add('newClass') 
+// 2-ой способ
+let days = document.querySelector('#days') as any
+if (todays.getDay() == 0) {
+    days.children[todays.getDay() + 7].classList.add('newClass')
+}
+
+days.children[todays.getDay()].classList.add('newClass')
 
 // 3-ий способ
 let d = new Date();
@@ -150,14 +151,14 @@ console.log(todays.getDay());
 console.log(days.nextElementSibling);
 console.log(days.baseURI);
 
-let age =32
+let age = 32
 let education = 'higher'
-if(age>=30 && age<=40 && education=='higher') {
+if (age >= 30 && age <= 40 && education == 'higher') {
     console.log('проверка');
 }
 
 
-let y 
+let y
 console.log(y);
 
 
@@ -173,10 +174,10 @@ console.log(Boolean(0));
 
 
 // тернарный оператор
-5<1 ? console.log('true'):console.log('false');
+5 < 1 ? console.log('true') : console.log('false');
 
 let q = 13
-q%2==0 ? console.log('число четноё'): console.log('число  НЕ четноё');
+q % 2 == 0 ? console.log('число четноё') : console.log('число  НЕ четноё');
 
 // let age2 = 27
 // age2<18 ? console.log('вы несовешеннолетний'):console.log('вы взрослый');
@@ -191,18 +192,18 @@ q%2==0 ? console.log('число четноё'): console.log('число  НЕ �
 // }
 
 let v = 100
-v>0? console.log(v):console.log(-v);
+v > 0 ? console.log(v) : console.log(-v);
 
-if (v>0) {
+if (v > 0) {
     console.log('второй вариант ' + v)
 } else {
     console.log('второй вариант ' + -v)
 }
 
 let earth = 'Венера' as any
-earth=='Земля' || earth=='земля' ? 
-console.log('привет землянин'):
-console.log('привет инопланетянин');
+earth == 'Земля' || earth == 'земля' ?
+    console.log('привет землянин') :
+    console.log('привет инопланетянин');
 
 let dayOfweek = 2 as any
 
@@ -217,30 +218,30 @@ switch (dayOfweek) {
         console.log('Данные неизвестны');
         break;
 }
-    
-if (dayOfweek ==1) {
+
+if (dayOfweek == 1) {
     console.log('понедельник');
 }
-if (dayOfweek ==2) {
-     console.log('вторник');
+if (dayOfweek == 2) {
+    console.log('вторник');
 }
 
 let year = 2025
-if (year%400==0){
+if (year % 400 == 0) {
     console.log('год високосный');
-} else if (year%100==0) {
+} else if (year % 100 == 0) {
     console.log('год НЕ високосный');
-} else if (year%4==0) {
+} else if (year % 4 == 0) {
     console.log('год високосный');
 } else {
     console.log('год не високосный')
 }
 
 
-let parity = (year%2==0)?'Четное':'Нечётное';
+let parity = (year % 2 == 0) ? 'Четное' : 'Нечётное';
 console.log(parity);
 
-let protocol  = 'FTP'
+let protocol = 'FTP'
 switch (protocol) {
     case 'HTTP':
         console.log('HTTP');
@@ -254,40 +255,40 @@ switch (protocol) {
 
     default:
         console.log('Протокола нет');
-        
+
         break;
 }
 
 let sss = ' '
-if (sss=' ') {
+if (sss = ' ') {
     console.log('sss');
-    
+
 }
 
 let yearss = 5 as number
-if (yearss<12) {
+if (yearss < 12) {
     console.log('Вы ребенок');
-} else if(yearss<18) {
+} else if (yearss < 18) {
     console.log('Вы несовершеннолетний');
-} else if (yearss<100) {
+} else if (yearss < 100) {
     console.log('Вы взрослый')
 } else {
     console.log('Введите корректную цифру');
 }
-    
 
- const answer = 8 as any
- switch (answer) {
-    case 1: 
+
+const answer = 8 as any
+switch (answer) {
+    case 1:
         console.log('число 1');
         break;
     case 2:
     case 3:
-        console.log ('число 3 или 2');
+        console.log('число 3 или 2');
         break;
     default:
-        console.log (`числа ${answer} нет в диапазоне`);
- }
+        console.log(`числа ${answer} нет в диапазоне`);
+}
 
 
 
@@ -302,17 +303,17 @@ console.log(rrr3);
 let min = 0
 let max = 100
 for (let i = min; i <= max; i++) {
-    if (i%5==0) {
+    if (i % 5 == 0) {
         console.log(i);
     }
-        
+
 }
 
 
 // возвести число само на себя
 
-function squareOfNumber (number:number) {
-    return console.log(`${number} в квадрате = ${number*number}`)
+function squareOfNumber(number: number) {
+    return console.log(`${number} в квадрате = ${number * number}`)
 }
 squareOfNumber(30)
 squareOfNumber(10)
@@ -323,9 +324,9 @@ squareOfNumber(3)
 
 
 
-function diapazone(firstNum:number, secondNum:number) {
-    for (let i = firstNum; i <=secondNum; i++) {
-        if(i%100==0) {
+function diapazone(firstNum: number, secondNum: number) {
+    for (let i = firstNum; i <= secondNum; i++) {
+        if (i % 100 == 0) {
             console.log(i);
         }
     }
@@ -342,11 +343,11 @@ console.log('===========');
 
 // Вывести все числа от 1 до 100, которые кратные указанному 
 // пользователем числу.
-    function multipleNumber (multNum:number) {
-        for (let i = 1; i < 100; i++) {
-                if(i%multNum==0) {
+function multipleNumber(multNum: number) {
+    for (let i = 1; i < 100; i++) {
+        if (i % multNum == 0) {
             console.log(i);
-            
+
         }
     }
 }
@@ -358,14 +359,14 @@ console.log('===========');
 // диапазона. Пользователь указывает минимальное и мак
 // симальное значения диапазона. 
 
-function multipleNumber4 (minNum:number, maxNum:number) {
+function multipleNumber4(minNum: number, maxNum: number) {
     for (let i = minNum; i < maxNum; i++) {
-       if(i%4==0) {
-         console.log(i);
-      }
-   } 
+        if (i % 4 == 0) {
+            console.log(i);
+        }
+    }
 }
-multipleNumber4(80,100)
+multipleNumber4(80, 100)
 
 
 
@@ -374,27 +375,27 @@ multipleNumber4(80,100)
 // число делится без остатка только на себя и на единицу.
 
 let simpleNumber = 1225
-for(let i=2; i<simpleNumber;i++) {
-        if (simpleNumber%i==0) {       
-            console.log(i);
-            console.log('Число ' + simpleNumber + ' НЕ простое');
-            break;
-        } else {
-            console.log('Число ' + simpleNumber + ' простое');
-            break;
-        }
+for (let i = 2; i < simpleNumber; i++) {
+    if (simpleNumber % i == 0) {
+        console.log(i);
+        console.log('Число ' + simpleNumber + ' НЕ простое');
+        break;
+    } else {
+        console.log('Число ' + simpleNumber + ' простое');
+        break;
+    }
 }
 
 // Вывести # столько раз, сколько указал пользователь.
 let lattice = 25
 let mass = []
-let acc= 0
+let acc = 0
 
 for (let i = 1; i <= lattice; i++) {
-    mass.push('#')    
+    mass.push('#')
     acc++
 }
-mass.push(acc+' повторений #')
+mass.push(acc + ' повторений #')
 
 console.log(mass);
 
@@ -417,7 +418,7 @@ console.log(a);
 let numStr = 123
 console.log(typeof numStr.toFixed().split(''));
 
-let numStr2 = '123' 
+let numStr2 = '123'
 console.log(numStr2.length);
 
 console.log(typeof Number(numStr2));
@@ -443,18 +444,18 @@ console.log(undefined == 0);
 // холодно тепло жарко горячо
 let temperature = 198
 let infoOfTemperature =
-temperature<15 ?  'холодно':
-temperature<30 ?  'тепло':
-temperature<45 ?  'жарко':
-temperature<100 ? 'горячо': 'диапазон температуры неверный';
+    temperature < 15 ? 'холодно' :
+        temperature < 30 ? 'тепло' :
+            temperature < 45 ? 'жарко' :
+                temperature < 100 ? 'горячо' : 'диапазон температуры неверный';
 console.log(infoOfTemperature);
 
- 
 
-let login='Директор'
-let message = (login == 'Сотрудник') ? 'привет':
-(login == 'Директор') ? 'здравствуйте':
-(login == '') ? 'нет логина': ''
+
+let login = 'Директор'
+let message = (login == 'Сотрудник') ? 'привет' :
+    (login == 'Директор') ? 'здравствуйте' :
+        (login == '') ? 'нет логина' : ''
 console.log(message);
 
 
@@ -470,23 +471,23 @@ console.log(message);
 // }
 
 let x = 3
-if (x>=3 && x<=10 ) {
+if (x >= 3 && x <= 10) {
     console.log(x);
-    
+
 }
 
 
 
 
- 
- console.clear()
- 
- 
 
- let oddEvenNumber = 2 as any
- switch(oddEvenNumber) {
-     case '':
-         console.log('Введите данные');
+console.clear()
+
+
+
+let oddEvenNumber = 2 as any
+switch (oddEvenNumber) {
+    case '':
+        console.log('Введите данные');
         break
     case 1:
     case 3:
@@ -498,25 +499,25 @@ if (x>=3 && x<=10 ) {
     case 6:
         console.log('число чётное');
         break
-        default: 
+    default:
         console.log('число вне диапазона')
 }
 
 
 
 let years = 10
-if(years<5){
+if (years < 5) {
     console.log('ребенок');
-} else if(years<18){
+} else if (years < 18) {
     console.log('подросток');
-} else if(years<100){
-    console.log('взрослый');   
+} else if (years < 100) {
+    console.log('взрослый');
 } else {
-    console.log('введите корректные данные');   
+    console.log('введите корректные данные');
 }
 
 
-let checkDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ] as any 
+let checkDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] as any
 console.log(checkDays);
 
 let newNewdaya = document.querySelector('#newNewdaya') as HTMLDivElement
@@ -525,7 +526,7 @@ newNewdaya.style.color = 'red'
 for (let i = 0; i < checkDays.length; i++) {
     newNewdaya.innerHTML += checkDays[i] + '\n'
     console.log(checkDays[i])
-    
+
 }
 
 let a1 = ''
@@ -534,7 +535,6 @@ let a2 = 'Значение'
 
 a1 = a1 == '' ? a2 : a1
 console.log(a1);
- 
 
 
 
@@ -543,10 +543,11 @@ console.log(a1);
 
 
 
-let value1 = 1 
-let value2 = 0 
+
+let value1 = 1
+let value2 = 0
 let value3 = 3
- 
+
 let result = +value1 + +value2 + +value3;
 console.log(result);
 
@@ -589,26 +590,26 @@ console.log(console.log(console.log('123')))
 
 
 let quantaty = 5
-if (quantaty<10 && quantaty>100) {
+if (quantaty < 10 && quantaty > 100) {
     console.log(quantaty); //выражение никогда не сработает
 }
 
-if (quantaty<10 || quantaty>100) {
-    console.log(`quantaty = ${quantaty}`); 
+if (quantaty < 10 || quantaty > 100) {
+    console.log(`quantaty = ${quantaty}`);
 }
 
 
 
-    
+
 
 
 let k = 5
 let factorial = 1
-while (k>1) {
-    factorial=k*factorial
+while (k > 1) {
+    factorial = k * factorial
     k--
     console.log(factorial);
-    
+
 }
 
 
@@ -616,7 +617,7 @@ while (k>1) {
 
 
 // font-size 
-function changeRegisterletter(symbol:any) {
+function changeRegisterletter(symbol: any) {
 
 }
 
@@ -632,7 +633,7 @@ let ctt = 0
 
 
 for (let i = minNum; i <= maxNum; i++) {
-    ctt+=i
+    ctt += i
     // console.log(ctt, 'i = ' + i);
 }
 console.log(ctt);
@@ -645,8 +646,8 @@ let num1 = 20
 let num2 = 15
 
 let numMass = [] as any
-for (let i = 0; i <=num1 && i<=num2; i++){
-    if (num1%i==0 && num2%i==0) {
+for (let i = 0; i <= num1 && i <= num2; i++) {
+    if (num1 % i == 0 && num2 % i == 0) {
         numMass.push(i)
     }
 }
@@ -658,7 +659,7 @@ console.log(numMass.pop());
 
 let userNum = 10
 for (let i = 0; i <= userNum; i++) {
-    if (userNum%i==0)
+    if (userNum % i == 0)
         console.log(i);
 }
 
@@ -671,10 +672,10 @@ console.log(x_num2);
 
 let x_num3 = '12345777'
 let count3 = 0
-for (let i = 1; i <=x_num3.length; i++) {
+for (let i = 1; i <= x_num3.length; i++) {
     count3++
 }
-console.log( `число состоит из: ${count3} цифр`);
+console.log(`число состоит из: ${count3} цифр`);
 
 //! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
 //! он ввел положительных, отрицательных и нулей. При этом 
@@ -748,7 +749,7 @@ console.log( `число состоит из: ${count3} цифр`);
 let newNum = '123456'
 let shiftNum = 2
 let num = newNum.slice(0, shiftNum)
-let num3 = newNum.slice(shiftNum,6)
+let num3 = newNum.slice(shiftNum, 6)
 console.log(num3 + num);
 
 
@@ -757,19 +758,70 @@ console.log(num3 + num);
 
 //!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
 
-// Задания, в которых необходимо использовать WHILE.
-//  1. Вывести # столько раз, сколько указал пользователь.
+//! Задания, в которых необходимо использовать WHILE.
+//!  1. Вывести # столько раз, сколько указал пользователь.
 
 let enterNum = 5
-// while (condition) {
-    
-// }
-let loc = []
-
-for (let i = 0; i < enterNum; i++) {
-    const element = array[i];
-    
+let loc = ''
+while (enterNum > 0) {
+    enterNum--
+    loc += '#'
 }
+console.log(loc);
+
+
+//! 2. Пользователь ввел число, а на экран вывелись все числа 
+//! от введенного до 0.
+
+
+let numUser = 5
+let strWithNum = ''
+while (numUser > 0) {
+    strWithNum += numUser + " "
+    numUser--
+}
+console.log(strWithNum);
+
+
+//! 3. Запросить число и степень. Возвести число в указанную 
+//! степень и вывести результат.
+
+// let yourNum = 8
+// let degree = 2
+// while (yourNum > 7) {
+//     console.log(yourNum ** degree)
+//     yourNum--
+// }
+
+// console.log('----------');
+
+
+//! 4. Запросить 2 числа и найти все общие делители.
+
+// let firstN = 30
+// let secondN = 20
+// let i = firstN
+
+// while (i > 0) {
+//     i--
+//     if (firstN % i == 0 && secondN % i == 0) {
+//         console.log(i);
+//         break
+//     }        
+// }
+
+//! 5. Посчитать факториал введенного пользователем числа.
+
+// let fact = 5
+// let mult = 1
+// while(fact>0) {
+//     mult*=fact
+//     fact--
+// }
+// console.log(mult);
+
+
+
 
 
 
@@ -792,5 +844,21 @@ for (let i = 0; i < enterNum; i++) {
 //     console.log(i);
 // }
 // while (i<-5)
+
+
+
+
+
+let capitalsCountries = {
+'Минск':'Беларусь',
+'Москва':'Россия',
+'Киев':'Украина'
+}
+console.log(capitalsCountries);
+
+for (const key in capitalsCountries) {
+    console.log(`${key} - это ${capitalsCountries[key]}`);
+}
+
 
 
