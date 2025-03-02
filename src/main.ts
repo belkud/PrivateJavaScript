@@ -756,6 +756,8 @@ console.log(num3 + num);
 
 
 
+
+
 //!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
 
 //! Задания, в которых необходимо использовать WHILE.
@@ -822,6 +824,22 @@ console.log(strWithNum);
 
 
 
+//! 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
+//! пор, пока он не решит его правильно.
+
+
+// do {
+//     let ab = +prompt('чему будет равно 2*2+2 ?');
+//         if (ab==6) {
+//             alert('ответ верный');
+//             break
+//         }
+
+
+// } while (confirm('Ответ неверный, хотите ли вы решить раз?'));
+
+
+
 
 
 
@@ -846,18 +864,102 @@ console.log(strWithNum);
 // while (i<-5)
 
 
+let messages = 'Hello1'
+console.log(messages);
 
 
 
-let capitalsCountries = {
-'Минск':'Беларусь',
-'Москва':'Россия',
-'Киев':'Украина'
+for (let i = 0; i < 10; i++) {
+    if(i%2!=0) break 
+    console.log(i);
+    
 }
-console.log(capitalsCountries);
 
-for (const key in capitalsCountries) {
-    console.log(`${key} - это ${capitalsCountries[key]}`);
+
+let tetsI = 1
+do {
+    tetsI++
+    console.log(tetsI);
+    
+} while (tetsI<5);
+ 
+
+
+
+// Реализуйте калькулятор. Пользователь вводит два числа, 
+// а программа выводит результаты действий + - * / между 
+// этими числами.
+
+let n1 = 5
+let n2 = 7
+let op = '+'
+let calc = +n1 + op + +n2
+// console.log(calc);
+
+
+
+
+
+let res = 1000
+let itter = 0
+for (let i = 0; res>50; i++) {
+    res/=2
+    itter++
+    console.log(res);
+    
+}
+console.log(`количество иттераций = ${itter}`);
+console.log(res);
+
+const res2 = 100
+console.log(res2);
+
+function testFunc (name:string, surname = 'Ivanov') {
+    console.log(`hello friend ${name} ${surname}`);
+    
+}
+testFunc('Ivan')
+testFunc('Petya', 'Petrov')
+
+function nothing(a:any, b:any) {
+    return a+b
+}
+if (nothing()==undefined) {
+    console.log('функции underfined!');
+} 
+console.log(typeof nothing(3,5))
+
+
+
+// проверка простое ли число!!!!!!!!!!!!
+let simpleNum = 19
+let checkSimpleNum = 0
+for (let i = 1; i <= simpleNum; i++) {
+    if (simpleNum%i==0) {
+        checkSimpleNum++
+    }   
+}
+console.log(checkSimpleNum>2 ? 'число составное' : 'число простое')
+
+
+function summArguments() {
+    let summ = 0
+    for (let i = 0; i < arguments.length; i++) {
+        summ+=arguments[i]        
+    }
+    return summ    
+}
+console.log(summArguments(1,3,8,4))
+
+
+
+
+let divideNum = 20
+for (let i = 1; i < divideNum; i++) {
+    divideNum/i
+    console.log(divideNum)
+    
+    
 }
 
 
