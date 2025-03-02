@@ -962,5 +962,23 @@ for (let i = 1; i < divideNum; i++) {
     
 }
 
+function checkUser (name:string) {
+    if(!name) return ('Вы не ввели имя')
+    if(typeof name != 'string') return ('Введите цифры')
+    return `Привет ${name}`
+}
+
+console.log(checkUser('Vasya'));
+
+
+
+
+//! <================= JS_PZ_Modul_1_Week_4=============>
+
+// 1. Написать функцию, которая принимает 2 числа и возвра
+// щает меньшее из них.
+
+
+
 
 
