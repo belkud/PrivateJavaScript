@@ -4,30 +4,9 @@ import '/src/style.scss'
 
 
 
-// @ts-ignore
-let rrr
-
-const strictFunction = () => {
-    'use strict';
-    let rrr
-    const nestedFunction = () => {
-        // эта функция тоже использует строгий режим
-    }
-}
 
 
 
-//! https://nodejs.org/en - ссылка на скачивание nodeJS
-
-// через пуск зайти в PowerShell (нажимаем правой кнопкой мыши -> запуск от имени администратора)
-// Get-ExecutionPolicy
-// Set-ExecutionPolicy unrestricted
-// подтвердить Y
-
-//! npm create vite
-
-
-console.log(333 + 123);
 
 let pol = 'vova'
 
@@ -259,67 +238,19 @@ switch (protocol) {
         break;
 }
 
-let sss = ' '
-if (sss = ' ') {
-    console.log('sss');
-
-}
-
-let yearss = 5 as number
-if (yearss < 12) {
-    console.log('Вы ребенок');
-} else if (yearss < 18) {
-    console.log('Вы несовершеннолетний');
-} else if (yearss < 100) {
-    console.log('Вы взрослый')
-} else {
-    console.log('Введите корректную цифру');
-}
-
-
-const answer = 8 as any
-switch (answer) {
-    case 1:
-        console.log('число 1');
-        break;
-    case 2:
-    case 3:
-        console.log('число 3 или 2');
-        break;
-    default:
-        console.log(`числа ${answer} нет в диапазоне`);
-}
 
 
 
-let Infinity
-console.log(Infinity);
+
+
+
 
 console.clear()
 console.log(212);
 let rrr3 = undefined
 console.log(rrr3);
 
-let min = 0
-let max = 100
-for (let i = min; i <= max; i++) {
-    if (i % 5 == 0) {
-        console.log(i);
-    }
 
-}
-
-
-// возвести число само на себя
-
-function squareOfNumber(number: number) {
-    return console.log(`${number} в квадрате = ${number * number}`)
-}
-squareOfNumber(30)
-squareOfNumber(10)
-squareOfNumber(40)
-squareOfNumber(31)
-squareOfNumber(3)
 
 
 
@@ -567,27 +498,6 @@ console.log(console.log(console.log('123')))
 
 
 
-//! 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 ва
-//! рианта ответа. За каждый правильный ответ начисляется 2 
-//! балла. После вопросов выведите пользователю количество 
-//! набранных баллов.
-
-// let answer1= prompt('Какой формы Земля?') 
-// let answer2= Number(prompt('Какой сейчас год?'))
-// let answer3= prompt('Как по-английски будет "жёлтый"?')
-
-// let answerSumm = 0
-// if (answer1 == 'круглая') {
-//     answerSumm+=2
-// }
-// if (answer2==2025) {
-//     answerSumm+=2
-// }
-// if (answer3=='yellow') {
-//     answerSumm+=2
-// }
-// console.log(answerSumm);
-
 
 let quantaty = 5
 if (quantaty < 10 && quantaty > 100) {
@@ -613,14 +523,7 @@ while (k > 1) {
 }
 
 
-
-
-
-// font-size 
-function changeRegisterletter(symbol: any) {
-
-}
-
+ 
 
 //!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
 
@@ -1113,15 +1016,6 @@ console.log(rec(3,3));
 
 
 
-
-
-
-
-
-
-
-
-
 function recursion(num:number, pow:number):any {
     return pow == 1 ? num :  num * recursion(num, (pow-1)) 
 }
@@ -1149,35 +1043,7 @@ console.log(recursion(4,4));
 
 //! 2. Написать функцию поиска наибольшего общего делителя.
 
-// function recursDivider (num:number):any {
-//     let count = 1 as number
-//     count++
-//     return recursDivider(num%count)
-//     // return num * recursDivider(num, (pow-1))
-
-//     recursDivider(num-1)
-//     return num;
-    
-// }
-// console.log(recursDivider(20));
-
-// let divider = 1
-    // if(num%divider==0) {
-        // }
-        // console.log(divider);
-
-        // return divider
-        
-    // let mass = []
-    
-    
-    // return num % recursDivider(num-1)
-
-    //     mass.push(divider)
-    // return mass
-    
-    
-
+ 
 
 
     1
@@ -1217,10 +1083,10 @@ function numberOfDiapazone (minNum:number, maxNum:number):any {
     if(minNum == maxNum) {
         return ''
     } else {
-        return (minNum+1) + '' + numberOfDiapazone(minNum+1, maxNum)
+        return (minNum) + '' + numberOfDiapazone(minNum+1, maxNum)
     }
 }
-console.log(numberOfDiapazone(5, 19));
+console.log(numberOfDiapazone(5, 10));
 
 
 
@@ -1291,14 +1157,117 @@ console.log(pairBrackets(3));
 
 
 
+//! 6. Написать конвертор валют. Пользователь вводит количе
+//! ство USD, выбирает, в какую валюту хочет перевести: EUR, 
+//! UAN или AZN, и получает в ответ соответствующую сумму.
+
+let quantatyUSD = 100
+let money = 'UAN'
+switch (money) {
+    case 'EUR':
+        console.log(quantatyUSD* 0.9);
+        break;
+    case 'UAN':
+        console.log(quantatyUSD* 4);
+        break;
+    case 'AZN':
+        console.log(quantatyUSD* 2);
+        break;
+
+    default:
+        console.log('Данную валюту не переводим');
+        break;
+}
+
+
+
+
+
+//! 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 ва
+//! рианта ответа. За каждый правильный ответ начисляется 2 
+//! балла. После вопросов выведите пользователю количество 
+//! набранных баллов.
+
+// let answer1= prompt('Какой формы Земля?') 
+// let answer2= Number(prompt('Какой сейчас год?'))
+// let answer3= prompt('Как по-английски будет "жёлтый"?')
+
+// let answerSumm = 0
+// if (answer1 == 'круглая') {
+//     answerSumm+=2
+// }
+// if (answer2==2025) {
+//     answerSumm+=2
+// }
+// if (answer3=='yellow') {
+//     answerSumm+=2
+// }
+// console.log(answerSumm);
+
+
+
+//! 3. Запросить число и степень. Возвести число в указанную 
+//! степень и вывести результат.
+
+let yourNum = 8
+let degree = 2
+while (yourNum > 7) {
+    console.log(yourNum ** degree)
+    yourNum--
+}
+
+console.log('----------');
+
+
+console.log((5**3));
+
+
+
+let s = 10 
+if (s<0 || s>120) {
+    console.log('Возраст некорректен');
+} else {
+    console.log('Ваш возраст в диапазоне');
+}
+
+
+// jj++
+// console.log(jj);
+
+// jj++
+// console.log(jj);
+
+// jj++
+// console.log(jj);
+
+// jj++ 
+// console.log(jj);
+
+
+
+let jj = 0
+console.log(jj);
+
+jj++
+console.log(jj);
+
+jj--
+console.log(jj);
+
+
+// console.log(jj++); возвращает старое значение (которое было до увеличения)
+// console.log(++jj); возвращает новое значение
 
 
 
 
 
 
-
-
+// while (jj<5) {
+//     jj++
+//     console.log(jj);
+    
+// }
 
 
 
