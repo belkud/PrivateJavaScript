@@ -975,8 +975,343 @@ console.log(checkUser('Vasya'));
 
 //! <================= JS_PZ_Modul_1_Week_4=============>
 
-// 1. Написать функцию, которая принимает 2 числа и возвра
-// щает меньшее из них.
+//! 1. Написать функцию, которая принимает 2 числа и возвра
+//! щает меньшее из них.
+
+function compareNumbers (a:number, b:number) {
+     return a>b ? a : b
+}
+
+
+//! 2. Написать функцию, которая возводит переданное число 
+//! в указанную степень.
+
+function multipleNumOnNum2 (num:number, num2:number) {
+    return num**num2
+}
+
+
+//! 3. Написать функцию, которая принимает 2 числа и знак  
+//! (+ - * /), считает пример и возвращает результат.
+
+function calculator (num1:number, operator:any, num2:number) {
+    switch (operator) {
+        case '+':
+            console.log(num1 + num2);
+            break
+        case '-':
+            console.log(num1 - num2);
+            break
+        case '*':
+            console.log(num1 * num2);
+            break
+        case '/':
+            console.log(num1 / num2);
+            break
+    }
+}
+
+
+//! 4. Написать функцию, которая проверяет, является ли пере
+//! данное ей число простым.
+
+function simpleNums(num:number) {
+    let count = 0
+    for (let i = 2; i < num; i++) {
+        if (num%i==0) {
+            count++
+        }    
+    }    
+    return count>0 ? console.log('Число сложное') : console.log('Число простое') ;
+}
+
+
+
+//! 6. Написать функцию, которая реализует работу оператора %. 
+//! Функция принимает 2 параметра и возвращает остаток от 
+//! деления первого параметра на второй. В функции исполь
+//! зовать только + - * /, оператор % не использовать. 
+
+function remainder (num1:number, num2:number) {
+    let quantaty = Math.floor(num1/num2)
+    return num1 - num2*quantaty
+}
+
+
+//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает их сумму.
+
+function sumNumbers (num1:number, 
+    num2:number, 
+    num3:number, 
+    num4:number, 
+    num5:number,) {
+        return num1 + num2 + num3 + num4 + num5
+    }
+
+
+//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает большее из них.
+
+function biggestNumber (num1:number, 
+    num2:number, 
+    num3:number, 
+    num4:number, 
+    num5:number,) {
+        return Math.max (num1, num2, num3, num4, num5)
+
+    }
+console.log(biggestNumber(5, 3, 10, 16, 4));
+
+
+
+//! 9. Написать функцию, которая выводит все четные или не
+//! четные числа, в указанном пользователем диапазоне. Какие 
+//! числа выводить, определяется третьим параметром типа 
+//! bool (true – четные, false – нечетные).
+
+function evenOddNumber (minNum:number, maxNum:number, bool:boolean) {
+    let mass = [] as any
+    for (let i = minNum; i < maxNum; i++) {
+        if (i%2==0 && bool==true) {
+            mass.push(i)
+        }
+        
+        if (i%2==1 && bool==false) {
+            mass.push(i)
+        }
+        
+    }
+    return  console.log(mass);
+}
+
+evenOddNumber(3,15, false)
+evenOddNumber(10,20, false)
+
+
+const summAB = (a:number, b:number) => {
+   return a+b
+}
+console.log(summAB(4,8));
+
+
+// умножить числа от 0 до 5
+
+function rec(num:number, pow:number):any {
+    if (pow==1) {
+            return num        
+    } else {
+        return num * rec(num, (pow - 1))
+    }
+
+}
+
+console.log(rec(3,3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function recursion(num:number, pow:number):any {
+    return pow == 1 ? num :  num * recursion(num, (pow-1)) 
+}
+
+console.log(recursion(4,4));
+
+
+
+
+
+
+//! <=============JS_DZ_Modul_1_Week_5==================>
+
+// * Во всех заданиях обязательно использовать рекурсию.
+
+//!  1. Написать функцию возведения числа в степень.
+
+// function recurs (num:number, pow:number):any {
+//     if (pow==1) return num
+//     return num * recurs(num, (pow-1))
+// }
+// console.log(recurs(4,2));
+
+
+
+//! 2. Написать функцию поиска наибольшего общего делителя.
+
+// function recursDivider (num:number):any {
+//     let count = 1 as number
+//     count++
+//     return recursDivider(num%count)
+//     // return num * recursDivider(num, (pow-1))
+
+//     recursDivider(num-1)
+//     return num;
+    
+// }
+// console.log(recursDivider(20));
+
+// let divider = 1
+    // if(num%divider==0) {
+        // }
+        // console.log(divider);
+
+        // return divider
+        
+    // let mass = []
+    
+    
+    // return num % recursDivider(num-1)
+
+    //     mass.push(divider)
+    // return mass
+    
+    
+
+
+
+    1
+    // Рекурсивная функция нахождения наибольшего общего делителя.
+    // function fun(a:any, b:any){
+//     a > b || ([a, b] = [b, a]);
+//     let length = b/2,i=2,k=1;
+//    return (function f()
+//  {
+//    if(i===length) return k;
+//        if(!(b % i) && !(a % i) ) {
+//        b /= i;
+//        a /= i;
+//        k *= i;
+//          return f()
+//        }
+//        else {
+    //          ++i;
+    //          return f()
+    //        }
+    //    })();
+    //  }
+    //  console.log(fun(50, 100));
+    
+    
+    
+    
+    
+    //! <=============JS_PZ_Modul_1_Week_5==================>
+    
+    
+//! 2. Написать функцию, которая выводит все числа из заданного 
+//! пользователем диапазона в прямом порядке. И еще одну 
+//! функцию – для вывода в обратном порядке.
+
+function numberOfDiapazone (minNum:number, maxNum:number):any {
+    if(minNum == maxNum) {
+        return ''
+    } else {
+        return (minNum+1) + '' + numberOfDiapazone(minNum+1, maxNum)
+    }
+}
+console.log(numberOfDiapazone(5, 19));
+
+
+
+
+//! 3. Написать функцию, которая выводит переданное ей число 
+//! задом наперед. 
+//! Например: число 1234 вывести как 4321.
+
+function getReverseNum(num:number):number {
+    if(num<10) {
+        return num
+    } else {
+        return +(num % 10 + '' + getReverseNum(Math.floor(num/10)))
+    }
+}
+console.log(getReverseNum(123));
+
+
+
+//! 4. Написать функцию, которая считает сумму цифр числа.
+//!  Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
+
+//? 1-й способ. Через рекурсию
+// function getSUmmDigitsNum(num:number):number {
+//     if(num<10) {
+//         return num
+//     } else {
+//         return +(num % 10 + getSUmmDigitsNum(Math.floor(num/10)))
+//     }
+// }
+// console.log(getSUmmDigitsNum(523));
+
+
+//? 2-й способ. Через цикл
+// function funcSumm (num:number) {
+//     let arrayNum = num.toString().split('')
+//     let accum = 0 as number
+//     for (let i = 0; i < arrayNum.length; i++) {
+//         accum+= +arrayNum[i]
+        
+//     }
+//     return accum
+
+// }
+// console.log(funcSumm(523));
+
+
+//! 5. Написать функцию, которая принимает число и выводит 
+//! соответствующее количество вложенных пар круглых скобок. 
+//! Например: число 4 – (((()))).
+function pairBrackets (num:number):any {
+    if(!num){
+        return ''
+    } else {
+        return '(' + pairBrackets(num-1) + ')'
+    }
+}
+console.log(pairBrackets(3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
