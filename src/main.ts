@@ -244,17 +244,6 @@ switch (protocol) {
 
 
 
-
-console.clear()
-console.log(212);
-let rrr3 = undefined
-console.log(rrr3);
-
-
-
-
-
-
 function diapazone(firstNum: number, secondNum: number) {
     for (let i = firstNum; i <= secondNum; i++) {
         if (i % 100 == 0) {
@@ -1161,23 +1150,7 @@ console.log(pairBrackets(3));
 //! ство USD, выбирает, в какую валюту хочет перевести: EUR, 
 //! UAN или AZN, и получает в ответ соответствующую сумму.
 
-let quantatyUSD = 100
-let money = 'UAN'
-switch (money) {
-    case 'EUR':
-        console.log(quantatyUSD* 0.9);
-        break;
-    case 'UAN':
-        console.log(quantatyUSD* 4);
-        break;
-    case 'AZN':
-        console.log(quantatyUSD* 2);
-        break;
 
-    default:
-        console.log('Данную валюту не переводим');
-        break;
-}
 
 
 
@@ -1188,21 +1161,7 @@ switch (money) {
 //! балла. После вопросов выведите пользователю количество 
 //! набранных баллов.
 
-// let answer1= prompt('Какой формы Земля?') 
-// let answer2= Number(prompt('Какой сейчас год?'))
-// let answer3= prompt('Как по-английски будет "жёлтый"?')
 
-// let answerSumm = 0
-// if (answer1 == 'круглая') {
-//     answerSumm+=2
-// }
-// if (answer2==2025) {
-//     answerSumm+=2
-// }
-// if (answer3=='yellow') {
-//     answerSumm+=2
-// }
-// console.log(answerSumm);
 
 
 
@@ -1223,12 +1182,7 @@ console.log((5**3));
 
 
 
-let s = 10 
-if (s<0 || s>120) {
-    console.log('Возраст некорректен');
-} else {
-    console.log('Ваш возраст в диапазоне');
-}
+
 
 
 // jj++
