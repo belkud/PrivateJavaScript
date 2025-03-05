@@ -456,87 +456,6 @@ console.log(num3 + num);
 
 
 
-//!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
-
-//! Задания, в которых необходимо использовать WHILE.
-//!  1. Вывести # столько раз, сколько указал пользователь.
-
-let enterNum = 5
-let loc = ''
-while (enterNum > 0) {
-    enterNum--
-    loc += '#'
-}
-console.log(loc);
-
-
-//! 2. Пользователь ввел число, а на экран вывелись все числа 
-//! от введенного до 0.
-
-
-let numUser = 5
-let strWithNum = ''
-while (numUser > 0) {
-    strWithNum += numUser + " "
-    numUser--
-}
-console.log(strWithNum);
-
-
-//! 3. Запросить число и степень. Возвести число в указанную 
-//! степень и вывести результат.
-
-// let yourNum = 8
-// let degree = 2
-// while (yourNum > 7) {
-//     console.log(yourNum ** degree)
-//     yourNum--
-// }
-
-// console.log('----------');
-
-
-//! 4. Запросить 2 числа и найти все общие делители.
-
-// let firstN = 30
-// let secondN = 20
-// let i = firstN
-
-// while (i > 0) {
-//     i--
-//     if (firstN % i == 0 && secondN % i == 0) {
-//         console.log(i);
-//         break
-//     }        
-// }
-
-//! 5. Посчитать факториал введенного пользователем числа.
-
-// let fact = 5
-// let mult = 1
-// while(fact>0) {
-//     mult*=fact
-//     fact--
-// }
-// console.log(mult);
-
-
-
-//! 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
-//! пор, пока он не решит его правильно.
-
-
-// do {
-//     let ab = +prompt('чему будет равно 2*2+2 ?');
-//         if (ab==6) {
-//             alert('ответ верный');
-//             break
-//         }
-
-
-// } while (confirm('Ответ неверный, хотите ли вы решить раз?'));
-
-
 
 
 
@@ -587,17 +506,6 @@ do {
 
 
 
-
-let res = 1000
-let itter = 0
-for (let i = 0; res > 50; i++) {
-    res /= 2
-    itter++
-    console.log(res);
-
-}
-console.log(`количество иттераций = ${itter}`);
-console.log(res);
 
 const res2 = 100
 console.log(res2);
@@ -1287,6 +1195,126 @@ console.log(object);
 console.log(object3)// свойство в третьем объекте теперь не меняются;
 
 
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
+
+//! Задания, в которых необходимо использовать WHILE.
+//!  1. Вывести # столько раз, сколько указал пользователь.
+
+let enterNum = 5
+let loc = ''
+while (enterNum > 0) {
+    enterNum--
+    loc += '#'
+}
+console.log(loc);
+
+
+//! 2. Пользователь ввел число, а на экран вывелись все числа 
+//! от введенного до 0.
+
+
+let numUser = 5
+let strWithNum = ''
+while (numUser > 0) {
+    strWithNum += numUser + " "
+    numUser--
+}
+console.log(strWithNum);
+
+
+//! 3. Запросить число и степень. Возвести число в указанную 
+//! степень и вывести результат.
+
+// let yourNum = 8
+// let degree = 2
+// while (yourNum > 7) {
+//     console.log(yourNum ** degree)
+//     yourNum--
+// }
+
+// console.log('----------');
+
+
+//! 4. Запросить 2 числа и найти все общие делители.
+
+// let firstN = 30
+// let secondN = 20
+// let i = firstN
+
+// while (i > 0) {
+//     i--
+//     if (firstN % i == 0 && secondN % i == 0) {
+//         console.log(i);
+//         break
+//     }        
+// }
+
+//! 5. Посчитать факториал введенного пользователем числа.
+
+// let fact = 5
+// let mult = 1
+// while(fact>0) {
+//     mult*=fact
+//     fact--
+// }
+// console.log(mult);
+
+
+
+//! 1. Предлагать пользователю решить пример 2 + 2 * 2 до тех 
+//! пор, пока он не решит его правильно.
+
+
+// do {
+//     let ab = +prompt('чему будет равно 2*2+2 ?');
+//         if (ab==6) {
+//             alert('ответ верный');
+//             break
+//         }
+
+
+// } while (confirm('Ответ неверный, хотите ли вы решить раз?'));
+
+
+
+//! 2. Делить число 1000 на 2
+
+// let res = 1000
+// let itter = 0
+// for (let i = 0; res > 50; i++) {
+//     res /= 2
+//     console.log(res);
+    // itter++
+// }
+// console.log(`количество иттераций = ${itter}`);
+// console.log(res);
+
+
+let xx = 0
+
+do { // выполнится хоть один раз даже если условие неверно
+    console.log(xx);
+    xx++
+} while (xx<5) 
+
+
+let yy = 0
+
+while (yy<5) { // условие неверное - не выполнится
+    console.log(yy);
+    yy++
+}
 
 
 
