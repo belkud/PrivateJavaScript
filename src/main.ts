@@ -50,25 +50,6 @@ function balance(a: number, b: number) {
 balance(15, 9)
 
 
-// let text = document.querySelector('#text')
-
-
-
-
-
-let hours = 10
-let minutes = 15
-// let time = 24*60 - hours*60 - minutes
-console.log('время до конца дня: ')
-console.log((23 - hours) + ' часов' + ' и ' + (60 - minutes) + ' минут');
-
-
-let memory = 10000
-console.log(memory / 820 - (memory % 820) / 820);
-
-console.log(Math.floor(memory / 820));
-
-
 
 
 //! мини календари
@@ -143,103 +124,6 @@ console.log(y);
 
 console.log(Boolean(1));
 console.log(Boolean(0));
-// console.log(true + false);
-
-
-
-
-
-
-
-
-// тернарный оператор
-5 < 1 ? console.log('true') : console.log('false');
-
-let q = 13
-q % 2 == 0 ? console.log('число четноё') : console.log('число  НЕ четноё');
-
-// let age2 = 27
-// age2<18 ? console.log('вы несовешеннолетний'):console.log('вы взрослый');
-
-// let num = Number(prompt('введите число'))
-// if(num>=0){
-//     console.log('Число положительное');
-// } else if(num<=0){
-//     console.log('Число отрицательное');
-// } else {
-//     console.log('Вы ввели не число');
-// }
-
-let v = 100
-v > 0 ? console.log(v) : console.log(-v);
-
-if (v > 0) {
-    console.log('второй вариант ' + v)
-} else {
-    console.log('второй вариант ' + -v)
-}
-
-let earth = 'Венера' as any
-earth == 'Земля' || earth == 'земля' ?
-    console.log('привет землянин') :
-    console.log('привет инопланетянин');
-
-let dayOfweek = 2 as any
-
-switch (dayOfweek) {
-    case 1:
-        console.log('понедельник');
-        break;
-    case 2:
-        console.log('вторник');
-        break;
-    default:
-        console.log('Данные неизвестны');
-        break;
-}
-
-if (dayOfweek == 1) {
-    console.log('понедельник');
-}
-if (dayOfweek == 2) {
-    console.log('вторник');
-}
-
-let year = 2025
-if (year % 400 == 0) {
-    console.log('год високосный');
-} else if (year % 100 == 0) {
-    console.log('год НЕ високосный');
-} else if (year % 4 == 0) {
-    console.log('год високосный');
-} else {
-    console.log('год не високосный')
-}
-
-
-let parity = (year % 2 == 0) ? 'Четное' : 'Нечётное';
-console.log(parity);
-
-let protocol = 'FTP'
-switch (protocol) {
-    case 'HTTP':
-        console.log('HTTP');
-        break;
-    case 'HTTPS':
-        console.log('HTTPS');
-        break;
-    case 'FTP':
-        console.log('FTP');
-        break;
-
-    default:
-        console.log('Протокола нет');
-
-        break;
-}
-
-
-
 
 
 
@@ -323,18 +207,6 @@ console.log(mass);
 
 
 
-let a
-console.log(a);
-
-//@ts-ignore
-a = ((1 + 2), (3 + 4));
-console.log(a);
-
-
-
-
-
-
 let numStr = 123
 console.log(typeof numStr.toFixed().split(''));
 
@@ -351,15 +223,6 @@ console.log(null == 0);
 console.log(undefined == 0);
 
 
-
-
-// 'В каком году была опубликована спецификация ECMAScript-2015?'
-
-// let ages = prompt('В каком году была опубликована спецификация ECMAScript-2015?')
-
-// //@ts-ignore
-// ages==2015 ? console.log('все правильно'): console.log('ответ неверный');
-// ;
 
 // холодно тепло жарко горячо
 let temperature = 198
@@ -390,38 +253,6 @@ console.log(message);
 //   message = '';
 // }
 
-let x = 3
-if (x >= 3 && x <= 10) {
-    console.log(x);
-
-}
-
-
-
-
-
-console.clear()
-
-
-
-let oddEvenNumber = 2 as any
-switch (oddEvenNumber) {
-    case '':
-        console.log('Введите данные');
-        break
-    case 1:
-    case 3:
-    case 5:
-        console.log('число не чётное');
-        break
-    case 2:
-    case 4:
-    case 6:
-        console.log('число чётное');
-        break
-    default:
-        console.log('число вне диапазона')
-}
 
 
 
@@ -457,31 +288,6 @@ a1 = a1 == '' ? a2 : a1
 console.log(a1);
 
 
-
-
-
-
-
-
-
-let value1 = 1
-let value2 = 0
-let value3 = 3
-
-let result = +value1 + +value2 + +value3;
-console.log(result);
-
-let result2 = value1 && value2 && value3;
-console.log(result2);
-
-//@ts-ignore
-console.log(Boolean(0) == 0);
-console.log(typeof !!1);
-console.log(typeof Boolean(1));
-console.log(!!1 == Boolean(1));
-
-console.log(console.log(console.log('123')))
-
 // || - ищет первое истинное значение
 // && - ищет первое ложное значение
 
@@ -512,7 +318,7 @@ while (k > 1) {
 }
 
 
- 
+
 
 //!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
 
@@ -762,9 +568,9 @@ console.log(messages);
 
 
 for (let i = 0; i < 10; i++) {
-    if(i%2!=0) break 
+    if (i % 2 != 0) break
     console.log(i);
-    
+
 }
 
 
@@ -772,21 +578,11 @@ let tetsI = 1
 do {
     tetsI++
     console.log(tetsI);
-    
-} while (tetsI<5);
- 
+
+} while (tetsI < 5);
 
 
 
-// Реализуйте калькулятор. Пользователь вводит два числа, 
-// а программа выводит результаты действий + - * / между 
-// этими числами.
-
-let n1 = 5
-let n2 = 7
-let op = '+'
-let calc = +n1 + op + +n2
-// console.log(calc);
 
 
 
@@ -794,11 +590,11 @@ let calc = +n1 + op + +n2
 
 let res = 1000
 let itter = 0
-for (let i = 0; res>50; i++) {
-    res/=2
+for (let i = 0; res > 50; i++) {
+    res /= 2
     itter++
     console.log(res);
-    
+
 }
 console.log(`количество иттераций = ${itter}`);
 console.log(res);
@@ -806,20 +602,20 @@ console.log(res);
 const res2 = 100
 console.log(res2);
 
-function testFunc (name:string, surname = 'Ivanov') {
+function testFunc(name: string, surname = 'Ivanov') {
     console.log(`hello friend ${name} ${surname}`);
-    
+
 }
 testFunc('Ivan')
 testFunc('Petya', 'Petrov')
 
-function nothing(a:any, b:any) {
-    return a+b
+function nothing(a: any, b: any) {
+    return a + b
 }
-if (nothing()==undefined) {
+if (nothing() == undefined) {
     console.log('функции underfined!');
-} 
-console.log(typeof nothing(3,5))
+}
+console.log(typeof nothing(3, 5))
 
 
 
@@ -827,36 +623,36 @@ console.log(typeof nothing(3,5))
 let simpleNum = 19
 let checkSimpleNum = 0
 for (let i = 1; i <= simpleNum; i++) {
-    if (simpleNum%i==0) {
+    if (simpleNum % i == 0) {
         checkSimpleNum++
-    }   
+    }
 }
-console.log(checkSimpleNum>2 ? 'число составное' : 'число простое')
+console.log(checkSimpleNum > 2 ? 'число составное' : 'число простое')
 
 
 function summArguments() {
     let summ = 0
     for (let i = 0; i < arguments.length; i++) {
-        summ+=arguments[i]        
+        summ += arguments[i]
     }
-    return summ    
+    return summ
 }
-console.log(summArguments(1,3,8,4))
+console.log(summArguments(1, 3, 8, 4))
 
 
 
 
 let divideNum = 20
 for (let i = 1; i < divideNum; i++) {
-    divideNum/i
+    divideNum / i
     console.log(divideNum)
-    
-    
+
+
 }
 
-function checkUser (name:string) {
-    if(!name) return ('Вы не ввели имя')
-    if(typeof name != 'string') return ('Введите цифры')
+function checkUser(name: string) {
+    if (!name) return ('Вы не ввели имя')
+    if (typeof name != 'string') return ('Введите цифры')
     return `Привет ${name}`
 }
 
@@ -870,23 +666,23 @@ console.log(checkUser('Vasya'));
 //! 1. Написать функцию, которая принимает 2 числа и возвра
 //! щает меньшее из них.
 
-function compareNumbers (a:number, b:number) {
-     return a>b ? a : b
+function compareNumbers(a: number, b: number) {
+    return a > b ? a : b
 }
 
 
 //! 2. Написать функцию, которая возводит переданное число 
 //! в указанную степень.
 
-function multipleNumOnNum2 (num:number, num2:number) {
-    return num**num2
+function multipleNumOnNum2(num: number, num2: number) {
+    return num ** num2
 }
 
 
 //! 3. Написать функцию, которая принимает 2 числа и знак  
 //! (+ - * /), считает пример и возвращает результат.
 
-function calculator (num1:number, operator:any, num2:number) {
+function calculator(num1: number, operator: any, num2: number) {
     switch (operator) {
         case '+':
             console.log(num1 + num2);
@@ -907,14 +703,14 @@ function calculator (num1:number, operator:any, num2:number) {
 //! 4. Написать функцию, которая проверяет, является ли пере
 //! данное ей число простым.
 
-function simpleNums(num:number) {
+function simpleNums(num: number) {
     let count = 0
     for (let i = 2; i < num; i++) {
-        if (num%i==0) {
+        if (num % i == 0) {
             count++
-        }    
-    }    
-    return count>0 ? console.log('Число сложное') : console.log('Число простое') ;
+        }
+    }
+    return count > 0 ? console.log('Число сложное') : console.log('Число простое');
 }
 
 
@@ -924,35 +720,35 @@ function simpleNums(num:number) {
 //! деления первого параметра на второй. В функции исполь
 //! зовать только + - * /, оператор % не использовать. 
 
-function remainder (num1:number, num2:number) {
-    let quantaty = Math.floor(num1/num2)
-    return num1 - num2*quantaty
+function remainder(num1: number, num2: number) {
+    let quantaty = Math.floor(num1 / num2)
+    return num1 - num2 * quantaty
 }
 
 
 //! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
 //! возвращает их сумму.
 
-function sumNumbers (num1:number, 
-    num2:number, 
-    num3:number, 
-    num4:number, 
-    num5:number,) {
-        return num1 + num2 + num3 + num4 + num5
-    }
+function sumNumbers(num1: number,
+    num2: number,
+    num3: number,
+    num4: number,
+    num5: number,) {
+    return num1 + num2 + num3 + num4 + num5
+}
 
 
 //! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
 //! возвращает большее из них.
 
-function biggestNumber (num1:number, 
-    num2:number, 
-    num3:number, 
-    num4:number, 
-    num5:number,) {
-        return Math.max (num1, num2, num3, num4, num5)
+function biggestNumber(num1: number,
+    num2: number,
+    num3: number,
+    num4: number,
+    num5: number,) {
+    return Math.max(num1, num2, num3, num4, num5)
 
-    }
+}
 console.log(biggestNumber(5, 3, 10, 16, 4));
 
 
@@ -962,120 +758,109 @@ console.log(biggestNumber(5, 3, 10, 16, 4));
 //! числа выводить, определяется третьим параметром типа 
 //! bool (true – четные, false – нечетные).
 
-function evenOddNumber (minNum:number, maxNum:number, bool:boolean) {
+function evenOddNumber(minNum: number, maxNum: number, bool: boolean) {
     let mass = [] as any
     for (let i = minNum; i < maxNum; i++) {
-        if (i%2==0 && bool==true) {
+        if (i % 2 == 0 && bool == true) {
             mass.push(i)
         }
-        
-        if (i%2==1 && bool==false) {
+
+        if (i % 2 == 1 && bool == false) {
             mass.push(i)
         }
-        
+
     }
-    return  console.log(mass);
+    return console.log(mass);
 }
 
-evenOddNumber(3,15, false)
-evenOddNumber(10,20, false)
+evenOddNumber(3, 15, false)
+evenOddNumber(10, 20, false)
 
 
-const summAB = (a:number, b:number) => {
-   return a+b
+const summAB = (a: number, b: number) => {
+    return a + b
 }
-console.log(summAB(4,8));
+console.log(summAB(4, 8));
 
 
 // умножить числа от 0 до 5
 
-function rec(num:number, pow:number):any {
-    if (pow==1) {
-            return num        
+function rec(num: number, pow: number): any {
+    if (pow == 1) {
+        return num
     } else {
         return num * rec(num, (pow - 1))
     }
 
 }
 
-console.log(rec(3,3));
+console.log(rec(3, 3));
 
 
 
 
 
 
-function recursion(num:number, pow:number):any {
-    return pow == 1 ? num :  num * recursion(num, (pow-1)) 
+function recursion(num: number, pow: number): any {
+    return pow == 1 ? num : num * recursion(num, (pow - 1))
 }
 
-console.log(recursion(4,4));
+console.log(recursion(4, 4));
 
 
 
 
 
 
-//! <=============JS_DZ_Modul_1_Week_5==================>
 
-// * Во всех заданиях обязательно использовать рекурсию.
 
-//!  1. Написать функцию возведения числа в степень.
-
-// function recurs (num:number, pow:number):any {
-//     if (pow==1) return num
-//     return num * recurs(num, (pow-1))
-// }
-// console.log(recurs(4,2));
+console.clear()
 
 
 
-//! 2. Написать функцию поиска наибольшего общего делителя.
-
- 
+//! <=============JS_PZ_Modul_1_Week_5==================>
 
 
-    1
-    // Рекурсивная функция нахождения наибольшего общего делителя.
-    // function fun(a:any, b:any){
-//     a > b || ([a, b] = [b, a]);
-//     let length = b/2,i=2,k=1;
-//    return (function f()
-//  {
-//    if(i===length) return k;
-//        if(!(b % i) && !(a % i) ) {
-//        b /= i;
-//        a /= i;
-//        k *= i;
-//          return f()
-//        }
-//        else {
-    //          ++i;
-    //          return f()
-    //        }
-    //    })();
-    //  }
-    //  console.log(fun(50, 100));
-    
-    
-    
-    
-    
-    //! <=============JS_PZ_Modul_1_Week_5==================>
-    
-    
+//! 1. Написать функцию, которая вычисляет факториал задан
+//! ного числа.    
+
+function factorialNum(x: number): any {
+    if (x == 1) {
+        return x
+    } else {
+        return x * factorialNum(x - 1)
+    }
+}
+console.log(factorialNum(5));
+
+
+
 //! 2. Написать функцию, которая выводит все числа из заданного 
 //! пользователем диапазона в прямом порядке. И еще одну 
 //! функцию – для вывода в обратном порядке.
 
-function numberOfDiapazone (minNum:number, maxNum:number):any {
-    if(minNum == maxNum) {
+
+function numberOfDiapazone(minNum: number, maxNum: number): any {
+    if (minNum == maxNum) {
         return ''
     } else {
-        return (minNum) + '' + numberOfDiapazone(minNum+1, maxNum)
+        return (minNum) + '' + numberOfDiapazone(minNum + 1, maxNum)
     }
 }
 console.log(numberOfDiapazone(5, 10));
+
+
+function showReverseNumber(minNum: number, maxNum: number): any {
+    if (minNum == maxNum) {
+        return ''
+    } else {
+        return (maxNum - 1) + '' + showReverseNumber(minNum, maxNum - 1)
+    }
+}
+
+
+
+console.log(showReverseNumber(5, 10))
 
 
 
@@ -1084,11 +869,11 @@ console.log(numberOfDiapazone(5, 10));
 //! задом наперед. 
 //! Например: число 1234 вывести как 4321.
 
-function getReverseNum(num:number):number {
-    if(num<10) {
+function getReverseNum(num: number): number {
+    if (num < 10) {
         return num
     } else {
-        return +(num % 10 + '' + getReverseNum(Math.floor(num/10)))
+        return +(num % 10 + '' + getReverseNum(Math.floor(num / 10)))
     }
 }
 console.log(getReverseNum(123));
@@ -1115,7 +900,7 @@ console.log(getReverseNum(123));
 //     let accum = 0 as number
 //     for (let i = 0; i < arrayNum.length; i++) {
 //         accum+= +arrayNum[i]
-        
+
 //     }
 //     return accum
 
@@ -1126,11 +911,11 @@ console.log(getReverseNum(123));
 //! 5. Написать функцию, которая принимает число и выводит 
 //! соответствующее количество вложенных пар круглых скобок. 
 //! Например: число 4 – (((()))).
-function pairBrackets (num:number):any {
-    if(!num){
+function pairBrackets(num: number): any {
+    if (!num) {
         return ''
     } else {
-        return '(' + pairBrackets(num-1) + ')'
+        return '(' + pairBrackets(num - 1) + ')'
     }
 }
 console.log(pairBrackets(3));
@@ -1146,9 +931,6 @@ console.log(pairBrackets(3));
 
 
 
-//! 6. Написать конвертор валют. Пользователь вводит количе
-//! ство USD, выбирает, в какую валюту хочет перевести: EUR, 
-//! UAN или AZN, и получает в ответ соответствующую сумму.
 
 
 
@@ -1156,10 +938,138 @@ console.log(pairBrackets(3));
 
 
 
-//! 9. Задать пользователю 3 вопроса, в каждом вопросе по 3 ва
-//! рианта ответа. За каждый правильный ответ начисляется 2 
-//! балла. После вопросов выведите пользователю количество 
-//! набранных баллов.
+
+
+
+//! <=============JS_DZ_Modul_1_Week_5==================>
+
+// * Во всех заданиях обязательно использовать рекурсию.
+
+//!  1. Написать функцию возведения числа в степень.
+
+function numberInPow(x: number, y: number): any {
+    if (y == 1) {
+        return x
+    } else {
+        return x * (numberInPow(x, y - 1))
+    }
+}
+console.log(numberInPow(5, 3));
+
+
+
+
+
+//! 2. Написать функцию поиска наибольшего общего делителя.
+
+
+function recursiveFactor(n: number, d: number): any {
+    if (n < 1) return
+    if (n == 1) return;
+    if (n == 2) return [1, 2];
+    if (n / d < 2) return [n];
+    if (n % d == 0) return [d, ...recursiveFactor(n, d + 1)];
+    return recursiveFactor(n, d + 1);
+}
+console.log(recursiveFactor(10, 6));
+
+
+
+// Рекурсивная функция нахождения наибольшего общего делителя.
+// function fun(a:any, b:any){
+//     a > b || ([a, b] = [b, a]);
+//     let length = b/2,i=2,k=1;
+//    return (function f()
+//  {
+//    if(i===length) return k;
+//        if(!(b % i) && !(a % i) ) {
+//        b /= i;
+//        a /= i;
+//        k *= i;
+//          return f()
+//        }
+//        else {
+//          ++i;
+//          return f()
+//        }
+//    })();
+//  }
+//  console.log(fun(50, 100));
+
+
+
+// ?????????????????
+// function divider (x:number):any {
+//     if (x==1) {
+//         return x
+//     } 
+//         return x + '' + (divider(x-1))            
+//     }
+
+// console.log(divider(15));
+
+
+//! 3. Написать функцию для поиска максимальной цифры в числе.
+
+function maxNumber(num: number): any {
+    if (num < 10) {
+        return num
+    } else {
+        // let arr = num.toString().split('')
+        // return Math.max(...arr)
+        // return num.toString().length
+        return (num + '' + maxNumber(num - 1))
+    }
+}
+console.log(maxNumber(15));
+
+
+
+// function maxN(num:number) {
+//     let n = (num.toString().split('')) as any
+//     return Math.max(...n)
+
+// }
+
+// console.log(maxN(213))
+// console.log(maxN(343))
+// console.log(maxN(563))
+// console.log(maxN(21))
+
+
+
+// 6. Написать функцию, которая возвращает число Фибоначчи 
+// по переданному порядковому номеру. 
+// Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на 
+// том, что каждое число равно сумме двух предыдущих чисел. 
+// Например: порядковый номер 3 – число 2, порядковый 
+// номер 6 – число 8.
+
+// function fibo(n:number):number {
+//     if (n == 1 || n == 2) return 1;
+//         else 
+//     return fibo(n-2) + fibo(n-1);
+//   }
+// console.log(fibo(12));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1167,18 +1077,15 @@ console.log(pairBrackets(3));
 
 //! 3. Запросить число и степень. Возвести число в указанную 
 //! степень и вывести результат.
+// ????????????????????????
+// let yourNum = 8
+// let degree = 2
+// while (yourNum > 7) {
+//     console.log(yourNum ** degree)
+//     yourNum--
+// }
 
-let yourNum = 8
-let degree = 2
-while (yourNum > 7) {
-    console.log(yourNum ** degree)
-    yourNum--
-}
-
-console.log('----------');
-
-
-console.log((5**3));
+// console.log((5**3));
 
 
 
@@ -1199,15 +1106,14 @@ console.log((5**3));
 
 
 
-let jj = 0
-console.log(jj);
+// let jj = 0
+// console.log(jj);
 
-jj++
-console.log(jj);
+// jj++
+// console.log(jj);
 
-jj--
-console.log(jj);
-
+// jj--
+// console.log(jj);
 
 // console.log(jj++); возвращает старое значение (которое было до увеличения)
 // console.log(++jj); возвращает новое значение
@@ -1220,8 +1126,18 @@ console.log(jj);
 // while (jj<5) {
 //     jj++
 //     console.log(jj);
-    
+
 // }
+// let x = 29
+// console.log(x%10 + Math.floor(x/10));
+
+// (x % 10 + getSUmmDigitsNum(Math.floor(num/10)))
+
+
+
+// 5. Написать функцию, которая принимает число и выводит 
+// соответствующее количество вложенных пар круглых скобок. 
+// Например: число 4 – (((()))).
 
 
 
@@ -1232,6 +1148,143 @@ console.log(jj);
 
 
 
+
+
+
+function cells(x: number): any {
+    if (x == 1) {
+        return 1
+    } else {
+        return x + cells(x - 1)
+    }
+}
+
+console.log(cells(8));
+
+
+
+
+function evenOddnum2(x: number): any {
+    if (x == 0) {
+        return true
+    }
+    if (x == 1) {
+        return false
+    } else {
+        return x = evenOddnum2(x - 2)
+    }
+}
+console.log(evenOddnum2(16));
+
+
+//! Наибольший общий делитель через рекурсию
+// Function to calculate the greatest common divisor (GCD) 
+// of two numbers using Euclidean algorithm.
+let gcd = function (a: number, b: number): any {
+    // Base case: if b is 0, then GCD is a.
+    if (!b) {
+        return a;
+    }
+    // Recursive case: calculate GCD using the remainder 
+    // (a % b).
+    console.log('a= ' + a, 'b= ' + b, a % b);
+
+    return gcd(b, a % b);
+};
+
+// Example usage: Calculate and print the GCD of 2154 and 458.
+console.log(gcd(25, 40));
+
+
+let a = 25
+let b = 40
+console.log(a % b);
+
+
+
+
+
+
+//!!!!!!!!! объекты
+
+
+
+const object: any = {
+    a: 10,
+    b: 3,
+    c: 8,
+    3: 'ccc',
+    obj: {
+        z: '555'
+    },
+    'two words': 'имя/фамилия'
+}
+
+for (const key in object) {
+    console.log(object[key]); //! показывает значения
+    // console.log(key); //! показывает ключи
+}
+
+
+//! как выводить данные
+console.log(object.obj['z']);// обращаем внимание что 'z' строка
+console.log(object.a) // вывод ключа string
+console.log(object['a']) // вывод ключа string
+
+console.log(object[3]) // только так выводится number
+console.log(object['two words']);
+
+//! как добавить данные
+object.names = 'namesss'
+
+
+//! как удалить данные
+delete object.a
+delete object['two words']
+
+
+const object2 = object
+console.log(object2);
+
+console.log(object['c'] = 100); //ключ перезапишется (ссылается на одну ячейку)
+console.log(object2);
+console.log(object == object2);
+
+let x = 1
+console.log(x);
+
+let z = x
+console.log(z);
+
+x = 5
+console.log(x);
+console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
+
+console.log(typeof object)
+
+let stringi = JSON.stringify(object) //  в строку
+
+//! JSON.stringify() - Это позволяет упростить и повысить 
+//! эффективность такие задачи, как хранение данных в 
+//! локальном хранилище, отправка данных в HTTP - запросах 
+//! или парсинг данных из ответов сервера.
+
+console.log(stringi);
+console.log(typeof stringi);
+
+console.log(JSON.parse(stringi)); // обратно в объект
+
+// JSON.parse()
+// Этот метод особенно полезен, когда необходимо обработать
+// данные, полученные от сервера в формате JSON.
+
+
+const object3 = {...object} //клонировали объект (у него другой 'адрес хранения')
+
+object.b = 'changeB'
+
+console.log(object);
+console.log(object3)// свойство в третьем объекте теперь не меняются;
 
 
 
