@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div id="app">555</div>
+    <div id="app"></div>
 
     <form action="">
         <input type="text" name="your_name" id="name" placeholder="Имя">
@@ -75,6 +75,17 @@
 <div id="numbers"></div>
 
 
+
+<script>
+    const week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+for (let i = 0; i < week.length; i++) {
+  if (week[i] === 'Суббота' || week[i] === 'Воскресенье') {
+    document.write(week[i].bold());
+  } else {
+    document.write(week[i]);
+  }
+}
+</script>
 
 
 

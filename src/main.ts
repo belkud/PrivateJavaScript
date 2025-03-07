@@ -320,136 +320,6 @@ while (k > 1) {
 
 
 
-//!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
-
-//! 1. Подсчитать сумму всех чисел в заданном пользователем 
-//! диапазоне. 
-
-let minNum = 3
-let maxNum = 7
-let ctt = 0
-
-
-for (let i = minNum; i <= maxNum; i++) {
-    ctt += i
-    // console.log(ctt, 'i = ' + i);
-}
-console.log(ctt);
-
-
-//! 2. Запросить 2 числа и найти только наибольший общий 
-//! делитель.
-
-let num1 = 20
-let num2 = 15
-
-let numMass = [] as any
-for (let i = 0; i <= num1 && i <= num2; i++) {
-    if (num1 % i == 0 && num2 % i == 0) {
-        numMass.push(i)
-    }
-}
-console.log(numMass.pop());
-
-
-//! 3. Запросить у пользователя число и вывести все делители 
-//! этого числа.
-
-let userNum = 10
-for (let i = 0; i <= userNum; i++) {
-    if (userNum % i == 0)
-        console.log(i);
-}
-
-//! 4. Определить количество цифр в введенном числе.
-let x_num = '12345'
-console.log(x_num.length);
-
-let x_num2 = String(123456).length
-console.log(x_num2);
-
-let x_num3 = '12345777'
-let count3 = 0
-for (let i = 1; i <= x_num3.length; i++) {
-    count3++
-}
-console.log(`число состоит из: ${count3} цифр`);
-
-//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
-//! он ввел положительных, отрицательных и нулей. При этом 
-//! также посчитать, сколько четных и нечетных. Вывести 
-//! статистику на экран. Учтите, что достаточно одной пере
-//! менной (не 10) для ввода чисел пользователем.
-
-// let negative = 0;
-// let positive = 0;
-// let even = 0;
-// let odd = 0;
-// let zero = 0;
-
-// for (let i = 1; i <= 10; i++) {
-//   const num = Number(prompt("Введите число"));
-//   if (num > 0) {
-//     positive++;
-//   }
-//   if (num < 0) {
-//     negative++;
-//   }
-//   if (num == 0) {
-//     zero++;
-//   }
-//   if (num % 2 == 1) {
-//     odd++;
-//   }
-//   if (num % 2 == 0) {
-//     even++;
-//   }
-// }
-// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
-
-
-
-//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
-//! и знак, решить пример, вывести результат и спросить, хо
-//! чет ли он решить еще один пример. И так до тех пор, пока 
-//! пользователь не откажется.
-
-// do {
-//     var ab = +prompt('Введите первое число');
-//     var bb = +prompt('Введите второе число');
-//     var ib = prompt('Выберите знак - + / *');
-
-//     switch (ib) {
-//         case '+':
-//             alert(ab + bb);
-//             break;
-//         case '-':
-//             alert(ab - bb);
-//             break;
-//         case '/':
-//             alert(ab / bb);
-//             break;
-//         case '*':
-//             alert(ab * bb);
-//         default:
-//             break;
-//     }
-
-// } while (confirm('Хотите ли вы решить еще один пример?'));
-
-
-
-
-//! 7. Запросить у пользователя число и на сколько цифр его 
-//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
-//! число 123456 сдвинуть на 2 цифры, то получится 345612).
-
-let newNum = '123456'
-let shiftNum = 2
-let num = newNum.slice(0, shiftNum)
-let num3 = newNum.slice(shiftNum, 6)
-console.log(num3 + num);
-
 
 
 
@@ -1423,6 +1293,67 @@ console.log(arr5.length);
 //! Составьте массив дней недели. С помощью цикла for выведите все дни 
 //! недели, а выходные дни выведите жирным. 
 
+let dayApp = document.querySelector('#app') as HTMLDivElement
+let daysOfWeek = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] as any;
+
+for (let i = 0; i < daysOfWeek.length-1; i++) {
+    if(i < daysOfWeek.length -2) {
+        dayApp.innerHTML+= daysOfWeek[i] + '<br>'
+    } else {
+        dayApp.innerHTML += daysOfWeek[5].bold() + '<br>'
+        dayApp.innerHTML += daysOfWeek[6].bold() + '<br>' + '<br>'
+    }
+     
+    // else { //  покраска шрифта   
+    //     let span = document.createElement("span");
+    //     dayApp.append(span);
+    //     span.innerText += 'Воскресенье';
+    //     span.style.color = "red";
+
+    // }
+}
+    
+// Дано число n=1000. Делите его на 2 столько раз, пока результат деления не станет 
+// меньше 50. Какое число получится? Посчитайте количество итераций, необходимых 
+// для этого (итерация - это проход цикла), и запишите его в переменную num. 
+let n = 1000
+let iter = 0
+while (n>50) {
+    iter++
+    n/=2
+    console.log(n);
+    
+}
+console.log(iter);
+
+
+
+
+console.log('======');
+
+
+let arr6 = [2, -5, 9, -15, -10, 4]
+let mass6 = []
+for (let i = 0; i < arr6.length; i++) {
+    let x = Math.abs(arr6[i])
+    if (arr6[i]<0) {
+        mass6.push(x)
+    }
+}
+
+for (let i = 0; i < mass6.length; i++) {
+    if (mass6[i]%2==1) {
+        console.log(mass6[i]);
+        
+    }
+    
+    
+}
+    
+    // && arr6[i]%2==0
+    // console.log(Math.abs(arr6[i]));
+    // console.log(x)
+    
 
 
 
@@ -1433,24 +1364,146 @@ console.log(arr5.length);
 
 
 
+//!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
+
+//! 1. Подсчитать сумму всех чисел в заданном пользователем 
+//! диапазоне. 
+
+let minNum = 3
+let maxNum = 7
+let ctt = 0
+
+
+for (let i = minNum; i <= maxNum; i++) {
+    ctt += i
+    // console.log(ctt, 'i = ' + i);
+}
+console.log(ctt);
+
+
+//! 2. Запросить 2 числа и найти только наибольший общий 
+//! делитель.
+
+let num1 = 20
+let num2 = 15
+
+let numMass = [] as any
+for (let i = 0; i <= num1 && i <= num2; i++) {
+    if (num1 % i == 0 && num2 % i == 0) {
+        numMass.push(i)
+    }
+}
+console.log(numMass.pop());
+
+
+//! 3. Запросить у пользователя число и вывести все делители 
+//! этого числа.
+
+let userNum = 10
+for (let i = 0; i <= userNum; i++) {
+    if (userNum % i == 0)
+        console.log(i);
+}
+
+//! 4. Определить количество цифр в введенном числе.
+let x_num = '12345'
+console.log(x_num.length);
+
+let x_num2 = String(123456).length
+console.log(x_num2);
+
+let x_num3 = '12345777'
+let count3 = 0
+for (let i = 1; i <= x_num3.length; i++) {
+    count3++
+}
+console.log(`число состоит из: ${count3} цифр`);
+
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
+//! он ввел положительных, отрицательных и нулей. При этом 
+//! также посчитать, сколько четных и нечетных. Вывести 
+//! статистику на экран. Учтите, что достаточно одной пере
+//! менной (не 10) для ввода чисел пользователем.
+
+// let negative = 0;
+// let positive = 0;
+// let even = 0;
+// let odd = 0;
+// let zero = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   const num = Number(prompt("Введите число"));
+//   if (num > 0) {
+//     positive++;
+//   }
+//   if (num < 0) {
+//     negative++;
+//   }
+//   if (num == 0) {
+//     zero++;
+//   }
+//   if (num % 2 == 1) {
+//     odd++;
+//   }
+//   if (num % 2 == 0) {
+//     even++;
+//   }
+// }
+// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+
+
+//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
+//! и знак, решить пример, вывести результат и спросить, хо
+//! чет ли он решить еще один пример. И так до тех пор, пока 
+//! пользователь не откажется.
+
+// do {
+//     var ab = +prompt('Введите первое число');
+//     var bb = +prompt('Введите второе число');
+//     var ib = prompt('Выберите знак - + / *');
+
+//     switch (ib) {
+//         case '+':
+//             alert(ab + bb);
+//             break;
+//         case '-':
+//             alert(ab - bb);
+//             break;
+//         case '/':
+//             alert(ab / bb);
+//             break;
+//         case '*':
+//             alert(ab * bb);
+//         default:
+//             break;
+//     }
+
+// } while (confirm('Хотите ли вы решить еще один пример?'));
 
 
 
 
+//! 7. Запросить у пользователя число и на сколько цифр его 
+//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
+//! число 123456 сдвинуть на 2 цифры, то получится 345612).
+
+let newNum = '123456'
+let shiftNum = 2
+let num = newNum.slice(0, shiftNum)
+let num3 = newNum.slice(shiftNum, 6)
+console.log(num3 + num);
 
 
+// 10???????????????????????????????? похожее условие
+//! 2. Делить число 1000 на 2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let res = 1000
+let itter = 0
+for (let i = 0; res > 50; i++) {
+    res /= 2
+    console.log(res);
+    itter++
+}
+console.log(`количество иттераций = ${itter}`);
+console.log(res);
