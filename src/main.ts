@@ -1498,12 +1498,60 @@ console.log(num3 + num);
 // 10???????????????????????????????? похожее условие
 //! 2. Делить число 1000 на 2
 
-let res = 1000
-let itter = 0
-for (let i = 0; res > 50; i++) {
-    res /= 2
-    console.log(res);
-    itter++
+// let res = 1000
+// let itter = 0
+// for (let i = 0; res > 50; i++) {
+//     res /= 2
+//     console.log(res);
+//     itter++
+// }
+// console.log(`количество иттераций = ${itter}`);
+// console.log(res);
+
+
+
+
+
+sayHi(4,8)
+
+// функция может быть объявлена в любом месте
+function sayHi (a:number, b:number) {
+    return console.log(a +b);
+    
 }
-console.log(`количество иттераций = ${itter}`);
-console.log(res);
+sayHi(3,5)
+
+
+// добавление переменной
+function named() {
+    let nam = 'Vasya'
+    return console.log(`${nam}`);
+    
+}
+named()
+
+//переприсваивание
+function summN(a:number, b = 10):any {
+    return a+b
+}
+console.log(summN(5));
+
+
+
+
+// проверка пользователя
+function userNew (name:string) {
+    if(name==undefined || name=='') {
+        return console.log('введите имя');
+    } else {
+        return console.log(name);       
+    }
+}
+
+userNew('')
+
+
+
+
+
+
