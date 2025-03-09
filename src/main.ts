@@ -1553,6 +1553,7 @@ userNew('')
 
 
 // Задание для самостоятельной работы
+console.clear()
 
 
 //! 4. Напишите скрипт, который принимает от пользователя 
@@ -1560,21 +1561,19 @@ userNew('')
 //! и выводит количество лет, по прошествии которых 
 //! вклад увеличится вдвое.
 
-// let money = 1000
-// let doubleMoney = 2*money
-// let deposit = 0.1
-// let year = 0
-// for (let i = 0; i < 100; i++) {
-//     money += money * deposit
-//     if (money <= doubleMoney) {
-//         console.log(year);
-//         console.log(money);
-        
-//         year++
-//     }
-// }    
+let money = 1000
+let doubleMoney = 2*money
+let deposit = 0.1
+let year = 0
+for (let i = 0; i < Infinity; i++) {
+    money += money * deposit
+    if (money <= doubleMoney) {
+        year++
+    }
+    break
+}    
 
-// console.log(year+1);
+console.log(year+1);
 
 //? money * 8% = 10.8
 //? money * 8% = 11,66
@@ -1598,7 +1597,6 @@ for (let i = 1; i <= 20; i++) {
     }
 }
 console.log(nums);
-console.clear()
 
 
 //! 6. Из-за утечки из бака охлаждения ежедневно вытекает 
@@ -1611,15 +1609,36 @@ console.clear()
 let capacity = 30   // литров
 let capacityStart = capacity
 let waterLeak = 10   // процентов
-let dayysOfwork = 0
+let daysOfwork = 0
 
 for (let i = 0; i < capacity; i++) {
-    dayysOfwork++
+    daysOfwork++
     capacity-= capacity*waterLeak/100
 if (capacity<10) break
 // console.log(capacity);
 }
-console.log(`${capacityStart} литров хватит на ${dayysOfwork} дней работы`);
+console.log(`${capacityStart} литров хватит на ${daysOfwork} дней работы`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
