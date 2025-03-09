@@ -1560,21 +1560,21 @@ userNew('')
 //! и выводит количество лет, по прошествии которых 
 //! вклад увеличится вдвое.
 
-let money = 1000
-let doubleMoney = 2*money
-let deposit = 0.1
-let year = 0
-for (let i = 0; i < 100; i++) {
-    money += money * deposit
-    if (money <= doubleMoney) {
-        console.log(year);
-        console.log(money);
+// let money = 1000
+// let doubleMoney = 2*money
+// let deposit = 0.1
+// let year = 0
+// for (let i = 0; i < 100; i++) {
+//     money += money * deposit
+//     if (money <= doubleMoney) {
+//         console.log(year);
+//         console.log(money);
         
-        year++
-    }
-}    
+//         year++
+//     }
+// }    
 
-console.log(year+1);
+// console.log(year+1);
 
 //? money * 8% = 10.8
 //? money * 8% = 11,66
@@ -1582,15 +1582,44 @@ console.log(year+1);
 
 
 
-// 5. Напишите скрипт, который выводит ровно 10 слу
-// чайных чисел из диапазона 1–20, кроме тех, которые 
-// делятся на 4.
+//! 5. Напишите скрипт, который выводит ровно 10 слу
+//! чайных чисел из диапазона 1–20, кроме тех, которые 
+//! делятся на 4.
+let nums = []
+let accN = 0
+for (let i = 1; i <= 20; i++) {
+    let n = Math.round(Math.random()*20)
+    if (n%4!=0) {
+        accN++
+        nums.push(n)
+    }
+    if (accN==10) {
+        break
+    }
+}
+console.log(nums);
+console.clear()
 
-// 6. Из-за утечки из бака охлаждения ежедневно вытекает 
-// 10% налитой воды. При объеме воды менее 10 литров 
-// возникает аварийная ситуация. Составьте программу, 
-// которая запрашивает у пользователя первоначальный 
-// объем воды и рассчитывает, на сколько дней работы 
-// этого хватит.
+
+//! 6. Из-за утечки из бака охлаждения ежедневно вытекает 
+//! 10% налитой воды. При объеме воды менее 10 литров 
+//! возникает аварийная ситуация. Составьте программу, 
+//! которая запрашивает у пользователя первоначальный 
+//! объем воды и рассчитывает, на сколько дней работы 
+//! этого хватит.
+
+let capacity = 30   // литров
+let capacityStart = capacity
+let waterLeak = 10   // процентов
+let dayysOfwork = 0
+
+for (let i = 0; i < capacity; i++) {
+    dayysOfwork++
+    capacity-= capacity*waterLeak/100
+if (capacity<10) break
+// console.log(capacity);
+}
+console.log(`${capacityStart} литров хватит на ${dayysOfwork} дней работы`);
+
 
 
