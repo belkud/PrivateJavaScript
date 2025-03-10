@@ -1276,262 +1276,6 @@ for (let i = 0; i < mass6.length; i++) {
 
 
 
-//!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
-
-//! 1. Подсчитать сумму всех чисел в заданном пользователем 
-//! диапазоне. 
-
-let minNum = 3
-let maxNum = 7
-let ctt = 0
-
-
-for (let i = minNum; i <= maxNum; i++) {
-    ctt += i
-    // console.log(ctt, 'i = ' + i);
-}
-console.log(ctt);
-
-
-//! 2. Запросить 2 числа и найти только наибольший общий 
-//! делитель.
-
-let num1 = 20
-let num2 = 15
-
-let numMass = [] as any
-for (let i = 0; i <= num1 && i <= num2; i++) {
-    if (num1 % i == 0 && num2 % i == 0) {
-        numMass.push(i)
-    }
-}
-console.log(numMass.pop());
-
-
-//! 3. Запросить у пользователя число и вывести все делители 
-//! этого числа.
-
-let userNum = 10
-for (let i = 0; i <= userNum; i++) {
-    if (userNum % i == 0)
-        console.log(i);
-}
-
-//! 4. Определить количество цифр в введенном числе.
-let x_num = '12345'
-console.log(x_num.length);
-
-let x_num2 = String(123456).length
-console.log(x_num2);
-
-let x_num3 = '12345777'
-let count3 = 0
-for (let i = 1; i <= x_num3.length; i++) {
-    count3++
-}
-console.log(`число состоит из: ${count3} цифр`);
-
-//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
-//! он ввел положительных, отрицательных и нулей. При этом 
-//! также посчитать, сколько четных и нечетных. Вывести 
-//! статистику на экран. Учтите, что достаточно одной пере
-//! менной (не 10) для ввода чисел пользователем.
-
-// let negative = 0;
-// let positive = 0;
-// let even = 0;
-// let odd = 0;
-// let zero = 0;
-
-// for (let i = 1; i <= 10; i++) {
-//   const num = Number(prompt("Введите число"));
-//   if (num > 0) {
-//     positive++;
-//   }
-//   if (num < 0) {
-//     negative++;
-//   }
-//   if (num == 0) {
-//     zero++;
-//   }
-//   if (num % 2 == 1) {
-//     odd++;
-//   }
-//   if (num % 2 == 0) {
-//     even++;
-//   }
-// }
-// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
-
-
-
-//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
-//! и знак, решить пример, вывести результат и спросить, хо
-//! чет ли он решить еще один пример. И так до тех пор, пока 
-//! пользователь не откажется.
-
-// do {
-//     var ab = +prompt('Введите первое число');
-//     var bb = +prompt('Введите второе число');
-//     var ib = prompt('Выберите знак - + / *');
-
-//     switch (ib) {
-//         case '+':
-//             alert(ab + bb);
-//             break;
-//         case '-':
-//             alert(ab - bb);
-//             break;
-//         case '/':
-//             alert(ab / bb);
-//             break;
-//         case '*':
-//             alert(ab * bb);
-//         default:
-//             break;
-//     }
-
-// } while (confirm('Хотите ли вы решить еще один пример?'));
-
-
-
-
-//! 7. Запросить у пользователя число и на сколько цифр его 
-//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
-//! число 123456 сдвинуть на 2 цифры, то получится 345612).
-
-let newNum = '123456'
-let shiftNum = 2
-let num = newNum.slice(0, shiftNum)
-let num3 = newNum.slice(shiftNum, 6)
-console.log(num3 + num);
-
-
-// 10???????????????????????????????? похожее условие
-//! 2. Делить число 1000 на 2
-
-// let res = 1000
-// let itter = 0
-// for (let i = 0; res > 50; i++) {
-//     res /= 2
-//     console.log(res);
-//     itter++
-// }
-// console.log(`количество иттераций = ${itter}`);
-// console.log(res);
-
-
-
-
-
-sayHi(4,8)
-
-// функция может быть объявлена в любом месте
-function sayHi (a:number, b:number) {
-    return console.log(a +b);
-    
-}
-sayHi(3,5)
-
-
-// добавление переменной
-function named() {
-    let nam = 'Vasya'
-    return console.log(`${nam}`);
-    
-}
-named()
-
-//переприсваивание
-function summN(a:number, b = 10):any {
-    return a+b
-}
-console.log(summN(5));
-
-
-
-
-// проверка пользователя
-function userNew (name:string) {
-    if(name==undefined || name=='') {
-        return console.log('введите имя');
-    } else {
-        return console.log(name);       
-    }
-}
-
-userNew('')
-
-
-
-// Задание для самостоятельной работы
-console.clear()
-
-
-//! 4. Напишите скрипт, который принимает от пользователя 
-//! величину годовой депозитной ставки (в процентах) 
-//! и выводит количество лет, по прошествии которых 
-//! вклад увеличится вдвое.
-
-let money = 1000
-let doubleMoney = 2*money
-let deposit = 0.1
-let year = 0
-for (let i = 0; i < Infinity; i++) {
-    money += money * deposit
-    if (money <= doubleMoney) {
-        year++
-    }
-    break
-}    
-
-console.log(year+1);
-
-//? money * 8% = 10.8
-//? money * 8% = 11,66
-//? money * 8% = 
-
-
-
-//! 5. Напишите скрипт, который выводит ровно 10 слу
-//! чайных чисел из диапазона 1–20, кроме тех, которые 
-//! делятся на 4.
-let nums = []
-let accN = 0
-for (let i = 1; i <= 20; i++) {
-    let n = Math.round(Math.random()*20)
-    if (n%4!=0) {
-        accN++
-        nums.push(n)
-    }
-    if (accN==10) {
-        break
-    }
-}
-console.log(nums);
-
-
-//! 6. Из-за утечки из бака охлаждения ежедневно вытекает 
-//! 10% налитой воды. При объеме воды менее 10 литров 
-//! возникает аварийная ситуация. Составьте программу, 
-//! которая запрашивает у пользователя первоначальный 
-//! объем воды и рассчитывает, на сколько дней работы 
-//! этого хватит.
-
-let capacity = 30   // литров
-let capacityStart = capacity
-let waterLeak = 10   // процентов
-let daysOfwork = 0
-
-for (let i = 0; i < capacity; i++) {
-    daysOfwork++
-    capacity-= capacity*waterLeak/100
-if (capacity<10) break
-// console.log(capacity);
-}
-console.log(`${capacityStart} литров хватит на ${daysOfwork} дней работы`);
-
-
 
 //! 3. Написать функцию для поиска максимальной цифры в числе.
 
@@ -1787,10 +1531,6 @@ console.log(getRevideFract(fract1, fract2));
 
 
 
-
-
-
-
 //!  5. Функция сокращения объекта-дроби.
 //? function getRedusedSumOfFractions2(fract1:any, fract2:any) {
 //?   let arr = [] as any
@@ -1822,6 +1562,280 @@ console.log(getRevideFract(fract1, fract2));
 
 
 
+
+
+//!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
+
+//! 1. Подсчитать сумму всех чисел в заданном пользователем 
+//! диапазоне. 
+
+let minNum = 3
+let maxNum = 7
+let ctt = 0
+
+
+for (let i = minNum; i <= maxNum; i++) {
+    ctt += i
+    // console.log(ctt, 'i = ' + i);
+}
+console.log(ctt);
+
+
+//! 2. Запросить 2 числа и найти только наибольший общий 
+//! делитель.
+
+let num1 = 20
+let num2 = 15
+
+let numMass = [] as any
+for (let i = 0; i <= num1 && i <= num2; i++) {
+    if (num1 % i == 0 && num2 % i == 0) {
+        numMass.push(i)
+    }
+}
+console.log(numMass.pop());
+
+
+//! 3. Запросить у пользователя число и вывести все делители 
+//! этого числа.
+
+let userNum = 10
+for (let i = 0; i <= userNum; i++) {
+    if (userNum % i == 0)
+        console.log(i);
+}
+
+//! 4. Определить количество цифр в введенном числе.
+let x_num = '12345'
+console.log(x_num.length);
+
+let x_num2 = String(123456).length
+console.log(x_num2);
+
+let x_num3 = '12345777'
+let count3 = 0
+for (let i = 1; i <= x_num3.length; i++) {
+    count3++
+}
+console.log(`число состоит из: ${count3} цифр`);
+
+//! 5. Запросить у пользователя 10 чисел и подсчитать, сколько 
+//! он ввел положительных, отрицательных и нулей. При этом 
+//! также посчитать, сколько четных и нечетных. Вывести 
+//! статистику на экран. Учтите, что достаточно одной пере
+//! менной (не 10) для ввода чисел пользователем.
+
+// let negative = 0;
+// let positive = 0;
+// let even = 0;
+// let odd = 0;
+// let zero = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//   const num = Number(prompt("Введите число"));
+//   if (num > 0) {
+//     positive++;
+//   }
+//   if (num < 0) {
+//     negative++;
+//   }
+//   if (num == 0) {
+//     zero++;
+//   }
+//   if (num % 2 == 1) {
+//     odd++;
+//   }
+//   if (num % 2 == 0) {
+//     even++;
+//   }
+// }
+// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+
+
+
+//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
+//! и знак, решить пример, вывести результат и спросить, хо
+//! чет ли он решить еще один пример. И так до тех пор, пока 
+//! пользователь не откажется.
+
+// do {
+//     var ab = +prompt('Введите первое число');
+//     var bb = +prompt('Введите второе число');
+//     var ib = prompt('Выберите знак - + / *');
+
+//     switch (ib) {
+//         case '+':
+//             alert(ab + bb);
+//             break;
+//         case '-':
+//             alert(ab - bb);
+//             break;
+//         case '/':
+//             alert(ab / bb);
+//             break;
+//         case '*':
+//             alert(ab * bb);
+//         default:
+//             break;
+//     }
+
+// } while (confirm('Хотите ли вы решить еще один пример?'));
+
+
+
+
+//! 7. Запросить у пользователя число и на сколько цифр его 
+//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
+//! число 123456 сдвинуть на 2 цифры, то получится 345612).
+
+let newNum = '123456'
+let shiftNum = 2
+let num = newNum.slice(0, shiftNum)
+let num3 = newNum.slice(shiftNum, 6)
+console.log(num3 + num);
+
+
+// 10???????????????????????????????? похожее условие
+//! 2. Делить число 1000 на 2
+
+// let res = 1000
+// let itter = 0
+// for (let i = 0; res > 50; i++) {
+//     res /= 2
+//     console.log(res);
+//     itter++
+// }
+// console.log(`количество иттераций = ${itter}`);
+// console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// !!!!!!!!!!Задание для самостоятельной работы
+
+
+
+//! 4. Напишите скрипт, который принимает от пользователя 
+//! величину годовой депозитной ставки (в процентах) 
+//! и выводит количество лет, по прошествии которых 
+//! вклад увеличится вдвое.
+
+let money = 1000
+let doubleMoney = 2*money
+let deposit = 0.1
+let year = 0
+for (let i = 0; i < Infinity; i++) {
+    money += money * deposit
+    if (money <= doubleMoney) {
+        year++
+    }
+    break
+}    
+
+console.log(year+1);
+
+//? money * 8% = 10.8
+//? money * 8% = 11,66
+//? money * 8% = 
+
+
+
+//! 5. Напишите скрипт, который выводит ровно 10 слу
+//! чайных чисел из диапазона 1–20, кроме тех, которые 
+//! делятся на 4.
+let nums = []
+let accN = 0
+for (let i = 1; i <= 20; i++) {
+    let n = Math.round(Math.random()*20)
+    if (n%4!=0) {
+        accN++
+        nums.push(n)
+    }
+    if (accN==10) {
+        break
+    }
+}
+console.log(nums);
+
+
+//! 6. Из-за утечки из бака охлаждения ежедневно вытекает 
+//! 10% налитой воды. При объеме воды менее 10 литров 
+//! возникает аварийная ситуация. Составьте программу, 
+//! которая запрашивает у пользователя первоначальный 
+//! объем воды и рассчитывает, на сколько дней работы 
+//! этого хватит.
+
+let capacity = 30   // литров
+let capacityStart = capacity
+let waterLeak = 10   // процентов
+let daysOfwork = 0
+
+for (let i = 0; i < capacity; i++) {
+    daysOfwork++
+    capacity-= capacity*waterLeak/100
+if (capacity<10) break
+// console.log(capacity);
+}
+console.log(`${capacityStart} литров хватит на ${daysOfwork} дней работы`);
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!! ТЕОРИЯ ФУНКЦИИ!!!!!!!!!!!!!
+
+sayHi(4,8)
+
+// функция может быть объявлена в любом месте
+function sayHi (a:number, b:number) {
+    return console.log(a +b);
+    
+}
+sayHi(3,5)
+
+
+// добавление переменной
+function named() {
+    let nam = 'Vasya'
+    return console.log(`${nam}`);
+    
+}
+named()
+
+//переприсваивание
+function summN(a:number, b = 10):any {
+    return a+b
+}
+console.log(summN(5));
+
+
+
+
+// проверка пользователя
+function userNew (name:string) {
+    if(name==undefined || name=='') {
+        return console.log('введите имя');
+    } else {
+        return console.log(name);       
+    }
+}
+
+userNew('')
 
 
 
