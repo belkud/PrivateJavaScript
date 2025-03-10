@@ -592,10 +592,6 @@ console.log(recursion(4, 4));
 
 
 
-console.clear()
-
-
-
 //! <=============JS_PZ_Modul_1_Week_5==================>
 
 
@@ -1078,67 +1074,8 @@ console.log(object3)// свойство в третьем объекте теп�
 
 //!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
 
-//! Задания, в которых необходимо использовать WHILE.
-//!  1. Вывести # столько раз, сколько указал пользователь.
-
-let enterNum = 5
-let loc = ''
-while (enterNum > 0) {
-    enterNum--
-    loc += '#'
-}
-console.log(loc);
 
 
-//! 2. Пользователь ввел число, а на экран вывелись все числа 
-//! от введенного до 0.
-
-
-let numUser = 5
-let strWithNum = ''
-while (numUser > 0) {
-    strWithNum += numUser + " "
-    numUser--
-}
-console.log(strWithNum);
-
-
-//! 3. Запросить число и степень. Возвести число в указанную 
-//! степень и вывести результат.
-
-// let yourNum = 8
-// let degree = 2
-// while (yourNum > 7) {
-//     console.log(yourNum ** degree)
-//     yourNum--
-// }
-
-// console.log('----------');
-
-
-//! 4. Запросить 2 числа и найти все общие делители.
-
-// let firstN = 30
-// let secondN = 20
-// let i = firstN
-
-// while (i > 0) {
-//     i--
-//     if (firstN % i == 0 && secondN % i == 0) {
-//         console.log(i);
-//         break
-//     }        
-// }
-
-//! 5. Посчитать факториал введенного пользователем числа.
-
-// let fact = 5
-// let mult = 1
-// while(fact>0) {
-//     mult*=fact
-//     fact--
-// }
-// console.log(mult);
 
 
 
@@ -1171,34 +1108,9 @@ console.log(`количество иттераций = ${itter}`);
 console.log(res);
 
 
-let xx = 0
-
-do { // выполнится хоть один раз даже если условие неверно
-    console.log(xx);
-    xx++
-} while (xx<5) 
 
 
 
-let yy = 0
-
-while (yy<5) { // условие неверное - не выполнится
-    console.log(yy);
-    yy++
-}
-
-console.log('=========');
-
-
-
-
-
-// let i = 0            // не рекомендовано
-// for (; i <= 10;) {
-//     console.log(i);
-//     i++
-        
-// }
 
 
 
@@ -1621,6 +1533,157 @@ console.log(`${capacityStart} литров хватит на ${daysOfwork} дн�
 
 
 
+//! 3. Написать функцию для поиска максимальной цифры в числе.
+
+let maxN = '45834693'
+let mass2 = maxN.split('')
+let accum2 = 0
+let uu = -100
+for (let i = 0; i < maxN.length; i++) {
+    if (mass2[i]>uu) {
+        uu = mass2[i] 
+        console.log(uu);
+    }
+}
+        // function maxNumber(params:type) {
+            
+        // }
+
+
+
+//! 5. Написать функцию для вывода всех множителей передан
+//! ного числа в возрастающем порядке. 
+//! Например: число 18 – множители 2 * 3 * 3.
+
+// ????????????????????????
+
+// function everyMult(params:type) {
+    
+// }
+
+let multies = 18
+let dividers = 1
+for (let i = 2; i < multies; i++) {
+    if (multies%i==0) {
+        console.log(i);
+            
+    }
+
+console.clear()
+
+    // dividers==multies/i
+    // console.log(dividers);
+}
+
+
+
+
+//! Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
+//! и следующие функции для работы с этим объектом.
+
+// type Fraction = {
+//     numerator:number,
+//     denominator:number
+//   }
+  
+  const fraction1 = {
+    numerator: 1,
+    denominator: 2
+  }
+  
+  const fraction2 = {
+    numerator: 3,
+    denominator: 10
+  } 
+  
+
+  function transformToCommonDenominator(fr1:any, fr2:any) {
+    return {
+      fr1: {
+        numerator: fr1.numerator*fr2.denominator,
+        denominator: fr1.denominator*fr2.denominator
+      },
+      fr2: {
+        numerator: fr2.numerator * fr1.denominator,
+        denominator: fr1.denominator * fr2.denominator
+      }
+    }
+  }
+  console.log(transformToCommonDenominator(fraction1, fraction2));
+  
+
+  // 1 Функция сложения 2 - х объектов - дробей.
+  
+  function getSumOfFractions(fr1:Fraction, fr2:Fraction) {
+    const commonFractions = transformToCommonDenominator(fr1, fr2)
+    return {
+      numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
+      denominator: commonFractions.fr1.denominator
+    }
+  }
+  
+  console.log(getSumOfFractions(fraction1, fraction2))
+
+  
+
+  function getRedusedSumOfFractions(fr1: Fraction, fr2: Fraction) {
+    const result = getSumOfFractions(fr1, fr2)
+    return getReductedFraction(result)
+  }
+  
+  console.log(getRedusedSumOfFractions(fraction1, fraction2))
+  
+
+  // 2 Функция вычитания 2 - х объектов - дробей.
+  
+  function getSubtrOfFractions(fr1: Fraction, fr2: Fraction) {
+    const commonFractions = transformToCommonDenominator(fr1, fr2)
+    const result = {
+      numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
+      denominator: commonFractions.fr1.denominator
+    }
+    return getReductedFraction(result)
+  }
+  
+  console.log(getSubtrOfFractions(fraction1, fraction2))
+  
+  // 3 Функция умножения 2 - х объектов - дробей.
+  
+  function getMulOfFractions(fr1: Fraction, fr2: Fraction) {
+    const result = {
+      numerator: fr1.numerator * fr2.numerator,
+      denominator: fr1.denominator * fr2.denominator
+    }
+    return getReductedFraction(result)
+  }
+  
+  console.log(getMulOfFractions(fraction1, fraction2))
+  
+  // 4 Функция деления 2 - х объектов - дробей.
+  
+  function getDivOfFractions(fr1: Fraction, fr2: Fraction) {
+    const result = {
+      numerator: fr1.numerator * fr2.denominator,
+      denominator: fr1.denominator * fr2.numerator
+    }
+    return getReductedFraction(result)
+  }
+  
+  console.log(getDivOfFractions(fraction1, fraction2))
+  
+  // 5 Функция сокращения объекта - дроби.
+  
+  function getReductedFraction(fr:Fraction) {
+    const min = fr.numerator<fr.denominator? fr.numerator:fr.denominator
+    for (let i=min;i>1; i--) {
+      if (fr.numerator%i==0 && fr.denominator%i==0) {
+        fr.numerator /=i
+        fr.denominator /=i
+        return getReductedFraction(fr)
+      }
+    }
+    return fr
+  }
 
 
 
@@ -1632,6 +1695,127 @@ console.log(`${capacityStart} литров хватит на ${daysOfwork} дн�
 
 
 
+
+
+
+
+
+
+
+
+
+  
+
+
+// console.clear()
+
+//! Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
+//! и следующие функции для работы с этим 
+
+
+
+
+
+
+const fract1 ={
+    numerator: 6,       
+    denumerator: 2,     
+}
+
+const fract2 ={
+    numerator: 5,       
+    denumerator: 3,    
+} 
+
+//! Приведение к общему знаменателю !!!!!!!!!!!!!!!!!
+function сommonDenominator (fract1:any,fract2:any) {
+    return {
+        fr1: {
+          numerator: fract1.numerator*fract2.denumerator,
+          denominator: fract1.denumerator*fract2.denumerator
+        },
+        fr2: {
+          numerator: fract2.numerator * fract1.denumerator,
+          denominator: fract2.denumerator*fract1.denumerator
+        }
+      }
+}
+console.log(сommonDenominator(fract1, fract2));
+
+
+
+//!  1. Функция сложения 2-х объектов-дробей.
+function summFract (fract1:any, fract2:any){
+    let result = сommonDenominator(fract1, fract2)
+    return {
+        numerator: result.fr1.numerator + result.fr2.numerator,
+        denominator: result.fr2.denominator
+    }
+}
+console.log(summFract(fract1, fract2));
+
+
+//!  2. Функция вычитания 2-х объектов-дробей.
+function minusFract (fract1:any, fract2:any){
+    let result = сommonDenominator(fract1, fract2)
+    return {
+        numerator: result.fr1.numerator - result.fr2.numerator,
+        denominator: result.fr2.denominator
+    }
+}
+console.log(minusFract(fract1, fract2));
+
+
+//!  3. Функция умножения 2-х объектов-дробей.
+function getMultyFract (fract1:any, fract2:any){
+    return {
+        numerator: fract1.numerator * fract2.numerator,
+        denominator: fract1.denumerator * fract2.denumerator
+    }
+}
+console.log(getMultyFract(fract1, fract2));
+
+
+//!  4. Функция деления 2-х объектов-дробей.
+function getRevideFract (fract1:any, fract2:any){
+    return {
+        numerator: fract1.numerator * fract2.denumerator,
+        denominator: fract1.denumerator * fract2.numerator
+    }
+}
+console.log(getRevideFract(fract1, fract2));
+
+
+
+
+
+
+
+//!  5. Функция сокращения объекта-дроби.
+//? function getRedusedSumOfFractions2(fract1:any, fract2:any) {
+//?   let arr = [] as any
+//?     for (let i = 0; i < fract1 && i<fract2; i++) {
+//?         if (fract1%i==0 && fract2%i==0)    
+//?         arr.push[i]
+//?     return (arr)
+//?     return getRedusedSumOfFractions2(fract1, fract2)
+//? }
+//? }
+//? console.log(getRedusedSumOfFractions2(fract1, fract2))
+
+
+
+
+// function getRedusedSumOfFractions2(fract1:any, fract2:any) {
+//     const result = summFract (fract1, fract2)
+//     return getReductedFraction(result)
+//   }
+  
+//   console.log(getRedusedSumOfFractions2(fract1, fract2))
+  
+  
+  
+// function getReductedFraction ()
 
 
 
