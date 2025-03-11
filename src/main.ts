@@ -1453,6 +1453,10 @@ console.clear()
 
 // console.clear()
 
+
+
+
+
 //! Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
 //! и следующие функции для работы с этим 
 
@@ -1471,16 +1475,20 @@ const fract2 ={
     denumerator: 3,    
 } 
 
+
+
+
+
 //! Приведение к общему знаменателю !!!!!!!!!!!!!!!!!
 function сommonDenominator (fract1:any,fract2:any) {
     return {
         fr1: {
           numerator: fract1.numerator*fract2.denumerator,
-          denominator: fract1.denumerator*fract2.denumerator
+          denumerator: fract1.denumerator*fract2.denumerator
         },
         fr2: {
           numerator: fract2.numerator * fract1.denumerator,
-          denominator: fract2.denumerator*fract1.denumerator
+          denumerator: fract2.denumerator*fract1.denumerator
         }
       }
 }
@@ -1493,7 +1501,7 @@ function summFract (fract1:any, fract2:any){
     let result = сommonDenominator(fract1, fract2)
     return {
         numerator: result.fr1.numerator + result.fr2.numerator,
-        denominator: result.fr2.denominator
+        denumerator: result.fr2.denumerator
     }
 }
 console.log(summFract(fract1, fract2));
@@ -1504,7 +1512,7 @@ function minusFract (fract1:any, fract2:any){
     let result = сommonDenominator(fract1, fract2)
     return {
         numerator: result.fr1.numerator - result.fr2.numerator,
-        denominator: result.fr2.denominator
+        denumerator: result.fr2.denumerator
     }
 }
 console.log(minusFract(fract1, fract2));
@@ -1514,34 +1522,36 @@ console.log(minusFract(fract1, fract2));
 function getMultyFract (fract1:any, fract2:any){
     return {
         numerator: fract1.numerator * fract2.numerator,
-        denominator: fract1.denumerator * fract2.denumerator
+        denumerator: fract1.denumerator * fract2.denumerator
     }
 }
 console.log(getMultyFract(fract1, fract2));
 
 
 //!  4. Функция деления 2-х объектов-дробей.
-function getRevideFract (fract1:any, fract2:any){
+function getDevideFract (fract1:any, fract2:any){
     return {
         numerator: fract1.numerator * fract2.denumerator,
-        denominator: fract1.denumerator * fract2.numerator
+        denumerator: fract1.denumerator * fract2.numerator
     }
 }
-console.log(getRevideFract(fract1, fract2));
+console.log(getDevideFract(fract1, fract2));
 
 
 
 //!  5. Функция сокращения объекта-дроби.
-//? function getRedusedSumOfFractions2(fract1:any, fract2:any) {
-//?   let arr = [] as any
-//?     for (let i = 0; i < fract1 && i<fract2; i++) {
-//?         if (fract1%i==0 && fract2%i==0)    
-//?         arr.push[i]
-//?     return (arr)
-//?     return getRedusedSumOfFractions2(fract1, fract2)
+//? function getRedusedSumOfFractions2(fr) {
+//?     const min = fr.numerator<fr.denumerator ? fr.numerator : fr.denumerator
+//?     for (let i = min; i > 1 ; i--) {
+//?         if (fr.numerator%i==0 && fr.denumerator2%i==0){
+//?             fr.numerator/=i
+//?             fr.denumerator/=i
+//?             return getRedusedSumOfFractions2(fr)
+//?         }    
+//?     }
+//?     return fr
 //? }
-//? }
-//? console.log(getRedusedSumOfFractions2(fract1, fract2))
+//? console.log(getRedusedSumOfFractions2(10))
 
 
 
@@ -1550,11 +1560,11 @@ console.log(getRevideFract(fract1, fract2));
 //     const result = summFract (fract1, fract2)
 //     return getReductedFraction(result)
 //   }
-  
+
 //   console.log(getRedusedSumOfFractions2(fract1, fract2))
   
-  
-  
+
+
 // function getReductedFraction ()
 
 
@@ -1632,63 +1642,63 @@ console.log(`число состоит из: ${count3} цифр`);
 // let zero = 0;
 
 // for (let i = 1; i <= 10; i++) {
-//   const num = Number(prompt("Введите число"));
-//   if (num > 0) {
-//     positive++;
-//   }
-//   if (num < 0) {
-//     negative++;
+    //   const num = Number(prompt("Введите число"));
+    //   if (num > 0) {
+        //     positive++;
+        //   }
+        //   if (num < 0) {
+            //     negative++;
 //   }
 //   if (num == 0) {
-//     zero++;
-//   }
-//   if (num % 2 == 1) {
-//     odd++;
-//   }
-//   if (num % 2 == 0) {
-//     even++;
-//   }
-// }
-// alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
-
-
-
-//! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
-//! и знак, решить пример, вывести результат и спросить, хо
-//! чет ли он решить еще один пример. И так до тех пор, пока 
-//! пользователь не откажется.
-
-// do {
-//     var ab = +prompt('Введите первое число');
-//     var bb = +prompt('Введите второе число');
-//     var ib = prompt('Выберите знак - + / *');
-
-//     switch (ib) {
-//         case '+':
-//             alert(ab + bb);
-//             break;
-//         case '-':
-//             alert(ab - bb);
-//             break;
-//         case '/':
-//             alert(ab / bb);
-//             break;
-//         case '*':
-//             alert(ab * bb);
-//         default:
-//             break;
-//     }
-
-// } while (confirm('Хотите ли вы решить еще один пример?'));
-
-
-
-
-//! 7. Запросить у пользователя число и на сколько цифр его 
-//! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
-//! число 123456 сдвинуть на 2 цифры, то получится 345612).
-
-let newNum = '123456'
+    //     zero++;
+    //   }
+    //   if (num % 2 == 1) {
+        //     odd++;
+        //   }
+        //   if (num % 2 == 0) {
+            //     even++;
+            //   }
+            // }
+            // alert(` Из введённых цифр — положительных: ${positive}, отрицательных: ${negative}, нулей: ${zero}, четных: ${even}, нечетных: ${odd}.`)
+            
+            
+            
+            //! 6. Зациклить калькулятор. Запросить у пользователя 2 числа 
+            //! и знак, решить пример, вывести результат и спросить, хо
+            //! чет ли он решить еще один пример. И так до тех пор, пока 
+            //! пользователь не откажется.
+            
+            // do {
+                //     var ab = +prompt('Введите первое число');
+                //     var bb = +prompt('Введите второе число');
+                //     var ib = prompt('Выберите знак - + / *');
+                
+                //     switch (ib) {
+                    //         case '+':
+                    //             alert(ab + bb);
+                    //             break;
+                    //         case '-':
+                    //             alert(ab - bb);
+                    //             break;
+                    //         case '/':
+                    //             alert(ab / bb);
+                    //             break;
+                    //         case '*':
+                    //             alert(ab * bb);
+                    //         default:
+                    //             break;
+                    //     }
+                    
+                    // } while (confirm('Хотите ли вы решить еще один пример?'));
+                    
+                    
+                    
+                    
+                    //! 7. Запросить у пользователя число и на сколько цифр его 
+                    //! сдвинуть. Сдвинуть цифры числа и вывести результат (если 
+                    //! число 123456 сдвинуть на 2 цифры, то получится 345612).
+                    
+                    let newNum = '123456'
 let shiftNum = 2
 let num = newNum.slice(0, shiftNum)
 let num3 = newNum.slice(shiftNum, 6)
@@ -1701,58 +1711,58 @@ console.log(num3 + num);
 // let res = 1000
 // let itter = 0
 // for (let i = 0; res > 50; i++) {
-//     res /= 2
-//     console.log(res);
-//     itter++
-// }
-// console.log(`количество иттераций = ${itter}`);
-// console.log(res);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// !!!!!!!!!!Задание для самостоятельной работы
-
-
-
-//! 4. Напишите скрипт, который принимает от пользователя 
-//! величину годовой депозитной ставки (в процентах) 
-//! и выводит количество лет, по прошествии которых 
-//! вклад увеличится вдвое.
-
-let money = 1000
-let doubleMoney = 2*money
-let deposit = 0.1
-let year = 0
-for (let i = 0; i < Infinity; i++) {
-    money += money * deposit
-    if (money <= doubleMoney) {
-        year++
-    }
-    break
-}    
-
-console.log(year+1);
-
-//? money * 8% = 10.8
-//? money * 8% = 11,66
-//? money * 8% = 
-
-
-
+    //     res /= 2
+    //     console.log(res);
+    //     itter++
+    // }
+    // console.log(`количество иттераций = ${itter}`);
+    // console.log(res);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // !!!!!!!!!!Задание для самостоятельной работы
+    
+    
+    
+    //! 4. Напишите скрипт, который принимает от пользователя 
+    //! величину годовой депозитной ставки (в процентах) 
+    //! и выводит количество лет, по прошествии которых 
+    //! вклад увеличится вдвое.
+    
+    let money = 1000
+    let doubleMoney = 2*money
+    let deposit = 0.1
+    let year = 0
+    for (let i = 0; i < Infinity; i++) {
+        money += money * deposit
+        if (money <= doubleMoney) {
+            year++
+        }
+        break
+    }    
+    
+    console.log(year+1);
+    
+    //? money * 8% = 10.8
+    //? money * 8% = 11,66
+    //? money * 8% = 
+    
+    
+    
 //! 5. Напишите скрипт, который выводит ровно 10 слу
 //! чайных чисел из диапазона 1–20, кроме тех, которые 
 //! делятся на 4.
@@ -1786,8 +1796,8 @@ let daysOfwork = 0
 for (let i = 0; i < capacity; i++) {
     daysOfwork++
     capacity-= capacity*waterLeak/100
-if (capacity<10) break
-// console.log(capacity);
+    if (capacity<10) break
+    // console.log(capacity);
 }
 console.log(`${capacityStart} литров хватит на ${daysOfwork} дней работы`);
 
@@ -1840,3 +1850,5 @@ userNew('')
 
 
 
+
+console.log(5>7 ? 5 : 7);
