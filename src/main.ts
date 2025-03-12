@@ -439,121 +439,6 @@ console.log(checkUser('Vasya'));
 
 
 
-//! <================= JS_PZ_Modul_1_Week_4=============>
-
-//! 1. Написать функцию, которая принимает 2 числа и возвра
-//! щает меньшее из них.
-
-function compareNumbers(a: number, b: number) {
-    return a > b ? a : b
-}
-
-
-//! 2. Написать функцию, которая возводит переданное число 
-//! в указанную степень.
-
-function multipleNumOnNum2(num: number, num2: number) {
-    return num ** num2
-}
-
-
-//! 3. Написать функцию, которая принимает 2 числа и знак  
-//! (+ - * /), считает пример и возвращает результат.
-
-function calculator(num1: number, operator: any, num2: number) {
-    switch (operator) {
-        case '+':
-            console.log(num1 + num2);
-            break
-        case '-':
-            console.log(num1 - num2);
-            break
-        case '*':
-            console.log(num1 * num2);
-            break
-        case '/':
-            console.log(num1 / num2);
-            break
-    }
-}
-
-
-//! 4. Написать функцию, которая проверяет, является ли пере
-//! данное ей число простым.
-
-function simpleNums(num: number) {
-    let count = 0
-    for (let i = 2; i < num; i++) {
-        if (num % i == 0) {
-            count++
-        }
-    }
-    return count > 0 ? console.log('Число сложное') : console.log('Число простое');
-}
-
-
-
-//! 6. Написать функцию, которая реализует работу оператора %. 
-//! Функция принимает 2 параметра и возвращает остаток от 
-//! деления первого параметра на второй. В функции исполь
-//! зовать только + - * /, оператор % не использовать. 
-
-function remainder(num1: number, num2: number) {
-    let quantaty = Math.floor(num1 / num2)
-    return num1 - num2 * quantaty
-}
-
-
-//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает их сумму.
-
-function sumNumbers(num1: number,
-    num2: number,
-    num3: number,
-    num4: number,
-    num5: number,) {
-    return num1 + num2 + num3 + num4 + num5
-}
-
-
-//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает большее из них.
-
-function biggestNumber(num1: number,
-    num2: number,
-    num3: number,
-    num4: number,
-    num5: number,) {
-    return Math.max(num1, num2, num3, num4, num5)
-
-}
-console.log(biggestNumber(5, 3, 10, 16, 4));
-
-
-
-//! 9. Написать функцию, которая выводит все четные или не
-//! четные числа, в указанном пользователем диапазоне. Какие 
-//! числа выводить, определяется третьим параметром типа 
-//! bool (true – четные, false – нечетные).
-
-function evenOddNumber(minNum: number, maxNum: number, bool: boolean) {
-    let mass = [] as any
-    for (let i = minNum; i < maxNum; i++) {
-        if (i % 2 == 0 && bool == true) {
-            mass.push(i)
-        }
-
-        if (i % 2 == 1 && bool == false) {
-            mass.push(i)
-        }
-
-    }
-    return console.log(mass);
-}
-
-evenOddNumber(3, 15, false)
-evenOddNumber(10, 20, false)
-
 
 const summAB = (a: number, b: number) => {
     return a + b
@@ -1804,7 +1689,7 @@ function setSeconds() {
         time.minutes+=Math.trunc(time.seconds/60)
         time.seconds = time.seconds - (Math.trunc(time.seconds/60))*60
     }
-    return setMinutes()
+    return time
 }
 console.log(setSeconds())
 
@@ -1818,7 +1703,7 @@ function setMinutes() {
         time.hours+=Math.trunc(time.minutes/60)
         time.minutes = time.minutes - (Math.trunc(time.minutes/60))*60
     }
-    return changeHours()
+    return setSeconds()
 }
 console.log(setMinutes());
 
@@ -1827,15 +1712,163 @@ console.log(setMinutes());
 //?  4. Функция изменения времени на переданное количество 
 //? часов.
 
-function changeHours() {
+function setHours() {
     if (time.hours>23) {
         time.hours= time.hours - (Math.trunc(time.hours/24))*24
     }
-    return time
+    return setMinutes()
 }
-console.log(changeHours());
+console.log(setHours());
 
 
 
 
 
+
+//! <================= JS_PZ_Modul_1_Week_4=============>
+
+//! 1. Написать функцию, которая принимает 2 числа и возвра
+//! щает меньшее из них.
+
+function compareNumbers(a: number, b: number) {
+    return a > b ? a : b
+}
+console.log(compareNumbers(9,8));
+
+
+
+//! 2. Написать функцию, которая возводит переданное число 
+//! в указанную степень.
+
+function multipleNumOnNum2(num: number, num2: number) {
+    return num ** num2
+}
+
+
+//! 3. Написать функцию, которая принимает 2 числа и знак  
+//! (+ - * /), считает пример и возвращает результат.
+
+// function calculator(num1: number, operator: any, num2: number) {
+//     switch (operator) {
+//         case '+':
+//             console.log(num1 + num2);
+//             break
+//         case '-':
+//             console.log(num1 - num2);
+//             break
+//         case '*':
+//             console.log(num1 * num2);
+//             break
+//         case '/':
+//             console.log(num1 / num2);
+//             break
+//     }
+// }
+// calculator(14, '-' ,7)
+// calculator(14, '+' ,7)
+// calculator(14, '*' ,7)
+// calculator(14, '/' ,7)
+
+
+//! 4. Написать функцию, которая проверяет, является ли пере
+//! данное ей число простым.
+
+// function simpleNums(num: number) {
+//     let count = 0
+//     for (let i = 2; i < num; i++) {
+//         if (num % i == 0) {
+//             count++
+//         }
+//     }
+//     return count > 0 ? 'Число сложное' : 'Число простое';
+// }
+
+// console.log(simpleNums(5));
+
+
+
+
+
+
+
+//! 5. Написать функцию, которая принимает число и выводит 
+//! таблицу умножения для этого числа. Вызовите функцию 
+//! для всех чисел от 2 до 9.
+
+// function getMultyplicatioTable (num:number) {
+//     let str = ''
+//     for (let i = 2; i <= 9; i++) {
+//             str += num*i + ' '        
+//     }
+//     return str
+// }
+
+// console.log(getMultyplicatioTable(3));
+
+
+
+
+
+//! 6. Написать функцию, которая реализует работу оператора %. 
+//! Функция принимает 2 параметра и возвращает остаток от 
+//! деления первого параметра на второй. В функции исполь
+//! зовать только + - * /, оператор % не использовать. 
+
+function remainder(num1: number, num2: number) {
+    let quantaty = Math.floor(num1 / num2)
+    return num1 - num2 * quantaty
+}
+
+
+//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает их сумму.
+
+// function sumNumbers(num1: number,
+//     num2 = 0,
+//     num3 = 0,
+//     num4 = 0,
+//     num5 = 0,
+// ) {
+//     return num1 + num2 + num3 + num4 + num5
+// }
+// console.log(sumNumbers(10));
+
+
+//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает большее из них.
+
+// function biggestNumber(num1: number,
+//     num2 = -Infinity,
+//     num3 = -Infinity,
+//     num4 = -Infinity,
+//     num5 = -Infinity,
+//     ) {
+//     return Math.max(num1, num2, num3, num4, num5)
+
+// }
+// console.log(biggestNumber(5, 3, 10));
+
+
+
+//! 9. Написать функцию, которая выводит все четные или не
+//! четные числа, в указанном пользователем диапазоне. Какие 
+//! числа выводить, определяется третьим параметром типа 
+//! bool (true – четные, false – нечетные).
+
+// function evenOddNumber(minNum: number, maxNum: number, bool: boolean) {
+//     let mass = [] as any
+//     for (let i = minNum; i < maxNum; i++) {
+//         if (i % 2 == 0 && bool == true) {
+//             mass.push(i)
+//         }
+
+//         if (i % 2 == 1 && bool == false) {
+//             mass.push(i)
+//         }
+
+//     }
+//     return console.log(mass);
+// }
+
+// evenOddNumber(3, 15, false)
+// evenOddNumber(10, 20, false)
