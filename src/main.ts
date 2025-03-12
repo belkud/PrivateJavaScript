@@ -1322,256 +1322,7 @@ console.clear()
 
 
 
-//! Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
-//! и следующие функции для работы с этим объектом.
-
-// type Fraction = {
-//     numerator:number,
-//     denominator:number
-//   }
-  
-  const fraction1 = {
-    numerator: 1,
-    denominator: 2
-  }
-  
-  const fraction2 = {
-    numerator: 3,
-    denominator: 10
-  } 
-  
-
-  function transformToCommonDenominator(fr1:any, fr2:any) {
-    return {
-      fr1: {
-        numerator: fr1.numerator*fr2.denominator,
-        denominator: fr1.denominator*fr2.denominator
-      },
-      fr2: {
-        numerator: fr2.numerator * fr1.denominator,
-        denominator: fr1.denominator * fr2.denominator
-      }
-    }
-  }
-  console.log(transformToCommonDenominator(fraction1, fraction2));
-  
-
-  // 1 Функция сложения 2 - х объектов - дробей.
-  
-  function getSumOfFractions(fr1:Fraction, fr2:Fraction) {
-    const commonFractions = transformToCommonDenominator(fr1, fr2)
-    return {
-      numerator: commonFractions.fr1.numerator + commonFractions.fr2.numerator,
-      denominator: commonFractions.fr1.denominator
-    }
-  }
-  
-  console.log(getSumOfFractions(fraction1, fraction2))
-
-  
-
-  function getRedusedSumOfFractions(fr1: Fraction, fr2: Fraction) {
-    const result = getSumOfFractions(fr1, fr2)
-    return getReductedFraction(result)
-  }
-  
-  console.log(getRedusedSumOfFractions(fraction1, fraction2))
-  
-
-  // 2 Функция вычитания 2 - х объектов - дробей.
-  
-  function getSubtrOfFractions(fr1: Fraction, fr2: Fraction) {
-    const commonFractions = transformToCommonDenominator(fr1, fr2)
-    const result = {
-      numerator: commonFractions.fr1.numerator - commonFractions.fr2.numerator,
-      denominator: commonFractions.fr1.denominator
-    }
-    return getReductedFraction(result)
-  }
-  
-  console.log(getSubtrOfFractions(fraction1, fraction2))
-  
-  // 3 Функция умножения 2 - х объектов - дробей.
-  
-  function getMulOfFractions(fr1: Fraction, fr2: Fraction) {
-    const result = {
-      numerator: fr1.numerator * fr2.numerator,
-      denominator: fr1.denominator * fr2.denominator
-    }
-    return getReductedFraction(result)
-  }
-  
-  console.log(getMulOfFractions(fraction1, fraction2))
-  
-  // 4 Функция деления 2 - х объектов - дробей.
-  
-  function getDivOfFractions(fr1: Fraction, fr2: Fraction) {
-    const result = {
-      numerator: fr1.numerator * fr2.denominator,
-      denominator: fr1.denominator * fr2.numerator
-    }
-    return getReductedFraction(result)
-  }
-  
-  console.log(getDivOfFractions(fraction1, fraction2))
-  
-  // 5 Функция сокращения объекта - дроби.
-  
-  function getReductedFraction(fr:Fraction) {
-    const min = fr.numerator<fr.denominator? fr.numerator:fr.denominator
-    for (let i=min;i>1; i--) {
-      if (fr.numerator%i==0 && fr.denominator%i==0) {
-        fr.numerator /=i
-        fr.denominator /=i
-        return getReductedFraction(fr)
-      }
-    }
-    return fr
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-// console.clear()
-
-
-
-
-
-//! Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
-//! и следующие функции для работы с этим 
-
-
-
-
-
-
-const fract1 ={
-    numerator: 6,       
-    denumerator: 2,     
-}
-
-const fract2 ={
-    numerator: 5,       
-    denumerator: 3,    
-} 
-
-
-
-
-
-//! Приведение к общему знаменателю !!!!!!!!!!!!!!!!!
-function сommonDenominator (fract1:any,fract2:any) {
-    return {
-        fr1: {
-          numerator: fract1.numerator*fract2.denumerator,
-          denumerator: fract1.denumerator*fract2.denumerator
-        },
-        fr2: {
-          numerator: fract2.numerator * fract1.denumerator,
-          denumerator: fract2.denumerator*fract1.denumerator
-        }
-      }
-}
-console.log(сommonDenominator(fract1, fract2));
-
-
-
-//!  1. Функция сложения 2-х объектов-дробей.
-function summFract (fract1:any, fract2:any){
-    let result = сommonDenominator(fract1, fract2)
-    return {
-        numerator: result.fr1.numerator + result.fr2.numerator,
-        denumerator: result.fr2.denumerator
-    }
-}
-console.log(summFract(fract1, fract2));
-
-
-//!  2. Функция вычитания 2-х объектов-дробей.
-function minusFract (fract1:any, fract2:any){
-    let result = сommonDenominator(fract1, fract2)
-    return {
-        numerator: result.fr1.numerator - result.fr2.numerator,
-        denumerator: result.fr2.denumerator
-    }
-}
-console.log(minusFract(fract1, fract2));
-
-
-//!  3. Функция умножения 2-х объектов-дробей.
-function getMultyFract (fract1:any, fract2:any){
-    return {
-        numerator: fract1.numerator * fract2.numerator,
-        denumerator: fract1.denumerator * fract2.denumerator
-    }
-}
-console.log(getMultyFract(fract1, fract2));
-
-
-//!  4. Функция деления 2-х объектов-дробей.
-function getDevideFract (fract1:any, fract2:any){
-    return {
-        numerator: fract1.numerator * fract2.denumerator,
-        denumerator: fract1.denumerator * fract2.numerator
-    }
-}
-console.log(getDevideFract(fract1, fract2));
-
-
-
-//!  5. Функция сокращения объекта-дроби.
-//? function getRedusedSumOfFractions2(fr) {
-//?     const min = fr.numerator<fr.denumerator ? fr.numerator : fr.denumerator
-//?     for (let i = min; i > 1 ; i--) {
-//?         if (fr.numerator%i==0 && fr.denumerator2%i==0){
-//?             fr.numerator/=i
-//?             fr.denumerator/=i
-//?             return getRedusedSumOfFractions2(fr)
-//?         }    
-//?     }
-//?     return fr
-//? }
-//? console.log(getRedusedSumOfFractions2(10))
-
-
-
-
-// function getRedusedSumOfFractions2(fract1:any, fract2:any) {
-//     const result = summFract (fract1, fract2)
-//     return getReductedFraction(result)
-//   }
-
-//   console.log(getRedusedSumOfFractions2(fract1, fract2))
-  
-
-
-// function getReductedFraction ()
-
-
-
-
-
-
+ 
 
 
 //!!!!!!!!!!!!!!!!! JS_DZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
@@ -1851,16 +1602,45 @@ userNew('')
 
 
 
-// console.log(5>7 ? 5 : 7);
-
-// ?????????????????????
-// let distance = 600
-// let speed = 100
-// let time = distance/speed
 
 
-// console.log( time+ Math.round(time/4) + ' часов' );
+//!!!!!!!!!!!!!!!!!DZ_Modul_2_Week_1!!!!!!!!!!!!!!!!!!!!!
 
+//! 1. Создать объект, описывающий автомобиль (производитель, модель, 
+//! год выпуска, средняя скорость), и следующие функции для работы 
+//! с этим объектом.
+//!  1. Функция для вывода на экран информации об автомобиле.
+//!  2. Функция для подсчета необходимого времени для преодоления переданного 
+//!  расстояния со средней скоростью. 
+//! Учтите, что через каждые 4 часа дороги водителю необхо
+//! димо делать перерыв на 1 час.
+
+let car = {
+    manufacture: 'Kia',
+    model: 'Rio',
+    year: 2013,
+    averageSpeed: 100,
+}
+
+
+//?  1. Функция для вывода на экран информации об автомобиле.
+function showInfoCar (info:any) {
+    return info
+}
+console.log(showInfoCar(car));
+
+
+//?  2. Функция для подсчета необходимого времени для преодоления переданного 
+//?  расстояния со средней скоростью. 
+//? Учтите, что через каждые 4 часа дороги водителю необхо
+//? димо делать перерыв на 1 час.
+
+
+function showTimeOfTravaling (distance:number) {
+    let timeN = distance/car.averageSpeed
+        return timeN + Math.floor(timeN/4) + ' часов'
+}
+console.log(showTimeOfTravaling(1000))
 
 
 // 100 км  1 ч
@@ -1869,15 +1649,117 @@ userNew('')
 // 400 км  5 ч
 // 500 км  6 ч
 // 600 км  7 ч
-// 700 км  9 ч
+// 700 км  8 ч
 // 800 км  10 ч
 // 900 км  11 ч
-// 1000 км  13 ч
+// 1000 км  12 ч
+
+
+//! 2. Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
+//! и следующие функции для работы с этим объектом.
+//! 1. Функция сложения 2-х объектов-дробей.
+//! 2. Функция вычитания 2-х объектов-дробей.
+//! 3. Функция умножения 2-х объектов-дробей.
+//! 4. Функция деления 2-х объектов-дробей.
+//! 5. Функция сокращения объекта-дроби.
+
+
+
+//? Создать объект, хранящий в себе отдельно числитель и знаменатель дроби, 
+//? и следующие функции для работы с этим 
+
+const fract1 ={
+    numerator: 6,       
+    denumerator: 2,     
+}
+
+const fract2 ={
+    numerator: 5,       
+    denumerator: 3,    
+} 
 
 
 
 
-//!!!!!!!!!!!!!!!!!DZ_Modul_2_Week_1!!!!!!!!!!!!!!!!!!!!!
+
+//? Приведение к общему знаменателю !!!!!!!!!!!!!!!!!
+function сommonDenominator (fract1:any,fract2:any) {
+    return {
+        fr1: {
+          numerator: fract1.numerator*fract2.denumerator,
+          denumerator: fract1.denumerator*fract2.denumerator
+        },
+        fr2: {
+          numerator: fract2.numerator * fract1.denumerator,
+          denumerator: fract2.denumerator*fract1.denumerator
+        }
+      }
+}
+console.log(сommonDenominator(fract1, fract2));
+
+
+
+//?  1. Функция сложения 2-х объектов-дробей.
+function summFract (fract1:any, fract2:any){
+    let result = сommonDenominator(fract1, fract2)
+    return {
+        numerator: result.fr1.numerator + result.fr2.numerator,
+        denumerator: result.fr2.denumerator
+    }
+}
+console.log(summFract(fract1, fract2));
+
+
+//?  2. Функция вычитания 2-х объектов-дробей.
+function minusFract (fract1:any, fract2:any){
+    let result = сommonDenominator(fract1, fract2)
+    return {
+        numerator: result.fr1.numerator - result.fr2.numerator,
+        denumerator: result.fr2.denumerator
+    }
+}
+console.log(minusFract(fract1, fract2));
+
+
+//?  3. Функция умножения 2-х объектов-дробей.
+function getMultyFract (fract1:any, fract2:any){
+    return {
+        numerator: fract1.numerator * fract2.numerator,
+        denumerator: fract1.denumerator * fract2.denumerator
+    }
+}
+console.log(getMultyFract(fract1, fract2));
+
+
+//?  4. Функция деления 2-х объектов-дробей.
+function getDevideFract (fract1:any, fract2:any){
+    return {
+        numerator: fract1.numerator * fract2.denumerator,
+        denumerator: fract1.denumerator * fract2.numerator
+    }
+}
+console.log(getDevideFract(fract1, fract2));
+
+
+
+//?  5. Функция сокращения объекта-дроби.
+//? function getRedusedSumOfFractions2(fr) {
+//?     const min = fr.numerator<fr.denumerator ? fr.numerator : fr.denumerator
+//?     for (let i = min; i > 1 ; i--) {
+//?         if (fr.numerator%i==0 && fr.denumerator2%i==0){
+//?             fr.numerator/=i
+//?             fr.denumerator/=i
+//?             return getRedusedSumOfFractions2(fr)
+//?         }    
+//?     }
+//?     return fr
+//? }
+//? console.log(getRedusedSumOfFractions2(10))
+
+
+
+
+
 
 //! 3. Создать объект, описывающий время (часы, минуты, секун
 //! ды), и следующие функции для работы с этим объектом.
@@ -1894,12 +1776,14 @@ userNew('')
 //! «20:31:15», а не «20:30:75»
 
 
-//!  1. Функция вывода времени на экран.
 let time = {
     hours: 30,
-    minutes: 65,
-    seconds: 63,
+    minutes: 115,
+    seconds: 163,
 }
+
+
+//?  1. Функция вывода времени на экран.
 
 function showTime() {
     return time
@@ -1907,36 +1791,37 @@ function showTime() {
 console.log(showTime())
 
 
-//!  2. Функция изменения времени на переданное количество 
-//! секунд.
 
-function changeSeconds() {
+//?  2. Функция изменения времени на переданное количество 
+//? секунд.
+
+function setSeconds() {
     if (time.seconds>60) {
         time.minutes+=Math.trunc(time.seconds/60)
         time.seconds = time.seconds - (Math.trunc(time.seconds/60))*60
     }
-    return changeMinutes()
+    return setMinutes()
 }
-console.log(changeSeconds())
+console.log(setSeconds())
 
 
-//!  3. Функция изменения времени на переданное количество 
-//! минут.
 
-function changeMinutes() {
+//?  3. Функция изменения времени на переданное количество 
+//? минут.
+
+function setMinutes() {
     if (time.minutes>60) {
         time.hours+=Math.trunc(time.minutes/60)
         time.minutes = time.minutes - (Math.trunc(time.minutes/60))*60
     }
     return changeHours()
 }
-console.log(changeMinutes());
+console.log(setMinutes());
 
 
 
-//!  4. Функция изменения времени на переданное количество 
-//! часов.
-
+//?  4. Функция изменения времени на переданное количество 
+//? часов.
 
 function changeHours() {
     if (time.hours>23) {
@@ -1947,14 +1832,6 @@ function changeHours() {
 console.log(changeHours());
 
 
-var time2 = {
-    hh : 20,
-    mm : 30,
-    ss : 45
-};
 
 
-function showTime2() {
-    console.log( `${time2.hh}:${time2.mm}:${time2.ss}` )
-}
-showTime2()
+
