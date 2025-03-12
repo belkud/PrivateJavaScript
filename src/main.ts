@@ -1851,4 +1851,110 @@ userNew('')
 
 
 
-console.log(5>7 ? 5 : 7);
+// console.log(5>7 ? 5 : 7);
+
+// ?????????????????????
+// let distance = 600
+// let speed = 100
+// let time = distance/speed
+
+
+// console.log( time+ Math.round(time/4) + ' часов' );
+
+
+
+// 100 км  1 ч
+// 200 км  2 ч
+// 300 км  3 ч
+// 400 км  5 ч
+// 500 км  6 ч
+// 600 км  7 ч
+// 700 км  9 ч
+// 800 км  10 ч
+// 900 км  11 ч
+// 1000 км  13 ч
+
+
+
+
+//!!!!!!!!!!!!!!!!!DZ_Modul_2_Week_1!!!!!!!!!!!!!!!!!!!!!
+
+//! 3. Создать объект, описывающий время (часы, минуты, секун
+//! ды), и следующие функции для работы с этим объектом.
+//!  1. Функция вывода времени на экран.
+//!  2. Функция изменения времени на переданное количество 
+//! секунд.
+//!  3. Функция изменения времени на переданное количество 
+//! минут.
+//!  4. Функция изменения времени на переданное количество 
+//! часов.
+//!  Учтите, что в последних 3-х функциях, при изменении одной 
+//! части времени, может измениться и другая. Например: если ко 
+//! времени «20:30:45» добавить 30 секунд, то должно получиться 
+//! «20:31:15», а не «20:30:75»
+
+
+//!  1. Функция вывода времени на экран.
+let time = {
+    hours: 30,
+    minutes: 65,
+    seconds: 63,
+}
+
+function showTime() {
+    return time
+}
+console.log(showTime())
+
+
+//!  2. Функция изменения времени на переданное количество 
+//! секунд.
+
+function changeSeconds() {
+    if (time.seconds>60) {
+        time.minutes+=Math.trunc(time.seconds/60)
+        time.seconds = time.seconds - (Math.trunc(time.seconds/60))*60
+    }
+    return changeMinutes()
+}
+console.log(changeSeconds())
+
+
+//!  3. Функция изменения времени на переданное количество 
+//! минут.
+
+function changeMinutes() {
+    if (time.minutes>60) {
+        time.hours+=Math.trunc(time.minutes/60)
+        time.minutes = time.minutes - (Math.trunc(time.minutes/60))*60
+    }
+    return changeHours()
+}
+console.log(changeMinutes());
+
+
+
+//!  4. Функция изменения времени на переданное количество 
+//! часов.
+
+
+function changeHours() {
+    if (time.hours>23) {
+        time.hours= time.hours - (Math.trunc(time.hours/24))*24
+    }
+    return time
+}
+console.log(changeHours());
+
+
+var time2 = {
+    hh : 20,
+    mm : 30,
+    ss : 45
+};
+
+
+function showTime2() {
+    console.log( `${time2.hh}:${time2.mm}:${time2.ss}` )
+}
+showTime2()
