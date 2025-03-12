@@ -1872,3 +1872,31 @@ function remainder(num1: number, num2: number) {
 
 // evenOddNumber(3, 15, false)
 // evenOddNumber(10, 20, false)
+
+
+
+
+
+function ab () {
+    return 10
+}
+
+console.log(ab());
+
+function cd () {
+    return ab()
+}
+
+console.log(cd());
+
+// Function Expression
+let uuu = function () {
+    return 'hi';
+    
+}
+console.log(uuu());
+
+let uuu2 = ()=> {
+    return 'hi2'
+}
+console.log(uuu2());
