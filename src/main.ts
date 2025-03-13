@@ -256,16 +256,16 @@ console.log(message);
 
 
 
-let years = 10
-if (years < 5) {
-    console.log('ребенок');
-} else if (years < 18) {
-    console.log('подросток');
-} else if (years < 100) {
-    console.log('взрослый');
-} else {
-    console.log('введите корректные данные');
-}
+// let years = 10
+// if (years < 5) {
+//     console.log('ребенок');
+// } else if (years < 18) {
+//     console.log('подросток');
+// } else if (years < 100) {
+//     console.log('взрослый');
+// } else {
+//     console.log('введите корректные данные');
+// }
 
 
 let checkDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] as any
@@ -1379,19 +1379,19 @@ console.log(num3 + num);
     //! и выводит количество лет, по прошествии которых 
     //! вклад увеличится вдвое.
     
-    let money = 1000
-    let doubleMoney = 2*money
-    let deposit = 0.1
-    let year = 0
-    for (let i = 0; i < Infinity; i++) {
-        money += money * deposit
-        if (money <= doubleMoney) {
-            year++
-        }
-        break
-    }    
+    // let money = 1000
+    // let doubleMoney = 2*money
+    // let deposit = 0.1
+    // let year = 0
+    // for (let i = 0; i < Infinity; i++) {
+    //     money += money * deposit
+    //     if (money <= doubleMoney) {
+    //         year++
+    //     }
+    //     break
+    // }    
     
-    console.log(year+1);
+    // console.log(year+1);
     
     //? money * 8% = 10.8
     //? money * 8% = 11,66
@@ -1509,8 +1509,8 @@ let car = {
 
 
 //?  1. Функция для вывода на экран информации об автомобиле.
-function showInfoCar (info:any) {
-    return info
+function showInfoCar (car:any) {
+    return car
 }
 console.log(showInfoCar(car));
 
@@ -1727,86 +1727,6 @@ console.log(setHours());
 
 //! <================= JS_PZ_Modul_1_Week_4=============>
 
-//! 1. Написать функцию, которая принимает 2 числа и возвра
-//! щает меньшее из них.
-
-function compareNumbers(a: number, b: number) {
-    return a > b ? a : b
-}
-console.log(compareNumbers(9,8));
-
-
-
-//! 2. Написать функцию, которая возводит переданное число 
-//! в указанную степень.
-
-function multipleNumOnNum2(num: number, num2: number) {
-    return num ** num2
-}
-
-
-//! 3. Написать функцию, которая принимает 2 числа и знак  
-//! (+ - * /), считает пример и возвращает результат.
-
-// function calculator(num1: number, operator: any, num2: number) {
-//     switch (operator) {
-//         case '+':
-//             console.log(num1 + num2);
-//             break
-//         case '-':
-//             console.log(num1 - num2);
-//             break
-//         case '*':
-//             console.log(num1 * num2);
-//             break
-//         case '/':
-//             console.log(num1 / num2);
-//             break
-//     }
-// }
-// calculator(14, '-' ,7)
-// calculator(14, '+' ,7)
-// calculator(14, '*' ,7)
-// calculator(14, '/' ,7)
-
-
-//! 4. Написать функцию, которая проверяет, является ли пере
-//! данное ей число простым.
-
-// function simpleNums(num: number) {
-//     let count = 0
-//     for (let i = 2; i < num; i++) {
-//         if (num % i == 0) {
-//             count++
-//         }
-//     }
-//     return count > 0 ? 'Число сложное' : 'Число простое';
-// }
-
-// console.log(simpleNums(5));
-
-
-
-
-
-
-
-//! 5. Написать функцию, которая принимает число и выводит 
-//! таблицу умножения для этого числа. Вызовите функцию 
-//! для всех чисел от 2 до 9.
-
-// function getMultyplicatioTable (num:number) {
-//     let str = ''
-//     for (let i = 2; i <= 9; i++) {
-//             str += num*i + ' '        
-//     }
-//     return str
-// }
-
-// console.log(getMultyplicatioTable(3));
-
-
-
 
 
 //! 6. Написать функцию, которая реализует работу оператора %. 
@@ -1848,6 +1768,7 @@ function remainder(num1: number, num2: number) {
 // }
 // console.log(biggestNumber(5, 3, 10));
 
+console.clear()
 
 
 //! 9. Написать функцию, которая выводит все четные или не
@@ -1855,48 +1776,80 @@ function remainder(num1: number, num2: number) {
 //! числа выводить, определяется третьим параметром типа 
 //! bool (true – четные, false – нечетные).
 
-// function evenOddNumber(minNum: number, maxNum: number, bool: boolean) {
-//     let mass = [] as any
-//     for (let i = minNum; i < maxNum; i++) {
-//         if (i % 2 == 0 && bool == true) {
-//             mass.push(i)
-//         }
 
-//         if (i % 2 == 1 && bool == false) {
-//             mass.push(i)
-//         }
-
-//     }
-//     return console.log(mass);
-// }
-
-// evenOddNumber(3, 15, false)
-// evenOddNumber(10, 20, false)
-
-
-
-
-
-function ab () {
-    return 10
+function showEvenOddNumberInDiapazone(minNum: number, maxNum: number, bool: boolean) {
+    let str = ''
+    for (let i = minNum; i <=maxNum; i++) {
+        if (bool==true && i%2==0) {
+            str+=i + ' '
+        } 
+        if (bool==false && i%2==1) {
+            str+=i + ' '
+        } 
+    }
+    return str
 }
 
-console.log(ab());
+console.log(showEvenOddNumberInDiapazone(3, 12, true))
+console.log(showEvenOddNumberInDiapazone(3, 12, false));
 
-function cd () {
-    return ab()
-}
 
-console.log(cd());
 
-// Function Expression
-let uuu = function () {
-    return 'hi';
+
+
+
+
+//! 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает 
+//! дату следующего дня в виде строки «дд.мм.гггг». Проверку на високосный год 
+//! желательно написать отдельной функцией.
+
+
+
+function returnNextDay(day:number, mounth:number, year:number) {
+    if (day>=32) return 'Введите корректный день'
+    if (day==31 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) return 'Введите корректный день'
+    if (day>=30 && mounth==2 || day==29 && mounth==2 && year%4!=0) return 'Введите корректный день'
+    if (mounth>=13) return 'Введите корректный месяц'
     
+    // подсчёт лет
+    if (day==31 && mounth==12){
+        year+=1
+        mounth=1
+        day=0
+    }
+    
+    // подсчёт дней и месяцев
+    if (day==30 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) {
+        day=1
+        mounth+=1
+    } else if (day==31 && (mounth==3 || mounth==5 ||mounth==7 || mounth==8 || mounth==10 || mounth==12)) {
+        day=1
+        mounth+=1
+    } else if(day==28 && mounth==2 && year%4!=0 || day==29 && mounth==2 && year%4==0){
+        day=1
+        mounth+=1
+    } else {
+        day+=1
 }
-console.log(uuu());
+    return `${day}.${mounth}.${year}`
+}
 
-let uuu2 = ()=> {
-    return 'hi2'
-}
-console.log(uuu2());
+console.log(returnNextDay(30, 4, 2024));
+
+
+
+
+// 28-29 февр
+// 30 апр июнь сент нояб
+// 31 янв март май  июль авг окт дек
+
+
+// day= day+1
+
+
+
+
+
+ 
+
+
