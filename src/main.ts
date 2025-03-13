@@ -1723,6 +1723,7 @@ console.log(setHours());
 
 
 
+console.clear()
 
 
 //! <================= JS_PZ_Modul_1_Week_4=============>
@@ -1738,6 +1739,7 @@ function remainder(num1: number, num2: number) {
     let quantaty = Math.floor(num1 / num2)
     return num1 - num2 * quantaty
 }
+console.log(remainder(8,3));
 
 
 //! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
@@ -1754,6 +1756,7 @@ function remainder(num1: number, num2: number) {
 // console.log(sumNumbers(10));
 
 
+
 //! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
 //! возвращает большее из них.
 
@@ -1768,7 +1771,7 @@ function remainder(num1: number, num2: number) {
 // }
 // console.log(biggestNumber(5, 3, 10));
 
-console.clear()
+
 
 
 //! 9. Написать функцию, которая выводит все четные или не
@@ -1789,12 +1792,8 @@ function showEvenOddNumberInDiapazone(minNum: number, maxNum: number, bool: bool
     }
     return str
 }
-
 console.log(showEvenOddNumberInDiapazone(3, 12, true))
 console.log(showEvenOddNumberInDiapazone(3, 12, false));
-
-
-
 
 
 
@@ -1830,21 +1829,70 @@ function returnNextDay(day:number, mounth:number, year:number) {
         mounth+=1
     } else {
         day+=1
+    }
+    return `«${day}.${mounth}.${year}»`
 }
-    return `${day}.${mounth}.${year}`
+
+console.log(returnNextDay(31, 12, 2024));
+
+ 
+//!  7. Написать функцию, которая считает количество слов в 
+//! предложении.
+
+// function findQuatatyWords(str:string) {
+//     return str.split(' ').length
+// }
+// console.log(findQuatatyWords('Написать функцию, которая считает количество слов в предложении.'));
+
+
+
+
+
+
+
+
+
+
+//!  8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+function findLongestWords(str:string) {
+    let x = str.split(' ')
+    let mass = [] 
+    for (let i = 0; i < x.length; i++) {
+        mass.push((x[i].length))
+    }
+    
+    let longWord = Math.max(...mass)
+    
+    for (let j = 0; j < x.length; j++) {
+        if (x[j].length==longWord) {
+            return console.log(x[j]);
+        }
+                    
+    }
+
 }
-
-console.log(returnNextDay(30, 4, 2024));
-
+findLongestWords('Написать функцию, которая возвращает самое длинное слово из предложения')
 
 
 
-// 28-29 февр
-// 30 апр июнь сент нояб
-// 31 янв март май  июль авг окт дек
+
+function longer(a, b) {
+    return (b.length > a.length) ? b : a;
+  }
+  
+  function longestWord(str) {
+    let words = str.split(' ');
+    return words.reduce(longer);
+  }
+  
+  console.log(longestWord("The quiclllk brown fox jumped over the lazy dogs"));
+
+  
 
 
-// day= day+1
+
 
 
 
