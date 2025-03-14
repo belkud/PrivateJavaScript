@@ -118,8 +118,8 @@ if (age >= 30 && age <= 40 && education == 'higher') {
 }
 
 
-let y
-console.log(y);
+// let y
+// console.log(y);
 
 
 console.log(Boolean(1));
@@ -909,15 +909,15 @@ console.log(object['c'] = 100); //ключ перезапишется (ссыл�
 console.log(object2);
 console.log(object == object2);
 
-let x = 1
-console.log(x);
+// let x = 1
+// console.log(x);
 
-let z = x
-console.log(z);
+// let z = x
+// console.log(z);
 
-x = 5
-console.log(x);
-console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
+// x = 5
+// console.log(x);
+// console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
 
 console.log(typeof object)
 
@@ -1802,8 +1802,6 @@ console.log(showEvenOddNumberInDiapazone(3, 12, false));
 //! дату следующего дня в виде строки «дд.мм.гггг». Проверку на високосный год 
 //! желательно написать отдельной функцией.
 
-
-
 function returnNextDay(day:number, mounth:number, year:number) {
     if (day>=32) return 'Введите корректный день'
     if (day==31 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) return 'Введите корректный день'
@@ -1832,7 +1830,6 @@ function returnNextDay(day:number, mounth:number, year:number) {
     }
     return `«${day}.${mounth}.${year}»`
 }
-
 console.log(returnNextDay(31, 12, 2024));
 
  
@@ -1856,24 +1853,51 @@ console.log(returnNextDay(31, 12, 2024));
 //!  8. Написать функцию, которая возвращает самое длинное 
 //! слово из предложения.
 
+// function findLongestWords(str:string) {
+//     let x = str.split(' ')
+//     let mass = [] 
+//     for (let i = 0; i < x.length; i++) {
+//         mass.push((x[i].length))
+//     }
+    
+//     let longWord = Math.max(...mass)
+    
+//     for (let j = 0; j < x.length; j++) {
+//         if (x[j].length==longWord) {
+//             return console.log(x[j]);
+//         }               
+//     }
+// }
+//  function calculateSymbols(str:string) {
+   
+//  }
+//  findLongestWords('Написать функцию, которая возвращает самое длинное слово из предложения')
+
 function findLongestWords(str:string) {
-    let x = str.split(' ')
+    let x = str.split(' ') 
     let mass = [] 
     for (let i = 0; i < x.length; i++) {
         mass.push((x[i].length))
     }
-    
     let longWord = Math.max(...mass)
-    
-    for (let j = 0; j < x.length; j++) {
-        if (x[j].length==longWord) {
-            return console.log(x[j]);
-        }
-                    
-    }
-
+    return console.log(longWord)    
 }
 findLongestWords('Написать функцию, которая возвращает самое длинное слово из предложения')
+ 
+
+function calculateSymbols() {
+    // findLongestWords(longWord)
+    
+    //  for (let j = 0; j < x.length; j++) {
+    //      if (x[j].length==longWord) {
+    //          return console.log(x[j]);
+    //      }               
+    //  }
+//    return findLongestWords(str)
+   
+ }
+
+calculateSymbols()
 
 
 
@@ -1894,10 +1918,87 @@ function longer(a, b) {
 
 
 
+  interface Rectangle {
+    topLeft: { x: number, y: number };
+    bottomRight: { x: number, y: number };
+}
+
+function getRectangleInfo(rect: Rectangle): void {
+    console.log(`Верхний левый угол: (${rect.topLeft.x}, ${rect.topLeft.y})`);
+    console.log(`Нижний правый угол: (${rect.bottomRight.x}, ${rect.bottomRight.y})`);
+}
+
+// getRectangleInfo()
+
+
+
+// console.log( Rectangle.topLeft(10,15));
+
+
+let rectElement = document.getElementById('rect') as HTMLDivElement
+
+
+//! создание элемента
+// let test = document.createElement('div')
+// test.innerHTML = 'Здесь текст'
+// console.log(test);
+
+
+// let p:string = '8'
+// console.log(typeof p);
+
+
+
+type myLets = {
+    a:number,
+    bj:number,
+    c:string,
+    d:string,
+}
+
+let obj1:myLets = {
+    a: 5,
+    d: 'eee',
+    bj: 7,
+    c: 'aaa',
+}
+
+let obj2:myLets = {
+    bj: 'bj',
+    4: 'fff',
+    3: 8,
+    5: 'hhh',
+    d: 'name',
+    c: 6,
+}
+
+console.log(obj1);
+console.log(obj2);
+
+
+// let x = Number(5)
+let x = 5 as number
+let y = String(5)
+console.log(typeof y);
+
+console.log(x + y);
 
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
