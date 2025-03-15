@@ -8,46 +8,18 @@ import '/src/style.scss'
 
 
 
-let pol = 'vova'
+// let pol = 'vova'
 
-let pol2 = pol.split('').reverse().join('')
-console.log(pol2);
-if (pol == pol2) {
-    console.log(`значение ${pol} -  поллиндром`);
-} else {
-    console.log(`значение ${pol} -  не поллиндром`);
-}
-
-
+// let pol2 = pol.split('').reverse().join('')
+// console.log(pol2);
+// if (pol == pol2) {
+//     console.log(`значение ${pol} -  поллиндром`);
+// } else {
+//     console.log(`значение ${pol} -  не поллиндром`);
+// }
 
 
-let array = [10, 11, 12, 13, 14, 15]
-let array2 = [1, 1, 2, 3, 4, 5]
 
-
-function summer(p: any) {
-    let summ = 0
-    for (let i = 0; i < p.length; i++) {
-        summ += p[i]
-    }
-    console.log(summ);
-}
-summer(array)
-
-summer(array2)
-
-
-function balance(a: number, b: number) {
-    if (a > b) {
-        console.log(Math.round(((a / b) - (+a / b)) * b));
-
-    } else {
-        console.log('Делитель больше делимого числа');
-
-    }
-}
-
-balance(15, 9)
 
 
 
@@ -105,74 +77,30 @@ console.log(days2[d.getDay()])
 
 
 
-console.log(window.screen);
-console.log(todays.getDay());
+// console.log(window.screen);
+// console.log(todays.getDay());
 
-console.log(days.nextElementSibling);
-console.log(days.baseURI);
+// console.log(days.nextElementSibling);
+// console.log(days.baseURI);
 
-let age = 32
-let education = 'higher'
-if (age >= 30 && age <= 40 && education == 'higher') {
-    console.log('проверка');
-}
+// let age = 32
+// let education = 'higher'
+// if (age >= 30 && age <= 40 && education == 'higher') {
+//     console.log('проверка');
+// }
 
 
 // let y
 // console.log(y);
 
 
-console.log(Boolean(1));
-console.log(Boolean(0));
+// console.log(Boolean(1));
+// console.log(Boolean(0));
+
+ 
 
 
-
-
-function diapazone(firstNum: number, secondNum: number) {
-    for (let i = firstNum; i <= secondNum; i++) {
-        if (i % 100 == 0) {
-            console.log(i);
-        }
-    }
-}
-
-diapazone(0, 10)
-diapazone(0, 1000)
-
-
-console.log('===========');
-
-
-
-
-// Вывести все числа от 1 до 100, которые кратные указанному 
-// пользователем числу.
-function multipleNumber(multNum: number) {
-    for (let i = 1; i < 100; i++) {
-        if (i % multNum == 0) {
-            console.log(i);
-
-        }
-    }
-}
-
-// multipleNumber(3)
-
-
-//  4. Вывести каждый 4-й элемент из указанного пользователем 
-// диапазона. Пользователь указывает минимальное и мак
-// симальное значения диапазона. 
-
-function multipleNumber4(minNum: number, maxNum: number) {
-    for (let i = minNum; i < maxNum; i++) {
-        if (i % 4 == 0) {
-            console.log(i);
-        }
-    }
-}
-multipleNumber4(80, 100)
-
-
+  
 
 
 // 5. Запросить число и проверить, простое ли оно. Простое 
@@ -190,82 +118,21 @@ for (let i = 2; i < simpleNumber; i++) {
     }
 }
 
-// Вывести # столько раз, сколько указал пользователь.
-let lattice = 25
-let mass = []
-let acc = 0
 
-for (let i = 1; i <= lattice; i++) {
-    mass.push('#')
-    acc++
-}
-mass.push(acc + ' повторений #')
-
-console.log(mass);
-
-
-
-
-
-let numStr = 123
-console.log(typeof numStr.toFixed().split(''));
-
-let numStr2 = '123'
-console.log(numStr2.length);
-
-console.log(typeof Number(numStr2));
-
-let numStr3 = '123' as any
-console.log(typeof (numStr3 * 1));
-
-console.log(undefined == null);
-console.log(null == 0);
-console.log(undefined == 0);
 
 
 
 // холодно тепло жарко горячо
-let temperature = 198
-let infoOfTemperature =
-    temperature < 15 ? 'холодно' :
-        temperature < 30 ? 'тепло' :
-            temperature < 45 ? 'жарко' :
-                temperature < 100 ? 'горячо' : 'диапазон температуры неверный';
-console.log(infoOfTemperature);
+// let temperature = 198
+// let infoOfTemperature =
+//     temperature < 15 ? 'холодно' :
+//         temperature < 30 ? 'тепло' :
+//             temperature < 45 ? 'жарко' :
+//                 temperature < 100 ? 'горячо' : 'диапазон температуры неверный';
+// console.log(infoOfTemperature);
 
 
 
-let login = 'Директор'
-let message = (login == 'Сотрудник') ? 'привет' :
-    (login == 'Директор') ? 'здравствуйте' :
-        (login == '') ? 'нет логина' : ''
-console.log(message);
-
-
-
-// if (login == 'Сотрудник') {
-//   message = 'Привет';
-// } else if (login == 'Директор') {
-//   message = 'Здравствуйте';
-// } else if (login == '') {
-//   message = 'Нет логина';
-// } else {
-//   message = '';
-// }
-
-
-
-
-// let years = 10
-// if (years < 5) {
-//     console.log('ребенок');
-// } else if (years < 18) {
-//     console.log('подросток');
-// } else if (years < 100) {
-//     console.log('взрослый');
-// } else {
-//     console.log('введите корректные данные');
-// }
 
 
 let checkDays = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"] as any
@@ -280,12 +147,12 @@ for (let i = 0; i < checkDays.length; i++) {
 
 }
 
-let a1 = ''
-let a2 = 'Значение'
+// let a1 = ''
+// let a2 = 'Значение'
 
 
-a1 = a1 == '' ? a2 : a1
-console.log(a1);
+// a1 = a1 == '' ? a2 : a1
+// console.log(a1);
 
 
 // || - ищет первое истинное значение
@@ -294,28 +161,28 @@ console.log(a1);
 
 
 
-let quantaty = 5
-if (quantaty < 10 && quantaty > 100) {
-    console.log(quantaty); //выражение никогда не сработает
-}
+// let quantaty = 5
+// if (quantaty < 10 && quantaty > 100) {
+//     console.log(quantaty); //выражение никогда не сработает
+// }
 
-if (quantaty < 10 || quantaty > 100) {
-    console.log(`quantaty = ${quantaty}`);
-}
-
-
+// if (quantaty < 10 || quantaty > 100) {
+//     console.log(`quantaty = ${quantaty}`);
+// }
 
 
 
 
-let k = 5
-let factorial = 1
-while (k > 1) {
-    factorial = k * factorial
-    k--
-    console.log(factorial);
 
-}
+
+// let k = 5
+// let factorial = 1
+// while (k > 1) {
+//     factorial = k * factorial
+//     k--
+//     console.log(factorial);
+
+// }
 
 
 
@@ -351,113 +218,94 @@ while (k > 1) {
 // while (i<-5)
 
 
-let messages = 'Hello1'
-console.log(messages);
 
 
 
-for (let i = 0; i < 10; i++) {
-    if (i % 2 != 0) break
-    console.log(i);
 
-}
+// for (let i = 0; i < 10; i++) {
+//     if (i % 2 != 0) break
+//     console.log(i);
 
-
-let tetsI = 1
-do {
-    tetsI++
-    console.log(tetsI);
-
-} while (tetsI < 5);
+// }
 
 
+// let tetsI = 1
+// do {
+//     tetsI++
+//     console.log(tetsI);
+
+// } while (tetsI < 5);
 
 
 
 
 
 
-const res2 = 100
-console.log(res2);
 
-function testFunc(name: string, surname = 'Ivanov') {
-    console.log(`hello friend ${name} ${surname}`);
-
-}
-testFunc('Ivan')
-testFunc('Petya', 'Petrov')
-
-function nothing(a: any, b: any) {
-    return a + b
-}
-if (nothing() == undefined) {
-    console.log('функции underfined!');
-}
-console.log(typeof nothing(3, 5))
 
 
 
 // проверка простое ли число!!!!!!!!!!!!
-let simpleNum = 19
-let checkSimpleNum = 0
-for (let i = 1; i <= simpleNum; i++) {
-    if (simpleNum % i == 0) {
-        checkSimpleNum++
-    }
-}
-console.log(checkSimpleNum > 2 ? 'число составное' : 'число простое')
+// let simpleNum = 19
+// let checkSimpleNum = 0
+// for (let i = 1; i <= simpleNum; i++) {
+//     if (simpleNum % i == 0) {
+//         checkSimpleNum++
+//     }
+// }
+// console.log(checkSimpleNum > 2 ? 'число составное' : 'число простое')
 
 
-function summArguments() {
-    let summ = 0
-    for (let i = 0; i < arguments.length; i++) {
-        summ += arguments[i]
-    }
-    return summ
-}
-console.log(summArguments(1, 3, 8, 4))
-
-
-
-
-let divideNum = 20
-for (let i = 1; i < divideNum; i++) {
-    divideNum / i
-    console.log(divideNum)
-
-
-}
-
-function checkUser(name: string) {
-    if (!name) return ('Вы не ввели имя')
-    if (typeof name != 'string') return ('Введите цифры')
-    return `Привет ${name}`
-}
-
-console.log(checkUser('Vasya'));
+// function summArguments() {
+//     let summ = 0
+//     for (let i = 0; i < arguments.length; i++) {
+//         summ += arguments[i]
+//     }
+//     return summ
+// }
+// console.log(summArguments(1, 3, 8, 4))
 
 
 
 
+// let divideNum = 20
+// for (let i = 1; i < divideNum; i++) {
+//     divideNum / i
+//     console.log(divideNum)
 
-const summAB = (a: number, b: number) => {
-    return a + b
-}
-console.log(summAB(4, 8));
+
+// }
+
+// function checkUser(name: string) {
+//     if (!name) return ('Вы не ввели имя')
+//     if (typeof name != 'string') return ('Введите цифры')
+//     return `Привет ${name}`
+// }
+
+// console.log(checkUser('Vasya'));
+
+
+
+
+
+// const summAB = (a: number, b: number) => {
+//     return a + b
+// }
+// console.log(summAB(4, 8));
 
 
 // умножить числа от 0 до 5
 
-function rec(num: number, pow: number): any {
-    if (pow == 1) {
-        return num
-    } else {
-        return num * rec(num, (pow - 1))
-    }
+// function rec(num: number, pow: number): any {
+//     if (pow == 1) {
+//         return num
+//     } else {
+//         return num * rec(num, (pow - 1))
+//     }
 
-}
+// }
 
-console.log(rec(3, 3));
+// console.log(rec(3, 3));
 
 
 
@@ -622,15 +470,15 @@ console.log(numberInPow(5, 3));
 //! 2. Написать функцию поиска наибольшего общего делителя.
 
 
-function recursiveFactor(n: number, d: number): any {
-    if (n < 1) return
-    if (n == 1) return;
-    if (n == 2) return [1, 2];
-    if (n / d < 2) return [n];
-    if (n % d == 0) return [d, ...recursiveFactor(n, d + 1)];
-    return recursiveFactor(n, d + 1);
-}
-console.log(recursiveFactor(10, 6));
+// ?function recursiveFactor(n: number, d: number): any {
+// ?    if (n < 1) return
+// ?    if (n == 1) return;
+// ?    if (n == 2) return [1, 2];
+// ?    if (n / d < 2) return [n];
+// ?    if (n % d == 0) return [d, ...recursiveFactor(n, d + 1)];
+// ?    return recursiveFactor(n, d + 1);
+// ?}
+// ?console.log(recursiveFactor(10, 6));
 
 
 
@@ -1723,7 +1571,6 @@ console.log(setHours());
 
 
 
-console.clear()
 
 
 //! <================= JS_PZ_Modul_1_Week_4=============>
@@ -1988,10 +1835,45 @@ console.log(x + y);
 
 
 
+//! <================= Методы массивов =================>
+
+//! push -  в конец  добавляет
+//! pop -  с конца удаляет
+//! unshift - добавляет в начало
+//! shift - добавляет в конец
+
+//! slice - копирует часть массива
+//! splice - вырезает часть массива
 
 
 
+let mas = ['a', 'b', 'c', 'd', 'e', 'f']
+console.log(mas);
 
+// mas.push('hhh')
+// console.log(mas);
+
+// mas.pop()
+// console.log(mas);
+
+// mas.unshift('fff')
+// console.log(mas);
+
+// mas.shift()
+// console.log(mas);
+
+// let mas2 = mas.slice(3,6) //(нач элемент, конеч элемент)
+// console.log(mas2);
+
+// console.log(mas);
+
+// mas.splice(2, 0, 'el1', 'el2') // (нач элемент, кол-во элементов)
+// console.log(mas);
+
+for (const el of mas) {
+    console.log(el);
+    
+}
 
 
 
