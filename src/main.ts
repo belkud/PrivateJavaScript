@@ -1572,113 +1572,6 @@ console.log(setHours());
 
 
 
-
-//! <================= JS_PZ_Modul_1_Week_4=============>
-
-
-
-//! 6. Написать функцию, которая реализует работу оператора %. 
-//! Функция принимает 2 параметра и возвращает остаток от 
-//! деления первого параметра на второй. В функции исполь
-//! зовать только + - * /, оператор % не использовать. 
-
-function remainder(num1: number, num2: number) {
-    let quantaty = Math.floor(num1 / num2)
-    return num1 - num2 * quantaty
-}
-console.log(remainder(8,3));
-
-
-//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает их сумму.
-
-// function sumNumbers(num1: number,
-//     num2 = 0,
-//     num3 = 0,
-//     num4 = 0,
-//     num5 = 0,
-// ) {
-//     return num1 + num2 + num3 + num4 + num5
-// }
-// console.log(sumNumbers(10));
-
-
-
-//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает большее из них.
-
-// function biggestNumber(num1: number,
-//     num2 = -Infinity,
-//     num3 = -Infinity,
-//     num4 = -Infinity,
-//     num5 = -Infinity,
-//     ) {
-//     return Math.max(num1, num2, num3, num4, num5)
-
-// }
-// console.log(biggestNumber(5, 3, 10));
-
-
-
-
-//! 9. Написать функцию, которая выводит все четные или не
-//! четные числа, в указанном пользователем диапазоне. Какие 
-//! числа выводить, определяется третьим параметром типа 
-//! bool (true – четные, false – нечетные).
-
-
-function showEvenOddNumberInDiapazone(minNum: number, maxNum: number, bool: boolean) {
-    let str = ''
-    for (let i = minNum; i <=maxNum; i++) {
-        if (bool==true && i%2==0) {
-            str+=i + ' '
-        } 
-        if (bool==false && i%2==1) {
-            str+=i + ' '
-        } 
-    }
-    return str
-}
-console.log(showEvenOddNumberInDiapazone(3, 12, true))
-console.log(showEvenOddNumberInDiapazone(3, 12, false));
-
-
-
-
-//! 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает 
-//! дату следующего дня в виде строки «дд.мм.гггг». Проверку на високосный год 
-//! желательно написать отдельной функцией.
-
-function returnNextDay(day:number, mounth:number, year:number) {
-    if (day>=32) return 'Введите корректный день'
-    if (day==31 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) return 'Введите корректный день'
-    if (day>=30 && mounth==2 || day==29 && mounth==2 && year%4!=0) return 'Введите корректный день'
-    if (mounth>=13) return 'Введите корректный месяц'
-    
-    // подсчёт лет
-    if (day==31 && mounth==12){
-        year+=1
-        mounth=1
-        day=0
-    }
-    
-    // подсчёт дней и месяцев
-    if (day==30 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) {
-        day=1
-        mounth+=1
-    } else if (day==31 && (mounth==3 || mounth==5 ||mounth==7 || mounth==8 || mounth==10 || mounth==12)) {
-        day=1
-        mounth+=1
-    } else if(day==28 && mounth==2 && year%4!=0 || day==29 && mounth==2 && year%4==0){
-        day=1
-        mounth+=1
-    } else {
-        day+=1
-    }
-    return `«${day}.${mounth}.${year}»`
-}
-console.log(returnNextDay(31, 12, 2024));
-
  
 //!  7. Написать функцию, которая считает количество слов в 
 //! предложении.
@@ -2104,3 +1997,134 @@ console.log(arr);
 // console.log(delElInArr(2));
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! <================= JS_PZ_Modul_1_Week_4=============>
+
+
+
+//! 6. Написать функцию, которая реализует работу оператора %. 
+//! Функция принимает 2 параметра и возвращает остаток от 
+//! деления первого параметра на второй. В функции исполь
+//! зовать только + - * /, оператор % не использовать. 
+
+function remainder(num1: number, num2: number) {
+    let quantaty = Math.floor(num1 / num2)
+    return num1 - num2 * quantaty
+}
+console.log(remainder(8,3));
+
+
+//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает их сумму.
+
+
+// function sumNumbers(num1: number,
+//     num2 = 0,
+//     num3 = 0,
+//     num4 = 0,
+//     num5 = 0,
+// ) {
+//     return num1 + num2 + num3 + num4 + num5
+// }
+// console.log(sumNumbers(10));
+
+
+
+//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
+//! возвращает большее из них.
+
+
+// function biggestNumber(num1: number,
+//     num2 = -Infinity,
+//     num3 = -Infinity,
+//     num4 = -Infinity,
+//     num5 = -Infinity,
+//     ) {
+//     return Math.max(num1, num2, num3, num4, num5)
+
+// }
+// console.log(biggestNumber(5, 3, 10));
+
+
+
+
+//! 9. Написать функцию, которая выводит все четные или не
+//! четные числа, в указанном пользователем диапазоне. Какие 
+//! числа выводить, определяется третьим параметром типа 
+//! bool (true – четные, false – нечетные).
+
+
+function showEvenOddNumberInDiapazone(minNum: number, maxNum: number, bool: boolean) {
+    let str = ''
+    for (let i = minNum; i <=maxNum; i++) {
+        if (bool==true && i%2==0) {
+            str+=i + ' '
+        } 
+        if (bool==false && i%2==1) {
+            str+=i + ' '
+        } 
+    }
+    return str
+}
+console.log(showEvenOddNumberInDiapazone(3, 12, true))
+console.log(showEvenOddNumberInDiapazone(3, 12, false));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает 
+//! дату следующего дня в виде строки «дд.мм.гггг». Проверку на високосный год 
+//! желательно написать отдельной функцией.
+
+function returnNextDay(day:number, mounth:number, year:number) {
+    if (day>=32) return 'Введите корректный день'
+    if (day==31 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) return 'Введите корректный день'
+    if (day>=30 && mounth==2 || day==29 && mounth==2 && year%4!=0) return 'Введите корректный день'
+    if (mounth>=13) return 'Введите корректный месяц'
+    
+    // подсчёт лет
+    if (day==31 && mounth==12){
+        year+=1
+        mounth=1
+        day=0
+    }
+    
+    // подсчёт дней и месяцев
+    if (day==30 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) {
+        day=1
+        mounth+=1
+    } else if (day==31 && (mounth==3 || mounth==5 ||mounth==7 || mounth==8 || mounth==10 || mounth==12)) {
+        day=1
+        mounth+=1
+    } else if(day==28 && mounth==2 && year%4!=0 || day==29 && mounth==2 && year%4==0){
+        day=1
+        mounth+=1
+    } else {
+        day+=1
+    }
+    return `«${day}.${mounth}.${year}»`
+}
+console.log(returnNextDay(31, 12, 2024));
