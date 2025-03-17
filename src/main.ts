@@ -1870,17 +1870,52 @@ console.log(mas);
 // mas.splice(2, 0, 'el1', 'el2') // (нач элемент, кол-во элементов)
 // console.log(mas);
 
-for (const el of mas) {
-    console.log(el);
+
+
+//! циклы for of и for (;;) для массива одинаковы
+// for (const el of mas) {
+//     console.log(el);    
+// }
+
+// for (let i = 0; i < mas.length; i++) {
+//     console.log(mas[i]);        
+// }
+
+
+//! цикл for in для объекта
+
+
+
+
+
+
+
+let fruits = ["Апельсин", "Слива"];
+console.log(fruits);
+
+fruits.push('apple')
+console.log(fruits);
+
+
+let funcs = [
     
+]
+
+
+
+
+// background-color =   backgroundColor
+
+// changeLet = 'background-color'
+
+function newWord (changeLet:string) {
+    let newLet = changeLet.split('-') 
+    let UpperLetter = newLet[1].slice(0,1).toUpperCase() // заглавная буква второго слова
+
+    return(newLet[0] + UpperLetter + newLet[1].slice(1));
 }
 
-
-
-
-
-
-
-
-
+console.log(newWord('background-color'));
+console.log(newWord('text-align'));
+console.log(newWord('background-center'));
 
