@@ -870,14 +870,14 @@ for (const key in obj) {
 //? for и оператора if выведите на экран столбец тех элементов 
 //? массива, которые больше 3-х, но меньше 10. 
 
-let arr = [2, 5, 9, 15, 0, 4]
-console.log(arr);
+// let arr = [2, 5, 9, 15, 0, 4]
+// console.log(arr);
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i]>3 && arr[i]<10) {
-        console.log(arr[i]);
-    }   
-}
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]>3 && arr[i]<10) {
+//         console.log(arr[i]);
+//     }   
+// }
 
 //? Дан массив с числами. Числа могут быть положительными и отрицательными. 
 //? Найдите сумму положительных элементов массива. 
@@ -1012,16 +1012,16 @@ for (let i = 0; i < mass6.length; i++) {
 
 //! 3. Написать функцию для поиска максимальной цифры в числе.
 
-let maxN = '45834693'
-let mass2 = maxN.split('')
-let accum2 = 0
-let uu = -100
-for (let i = 0; i < maxN.length; i++) {
-    if (mass2[i]>uu) {
-        uu = mass2[i] 
-        console.log(uu);
-    }
-}
+// let maxN = '45834693'
+// let mass2 = maxN.split('')
+// let accum2 = 0
+// let uu = -100
+// for (let i = 0; i < maxN.length; i++) {
+//     if (mass2[i]>uu) {
+//         uu = mass2[i] 
+//         console.log(uu);
+//     }
+// }
         // function maxNumber(params:type) {
             
         // }
@@ -1908,14 +1908,199 @@ let funcs = [
 
 // changeLet = 'background-color'
 
-function newWord (changeLet:string) {
+let yyy = function newWord (changeLet:string) {
     let newLet = changeLet.split('-') 
     let UpperLetter = newLet[1].slice(0,1).toUpperCase() // заглавная буква второго слова
 
     return(newLet[0] + UpperLetter + newLet[1].slice(1));
 }
 
-console.log(newWord('background-color'));
-console.log(newWord('text-align'));
-console.log(newWord('background-center'));
+console.log(yyy('background-color'));
+console.log(yyy('text-align'));
+console.log(yyy('background-center'));
+
+let masss = [yyy('background-center')]
+console.log(masss[0])
+
+
+// разные типы значений
+let arrn = [ 'Яблоко', { name: 'Джон' }, true, function() { console.log('привет'); } ];
+// arrn[4]='Apple'
+arrn.push('Apple')
+console.log(arrn);
+ 
+
+
+
+
+//! Создание глобальной ссылки 'вторым способом':
+
+//! 1. Заходим в Репозиторий-> Settings-> в самом низу делаем репозиторий Public
+//! 2. Заходим в Pages, там где 'Branch(none)' ставим 'main'
+//! 3. Переходим обратно в Репозиторий и  там где About ставим галочку в 'Use your GitHub Pages website'
+//! Ссылка по идее должна создаться :)
+
+
+
+
+let mass1 = [123]
+console.log(mass1);
+
+let mass2 = [123]
+console.log(mass2);
+
+console.log(mass1==mass2);
+console.log(mass1[0]==mass2[0]);
+
+
+
+// mass2[1] = 555
+// console.log(mass1);
+// console.log(mass2);
+
+
+let fruit = ["Яблоко", "Апельсин", "Слива"];
+console.log(fruit.length);
+
+// проходит по значениям
+for (let el of fruit) {
+  console.log( el );
+}
+
+// let array = []
+
+
+// function getMaxSubSum(arr:any) {
+//     let maxSum = 0;
+//     let partialSum = 0;
+
+// for (const el of arr) {
+//     partialSum+=el
+//     maxSum = Math.max(maxSum, partialSum)
+//     if (partialSum<0) {
+//         partialSum=0
+        
+//     }
+// }
+// return maxSum
+
+// }
+
+
+// console.log(getMaxSubSum([6, 2,-3, 5]));
+
+
+
+function getMaxSubSum(arr) {
+    let maxSum = 0;
+    let partialSum = 0;
+  
+    for (let item of arr) { // для каждого элемента массива
+      partialSum += item; // добавляем значение элемента к partialSum
+      maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+      if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+    }
+  
+    return maxSum;
+  }
+
+
+  console.log(getMaxSubSum([-3, -4, -2, 8]));
+  
+
+  console.log(getMaxSubSum([-1, 2, -3, -9, -8, 3]));
+
+
+
+
+
+//!  <=========================JS_PZ_Modul_2_Week_2======================>
+
+//! Задание 1
+//! Создать массив из 10 случайных чисел и написать несколько 
+//! функций для работы с ним.
+
+let arr = [] as any
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random()*5))    
+}
+console.log(arr);
+
+
+
+//? 1. Функция принимает массив и выводит его на экран.
+
+// function showArr(arr:object) {
+//     return arr    
+// }
+// console.log(showArr(arr));
+
+
+
+//? 2. Функция принимает массив и выводит только четные 
+//? элементы.
+
+// function oddElOfMass(arr:any) {
+//     let mass = [] as any
+//     for (const el of arr) {
+//         if (el%2==0) {
+//             mass.push(el)
+//         }
+//     }
+//     return mass
+// }
+// console.log(oddElOfMass(arr));
+
+
+
+
+//? 3. Функция принимает массив и возвращает сумму всех 
+//? элементов массива.
+
+// function summOfElMass(arr:any) {
+//     let accum = 0
+//     for (const el of arr) {
+//         accum+=el        
+//     }
+//     return accum
+// }
+// console.log(summOfElMass(arr));
+
+
+
+
+//? 4. Функция принимает массив и возвращает его максималь
+//? ный элемент.
+
+// function maxElOfmass(arr:any) {
+//     return Math.max(...arr)
+// }
+// console.log(maxElOfmass(arr));
+
+
+
+
+//? 5. Функция добавления нового элемента в массив по ука
+//? занному индексу.
+
+
+// function addElInMass(index:number, num:number) {
+//     arr.splice(index, 0, num)
+//     return arr
+// }
+// console.log(addElInMass(3, 1000));
+
+
+
+
+//? 6. Функция удаления элемента из массива по указанному 
+//? индексу.
+
+// function delElInArr(index:number) {
+//     delete arr[index]
+//     return arr
+// }
+
+// console.log(delElInArr(2));
+
 
