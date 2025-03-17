@@ -2128,3 +2128,78 @@ function returnNextDay(day:number, mounth:number, year:number) {
     return `«${day}.${mounth}.${year}»`
 }
 console.log(returnNextDay(31, 12, 2024));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// число в степени
+function test(num:number, pow:number) {
+    let result = 1
+    for(let i = 0; i < pow; i++) {
+        result *= num
+    }
+    return result
+}
+console.log(test(5,2));
+
+
+// число в степени 2
+function test2(num:number, pow:number):any {
+    if (pow==1){
+        return num
+    }else {
+        return num * test2(num, pow-1) 
+
+    }
+
+}
+
+console.log(test2(5,1));
+console.log(test2(5,2));
+
+
+
+
+// вычислить факториал
+function factorial2(n:number):any {
+    if (n == 1){
+        return n
+    }
+    return n * factorial2(n - 1);
+  }
+
+  console.log(factorial2(5));
+  
