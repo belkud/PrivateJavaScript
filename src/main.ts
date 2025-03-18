@@ -1783,16 +1783,16 @@ console.log(mas);
 
 
 
-let fruits = ["Апельсин", "Слива"];
-console.log(fruits);
+// let fruits = ["Апельсин", "Слива"];
+// console.log(fruits);
 
-fruits.push('apple')
-console.log(fruits);
+// fruits.push('apple')
+// console.log(fruits);
 
 
-let funcs = [
+// let funcs = [
     
-]
+// ]
 
 
 
@@ -1852,13 +1852,13 @@ console.log(mass1[0]==mass2[0]);
 // console.log(mass2);
 
 
-let fruit = ["Яблоко", "Апельсин", "Слива"];
-console.log(fruit.length);
+// let fruit = ["Яблоко", "Апельсин", "Слива"];
+// console.log(fruit.length);
 
 // проходит по значениям
-for (let el of fruit) {
-  console.log( el );
-}
+// for (let el of fruit) {
+//   console.log( el );
+// }
 
 // let array = []
 
@@ -2113,8 +2113,6 @@ console.log('-----------');
 //? общие элементы (то есть элементы, которые встречаются и в первом и во втором 
 //? массивах) без повторений.
 
-arr = [3, 2, 10, 1, 7, 10, 0, 1, 5, 10] //перезаписал массив!
-arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
 
 console.log('первый массив = ' + arr);
 console.log('второй массив = ' + arrSecond);
@@ -2122,23 +2120,138 @@ console.log('второй массив = ' + arrSecond);
 
 
 function  getGeneralElements (arr:number[],arrSecond:number[]) {
-    let array:number[] = []
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arrSecond.length; j++) {
-           if (arr[i]==arrSecond[j]) {      
-               array.push(arr[i])
-           } 
+    
+    //! первый способ
+    let mass:number[] = []
+    for (const el of arr) {
+        if(arr.includes(el) && arrSecond.includes(el)) {
+            if (!mass.includes(el)) {
+                mass.push(el)
+            }
         }
-        }
-        return array
-    }
-    getGeneralElements(arr, arrSecond)
+        
+    } return mass
+
+
+    
+    
+    //! второй способ
+    // let array:number[] = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arrSecond.length; j++) {
+    //        if (arr[i]==arrSecond[j]) {      
+    //            array.push(arr[i])
+    //        } 
+    //     }
+    //     }
+    //     return array
+    
+
+}
+    // getGeneralElements(arr, arrSecond)
 console.log(getGeneralElements(arr, arrSecond));
+
+
+
+
+
+console.log('-------------');
+
+arr = [3, 2, 10, 3, 7, 10, 0, 1, 5, 10] //перезаписал массив!
+arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
 
 
 
 //? 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
 //? все элементы из первого массива, которых нет во втором массиве.
+
+
+function getArrWithNewElement(arr:number[], arrSecond:number[]) {
+    let newMass:number[] = []
+    for (const el of arr) {
+        if(arr.includes(el) && !arrSecond.includes(el)){
+            if (!newMass.includes(el)) {
+                newMass.push(el)
+            }
+        }
+    }
+
+    return newMass
+}
+
+console.log(getArrWithNewElement(arr,arrSecond));
+
+//!  Задание 3
+//! Создать массив фруктов и отсортировать его по алфавиту. Написать следующие 
+//! функции.
+
+let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
+// console.log(fruits);
+
+
+
+function sortByAlphabet(fruits:string[]) {
+
+    return fruits.sort()
+}
+
+console.log(sortByAlphabet(fruits));
+
+
+
+
+
+
+//! 2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс 
+//! найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.
+
+let fruit= 'orangE' 
+
+fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
+
+
+
+function searchFruitsInArray(fruit:string){
+
+
+for (let i = 0; i < fruits.length; i++) {
+        if (fruit.toLowerCase() == fruits[i]) {
+            return `индекс элемента ${fruit} = ${i}` 
+        }
+    }
+return `данного элемента нет` 
+    
+}
+
+console.log(searchFruitsInArray(fruit));
+
+
+ 
+
+
+//! 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
