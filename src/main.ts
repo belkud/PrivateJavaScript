@@ -2232,19 +2232,20 @@ console.log(searchFruitsInArray(fruit));
 //! 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
 
 
+let inputInHTML = document.getElementById('fruit') as HTMLDivElement
+
+function showFruits (fruits:string[]) {
+    for (let i = 0; i < fruits.length; i++) {
+        inputInHTML.innerHTML+=`<li>${fruits[i]}</li>`
+    }
+
+}
+console.log(showFruits(fruits));
 
 
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 
 
