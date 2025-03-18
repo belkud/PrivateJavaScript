@@ -1907,15 +1907,68 @@ function getMaxSubSum(arr) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// число в степени
+function test(num:number, pow:number) {
+    let result = 1
+    for(let i = 0; i < pow; i++) {
+        result *= num
+    }
+    return result
+}
+console.log(test(5,2));
+
+
+// число в степени 2
+function test2(num:number, pow:number):any {
+    if (pow==1){
+        return num
+    }else {
+        return num * test2(num, pow-1) 
+
+    }
+
+}
+
+console.log(test2(5,1));
+console.log(test2(5,2));
+
+
+
+
+// вычислить факториал
+function factorial2(n:number):any {
+    if (n == 1){
+        return n
+    }
+    return n * factorial2(n - 1);
+  }
+
+  console.log(factorial2(5));
+  
+
+
+  
+
 //!  <=========================JS_PZ_Modul_2_Week_2======================>
 
 //! Задание 1
 //! Создать массив из 10 случайных чисел и написать несколько 
 //! функций для работы с ним.
 
-let arr = [] as any
+let arr:number[] = [] 
 for (let i = 0; i < 10; i++) {
-    arr.push(Math.round(Math.random()*5))    
+    arr.push(Math.round(Math.random()*10))    
 }
 console.log(arr);
 
@@ -1943,7 +1996,6 @@ console.log(arr);
 //     return mass
 // }
 // console.log(oddElOfMass(arr));
-
 
 
 
@@ -1997,209 +2049,97 @@ console.log(arr);
 // console.log(delElInArr(2));
 
 
+//! Задание 2
+//! Создать еще один массив из 5 случайных чисел и написать следующие функции.
 
-
-
-
-
-
-
-
-
-
-
-
-
-//! <================= JS_PZ_Modul_1_Week_4=============>
-
-
-
-//! 6. Написать функцию, которая реализует работу оператора %. 
-//! Функция принимает 2 параметра и возвращает остаток от 
-//! деления первого параметра на второй. В функции исполь
-//! зовать только + - * /, оператор % не использовать. 
-
-function remainder(num1: number, num2: number) {
-    let quantaty = Math.floor(num1 / num2)
-    return num1 - num2 * quantaty
+let arrSecond:number[] = []
+for (let i = 0; i < 5; i++) {
+    arrSecond.push(Math.round(Math.random()*10))    
 }
-console.log(remainder(8,3));
+console.log(arrSecond);
 
 
-//! 7. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает их сумму.
+//? 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? все элементы из двух массивов без повторений.
+
+//! arr = [3, 2, 10, 1, 7, 10, 0, 1, 5, 10] //перезаписал массив!
+//! arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
+// (чтобы не работать с random для наглядности)
 
 
-// function sumNumbers(num1: number,
-//     num2 = 0,
-//     num3 = 0,
-//     num4 = 0,
-//     num5 = 0,
-// ) {
-//     return num1 + num2 + num3 + num4 + num5
-// }
-// console.log(sumNumbers(10));
+//! console.log(arr.includes(6)); // включён ли элемент
 
 
 
-//! 8. Написать функцию, которая принимает от 1 до 5 чисел и 
-//! возвращает большее из них.
+function findUniqElements(arr:number[], arrSecond:number[]) {
+ let newArr:number[] = []
 
-
-// function biggestNumber(num1: number,
-//     num2 = -Infinity,
-//     num3 = -Infinity,
-//     num4 = -Infinity,
-//     num5 = -Infinity,
-//     ) {
-//     return Math.max(num1, num2, num3, num4, num5)
-
-// }
-// console.log(biggestNumber(5, 3, 10));
-
-
-
-
-//! 9. Написать функцию, которая выводит все четные или не
-//! четные числа, в указанном пользователем диапазоне. Какие 
-//! числа выводить, определяется третьим параметром типа 
-//! bool (true – четные, false – нечетные).
-
-
-function showEvenOddNumberInDiapazone(minNum: number, maxNum: number, bool: boolean) {
-    let str = ''
-    for (let i = minNum; i <=maxNum; i++) {
-        if (bool==true && i%2==0) {
-            str+=i + ' '
-        } 
-        if (bool==false && i%2==1) {
-            str+=i + ' '
-        } 
+//!  первый способ
+for (const el of arr) {
+    if (!newArr.includes(el)) {
+        newArr.push(el)
     }
-    return str
 }
-console.log(showEvenOddNumberInDiapazone(3, 12, true))
-console.log(showEvenOddNumberInDiapazone(3, 12, false));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//! 10. Написать функцию, которая принимает дату (день, месяц, год) и возвращает 
-//! дату следующего дня в виде строки «дд.мм.гггг». Проверку на високосный год 
-//! желательно написать отдельной функцией.
-
-function returnNextDay(day:number, mounth:number, year:number) {
-    if (day>=32) return 'Введите корректный день'
-    if (day==31 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) return 'Введите корректный день'
-    if (day>=30 && mounth==2 || day==29 && mounth==2 && year%4!=0) return 'Введите корректный день'
-    if (mounth>=13) return 'Введите корректный месяц'
     
-    // подсчёт лет
-    if (day==31 && mounth==12){
-        year+=1
-        mounth=1
-        day=0
+for (const el of arrSecond) {
+    if (!newArr.includes(el)) {
+        newArr.push(el)
     }
+}
     
-    // подсчёт дней и месяцев
-    if (day==30 && (mounth==4 || mounth==6 ||mounth==9 || mounth==11)) {
-        day=1
-        mounth+=1
-    } else if (day==31 && (mounth==3 || mounth==5 ||mounth==7 || mounth==8 || mounth==10 || mounth==12)) {
-        day=1
-        mounth+=1
-    } else if(day==28 && mounth==2 && year%4!=0 || day==29 && mounth==2 && year%4==0){
-        day=1
-        mounth+=1
-    } else {
-        day+=1
-    }
-    return `«${day}.${mounth}.${year}»`
-}
-console.log(returnNextDay(31, 12, 2024));
 
+return newArr
+ 
+//!  второй способ
+    // let newMass:number[] = []
+    // let arrayWithNewNumbers:number[] = []
+    // newMass = arr.concat(arrSecond)
 
+    // for (let i = 0; i < newMass.length; i++) {
+    //     if(!arrayWithNewNumbers.includes(newMass[i])){
+    //         arrayWithNewNumbers.push(newMass[i])
+    //     } 
+    // } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// число в степени
-function test(num:number, pow:number) {
-    let result = 1
-    for(let i = 0; i < pow; i++) {
-        result *= num
-    }
-    return result
-}
-console.log(test(5,2));
-
-
-// число в степени 2
-function test2(num:number, pow:number):any {
-    if (pow==1){
-        return num
-    }else {
-        return num * test2(num, pow-1) 
-
-    }
-
+    // return arrayWithNewNumbers
 }
 
-console.log(test2(5,1));
-console.log(test2(5,2));
+console.log(findUniqElements(arr, arrSecond))
+
+console.log('-----------');
+
+
+//? 2. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? общие элементы (то есть элементы, которые встречаются и в первом и во втором 
+//? массивах) без повторений.
+
+arr = [3, 2, 10, 1, 7, 10, 0, 1, 5, 10] //перезаписал массив!
+arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
+
+console.log('первый массив = ' + arr);
+console.log('второй массив = ' + arrSecond);
 
 
 
-
-// вычислить факториал
-function factorial2(n:number):any {
-    if (n == 1){
-        return n
+function  getGeneralElements (arr:number[],arrSecond:number[]) {
+    let array:number[] = []
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arrSecond.length; j++) {
+           if (arr[i]==arrSecond[j]) {      
+               array.push(arr[i])
+           } 
+        }
+        }
+        return array
     }
-    return n * factorial2(n - 1);
-  }
+    getGeneralElements(arr, arrSecond)
+console.log(getGeneralElements(arr, arrSecond));
 
-  console.log(factorial2(5));
-  
+
+
+//? 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? все элементы из первого массива, которых нет во втором массиве.
+
+
+
+
