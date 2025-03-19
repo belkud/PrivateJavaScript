@@ -1826,7 +1826,7 @@ console.log(arrn);
 
 
 
-//! Создание глобальной ссылки 'вторым способом':
+//! Создание глобальной ссылки:
 
 //! 1. Заходим в Репозиторий-> Settings-> в самом низу делаем репозиторий Public
 //! 2. Заходим в Pages, там где 'Branch(none)' ставим 'main'
@@ -2042,7 +2042,7 @@ console.log(arr);
 //? индексу.
 
 // function delElInArr(index:number) {
-//     delete arr[index]
+//     arr.splice(index,1)
 //     return arr
 // }
 
@@ -2181,29 +2181,38 @@ function getArrWithNewElement(arr:number[], arrSecond:number[]) {
 
 console.log(getArrWithNewElement(arr,arrSecond));
 
+
 //!  Задание 3
 //! Создать массив фруктов и отсортировать его по алфавиту. Написать следующие 
 //! функции.
 
 let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
-// console.log(fruits);
 
 
 
 function sortByAlphabet(fruits:string[]) {
-
     return fruits.sort()
 }
 
 console.log(sortByAlphabet(fruits));
 
 
+//? 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
+
+let inputInHTML = document.getElementById('fruit') as HTMLDivElement
+
+function showFruits (fruits:string[]) {
+    for (let i = 0; i < fruits.length; i++) {
+        inputInHTML.innerHTML+=`<li>${fruits[i]}</li>`
+    }
+
+}
+console.log(showFruits(fruits));
 
 
 
-
-//! 2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс 
-//! найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.
+//? 2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс 
+//? найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.
 
 let fruit= 'orangE' 
 
@@ -2229,24 +2238,89 @@ console.log(searchFruitsInArray(fruit));
  
 
 
-//! 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
-
-
-let inputInHTML = document.getElementById('fruit') as HTMLDivElement
-
-function showFruits (fruits:string[]) {
-    for (let i = 0; i < fruits.length; i++) {
-        inputInHTML.innerHTML+=`<li>${fruits[i]}</li>`
-    }
-
-}
-console.log(showFruits(fruits));
-
 
 
 
  
 
+// макс. цифра в числе
+
+function maxNumber2(num: number): any {
+    if (num < 10) {
+        return num
+    } else {
+
+        return (Math.max(num))
+        // return (num + '' + maxNumber2(Math.floor(num/10)))
+    }
+}
+console.log(maxNumber2(15));
+
+
+
+
+
+
+//!  <=========================JS_DZ_Modul_2_Week_2======================>
+
+
+//!  Задание 2
+//!  Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из 
+//!  названия товара, количества и цены за единицу товара. Написать следующие функции.
+
+let check = [
+    {name: 'Milk', quantaty:2, price:90},    //180
+    {name: 'Sugar', quantaty:3, price:100},    //300
+    {name: 'bread', quantaty:1, price:50},    //50
+    {name: 'potato', quantaty:2, price:60},    //120
+    {name: 'chocolate', quantaty:3, price:120},    //360
+    // суммарно 1010
+]
+
+
+//?  1. Распечатка чека на экран.
+
+let showCheck = document.getElementById('checkInShop') as HTMLElement
+for (const el of check) {
+    showCheck.innerHTML += JSON.stringify(el) + '<br>'
+}
+
+
+//?  2. Подсчет общей суммы покупки.
+
+let count = 0
+for (const el of check) {
+    
+    count+=el.quantaty*el.price
+}
+
+showCheck.innerHTML +=`<br> Общая сумма покупки = ${count} <br><br>`
+
+
+
+
+
+//?  3. Получение самой дорогой покупки в чеке.
+
+let massive:number[] = []
+for (const el of check) {
+    massive.push(el.price*el.quantaty)
+}
+showCheck.innerHTML+=`Самая дорогая покупка = ${Math.max(...massive)} <br><br>`    
+
+
+
+
+//?  4. Подсчет средней стоимости одного товара в чеке. 
+
+
+let middlePrice = 0
+for (let i = 0; i < check.length; i++) {
+    middlePrice+=(check[i].price)/check.length    
+    console.log(middlePrice);
+}
+
+showCheck.innerHTML+=`Средняя стоимость одного товара = ${middlePrice}<br><br>`
 
 
 
