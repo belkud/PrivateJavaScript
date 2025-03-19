@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+    <div id="inputs">
+        <input id="product_title" type="text" placeholder="Название продукта">
+        <input id="product_quantaty" type="text" placeholder="Количество">
+        <button id="add_product">add product</button>
+    </div>
+    
+    
+    <div id="listWithProducts"></div>
+        
+
+
+    <style>
+        #inputs {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            gap: 2px;
+            position: absolute;
+            margin-left: 300px;
+        }
+
+        #add_product{
+            color: aliceblue;
+            background-color: red;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+    </style>
+
+
 
     <div id="checkInShop"></div>
 

@@ -325,111 +325,6 @@ console.log(recursion(4, 4));
 
 
 
-//! <=============JS_PZ_Modul_1_Week_5==================>
-
-
-//! 1. Написать функцию, которая вычисляет факториал задан
-//! ного числа.    
-
-function factorialNum(x: number): any {
-    if (x == 1) {
-        return x
-    } else {
-        return x * factorialNum(x - 1)
-    }
-}
-console.log(factorialNum(5));
-
-
-
-//! 2. Написать функцию, которая выводит все числа из заданного 
-//! пользователем диапазона в прямом порядке. И еще одну 
-//! функцию – для вывода в обратном порядке.
-
-
-function numberOfDiapazone(minNum: number, maxNum: number): any {
-    if (minNum == maxNum) {
-        return ''
-    } else {
-        return (minNum) + '' + numberOfDiapazone(minNum + 1, maxNum)
-    }
-}
-console.log(numberOfDiapazone(5, 10));
-
-
-function showReverseNumber(minNum: number, maxNum: number): any {
-    if (minNum == maxNum) {
-        return ''
-    } else {
-        return (maxNum - 1) + '' + showReverseNumber(minNum, maxNum - 1)
-    }
-}
-
-
-
-console.log(showReverseNumber(5, 10))
-
-
-
-
-//! 3. Написать функцию, которая выводит переданное ей число 
-//! задом наперед. 
-//! Например: число 1234 вывести как 4321.
-
-function getReverseNum(num: number): number {
-    if (num < 10) {
-        return num
-    } else {
-        return +(num % 10 + '' + getReverseNum(Math.floor(num / 10)))
-    }
-}
-console.log(getReverseNum(123));
-
-
-
-//! 4. Написать функцию, которая считает сумму цифр числа.
-//!  Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
-
-//? 1-й способ. Через рекурсию
-// function getSUmmDigitsNum(num:number):number {
-//     if(num<10) {
-//         return num
-//     } else {
-//         return +(num % 10 + getSUmmDigitsNum(Math.floor(num/10)))
-//     }
-// }
-// console.log(getSUmmDigitsNum(523));
-
-
-//? 2-й способ. Через цикл
-// function funcSumm (num:number) {
-//     let arrayNum = num.toString().split('')
-//     let accum = 0 as number
-//     for (let i = 0; i < arrayNum.length; i++) {
-//         accum+= +arrayNum[i]
-
-//     }
-//     return accum
-
-// }
-// console.log(funcSumm(523));
-
-
-//! 5. Написать функцию, которая принимает число и выводит 
-//! соответствующее количество вложенных пар круглых скобок. 
-//! Например: число 4 – (((()))).
-function pairBrackets(num: number): any {
-    if (!num) {
-        return ''
-    } else {
-        return '(' + pairBrackets(num - 1) + ')'
-    }
-}
-console.log(pairBrackets(3));
-
-
-
-
 
 
 
@@ -2263,6 +2158,88 @@ console.log(maxNumber2(15));
 
 //!  <=========================JS_DZ_Modul_2_Week_2======================>
 
+//! Задание 1
+//! Создать массив «Список покупок». Каждый элемент массива является объектом, который 
+//! содержит название продукта, необходимое количество и куплен или нет. Написать 
+//! несколько функций для работы с таким массивом.
+
+let list = [
+    {name: 'Milk', quantaty:2, bought:true}, 
+    {name: 'Sugar', quantaty:3, bought:false}, 
+    {name: 'Bread', quantaty:1, bought:true},
+    {name: 'Potato', quantaty:2, bought:false}, 
+    {name: 'Chocolate', quantaty:3, bought:true}, 
+]
+
+let listWithProducts = document.getElementById('listWithProducts') as HTMLDivElement
+
+
+//? 1. Вывод всего списка на экран таким образом, чтобы сначала шли некупленные 
+//? продукты, а потом – купленные.
+
+listWithProducts.innerHTML+=('Некупленные продукты:').bold()+'<br>'
+
+for (const el of list) {
+    if(el.bought==true){
+        listWithProducts.innerHTML+=(el.name + ' ' + el.quantaty)+'<br>'
+    }
+}
+listWithProducts.innerHTML+=('Купленные продукты:').bold()+'<br>'
+
+for (const el of list) {
+    if(el.bought==false){
+        listWithProducts.innerHTML+=(el.name + ' ' + el.quantaty)+'<br>'
+    }
+}
+
+
+
+//? 2. Добавление покупки в список. Учтите, что при добавлении покупки с уже 
+//? существующим в списке продуктом, необходимо увеличивать количество в 
+//? существующей покупке, а не добавлять новую. 
+
+// ????????????????????????????????????????????????????????????
+
+let product_title = document.getElementById('product_title') as HTMLInputElement
+let product_quantaty = document.getElementById('product_quantaty') as HTMLInputElement
+let add_product = document.getElementById('add_product') as HTMLButtonElement
+
+
+function writeProduct() {
+
+    add_product.addEventListener('click',()=>{
+        for (let i = 0; i < list.length; i++) {
+            if(list[i].name==product_title.value) {
+                console.log(list[i].quantaty+=1);
+                
+                return list[i].quantaty+=1
+            }
+            
+        }
+        return listWithProducts.innerHTML+=product_title.value + ' ' + product_quantaty.value + '<button id="add_product">add product</button>' + '<br>'
+    })
+    
+}
+
+writeProduct()
+ 
+            
+            
+
+    
+
+
+//? 3. Покупка продукта. Функция принимает название продукта и отмечает его как 
+//? купленный.
+
+
+
+
+
+
+
+
+
 
 //!  Задание 2
 //!  Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из 
@@ -2281,50 +2258,181 @@ let check = [
 //?  1. Распечатка чека на экран.
 
 let showCheck = document.getElementById('checkInShop') as HTMLElement
-for (const el of check) {
-    showCheck.innerHTML += JSON.stringify(el) + '<br>'
+showCheck.innerHTML = '<br>' + ('Чек с покупками:').bold() + '<br>'+ '<br>'
+
+function printCheck(check:any[]) {
+    let printInfo = ''
+    for (const el of check) {
+        printInfo += (JSON.stringify(el))+'<br>'
+    }
+    return showCheck.innerHTML+=printInfo
 }
+printCheck(check);
+
+
 
 
 //?  2. Подсчет общей суммы покупки.
 
-let count = 0
-for (const el of check) {
-    
-    count+=el.quantaty*el.price
+
+function unionSumm(check:any[]) {
+  let count = 0
+    for (const el of check) {
+        count+=el.quantaty*el.price
+    }
+    return showCheck.innerHTML +=`<br> Общая сумма покупки = ${count} <br><br>`
 }
-
-showCheck.innerHTML +=`<br> Общая сумма покупки = ${count} <br><br>`
-
+unionSumm(check)
 
 
 
 
 //?  3. Получение самой дорогой покупки в чеке.
 
-let massive:number[] = []
-for (const el of check) {
-    massive.push(el.price*el.quantaty)
+function mostExpensiveBought(check:any[]) {
+    let massive:number[] = []
+    for (const el of check) {
+        massive.push(el.price*el.quantaty)
+    }
+    return showCheck.innerHTML+=`Самая дорогая покупка = ${Math.max(...massive)} <br><br>`    
 }
-showCheck.innerHTML+=`Самая дорогая покупка = ${Math.max(...massive)} <br><br>`    
+mostExpensiveBought(check)
 
 
 
 
 //?  4. Подсчет средней стоимости одного товара в чеке. 
 
+function findMiddlePrice(check:any[]) {
+    let middlePrice = 0
+    for (let i = 0; i < check.length; i++) {
+        middlePrice+=(check[i].price)/check.length    
+        console.log(middlePrice);
+    }
+    return showCheck.innerHTML+=`Средняя стоимость одного товара = ${middlePrice}<br><br><br><br>`
+}
+findMiddlePrice(check)
 
-let middlePrice = 0
-for (let i = 0; i < check.length; i++) {
-    middlePrice+=(check[i].price)/check.length    
-    console.log(middlePrice);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! <=============JS_PZ_Modul_1_Week_5==================>
+
+
+//! 1. Написать функцию, которая вычисляет факториал задан
+//! ного числа.    
+
+
+function factorialNum(x: number): any {
+    if (x == 1) {
+        return x
+    } else {
+        return x * factorialNum(x - 1)
+    }
+}
+console.log(factorialNum(5));
+
+
+
+//! 2. Написать функцию, которая выводит все числа из заданного 
+//! пользователем диапазона в прямом порядке. И еще одну 
+//! функцию – для вывода в обратном порядке.
+
+
+function numberOfDiapazone(minNum: number, maxNum: number): any {
+    if (minNum == maxNum) {
+        return ''
+    } else {
+        return (minNum) + '' + numberOfDiapazone(minNum + 1, maxNum)
+    }
+}
+console.log(numberOfDiapazone(5, 10));
+
+
+function showReverseNumber(minNum: number, maxNum: number): any {
+    if (minNum == maxNum) {
+        return ''
+    } else {
+        return (maxNum - 1) + '' + showReverseNumber(minNum, maxNum - 1)
+    }
 }
 
-showCheck.innerHTML+=`Средняя стоимость одного товара = ${middlePrice}<br><br>`
+
+
+console.log(showReverseNumber(5, 10))
 
 
 
 
+//! 3. Написать функцию, которая выводит переданное ей число 
+//! задом наперед. 
+//! Например: число 1234 вывести как 4321.
+
+
+
+function getReverseNum(num: number): number {
+    if (num < 10) {
+        return num
+    } else {
+        return +(num % 10 + '' + getReverseNum(Math.floor(num / 10)))
+    }
+}
+console.log(getReverseNum(123));
+
+
+
+//! 4. Написать функцию, которая считает сумму цифр числа.
+//!  Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
+ 
+//? 1-й способ. Через рекурсию
+// function getSUmmDigitsNum(num:number):number {
+//     if(num<10) {
+//         return num
+//     } else {
+//         return +(num % 10 + getSUmmDigitsNum(Math.floor(num/10)))
+//     }
+// }
+// console.log(getSUmmDigitsNum(523));
+
+
+//? 2-й способ. Через цикл
+// function funcSumm (num:number) {
+//     let arrayNum = num.toString().split('')
+//     let accum = 0 as number
+//     for (let i = 0; i < arrayNum.length; i++) {
+//         accum+= +arrayNum[i]
+
+//     }
+//     return accum
+
+// }
+// console.log(funcSumm(523));
+
+
+//! 5. Написать функцию, которая принимает число и выводит 
+//! соответствующее количество вложенных пар круглых скобок. 
+//! Например: число 4 – (((()))).
+
+
+function pairBrackets(num: number): any {
+    if (!num) {
+        return ''
+    } else {
+        return '(' + pairBrackets(num - 1) + ')'
+    }
+}
+console.log(pairBrackets(3));
 
 
 
