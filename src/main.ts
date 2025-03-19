@@ -607,97 +607,6 @@ console.log(a % b);
 
 
 
-//!!!!!!!!! объекты
-
-
-
-const object: any = {
-    a: 10,
-    b: 3,
-    c: 8,
-    3: 'ccc',
-    obj: {
-        z: '555'
-    },
-    'two words': 'имя/фамилия'
-}
-
-for (const key in object) {
-    console.log(object[key]); //! показывает значения
-    // console.log(key); //! показывает ключи
-}
-
-
-//! как выводить данные
-console.log(object.obj['z']);// обращаем внимание что 'z' строка
-console.log(object.a) // вывод ключа string
-console.log(object['a']) // вывод ключа string
-
-console.log(object[3]) // только так выводится number
-console.log(object['two words']);
-
-//! как добавить данные
-object.names = 'namesss'
-
-
-//! как удалить данные
-delete object.a
-delete object['two words']
-
-
-const object2 = object
-console.log(object2);
-
-console.log(object['c'] = 100); //ключ перезапишется (ссылается на одну ячейку)
-console.log(object2);
-console.log(object == object2);
-
-// let x = 1
-// console.log(x);
-
-// let z = x
-// console.log(z);
-
-// x = 5
-// console.log(x);
-// console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
-
-console.log(typeof object)
-
-let stringi = JSON.stringify(object) //  в строку
-
-//! JSON.stringify() - Это позволяет упростить и повысить 
-//! эффективность такие задачи, как хранение данных в 
-//! локальном хранилище, отправка данных в HTTP - запросах 
-//! или парсинг данных из ответов сервера.
-
-console.log(stringi);
-console.log(typeof stringi);
-
-console.log(JSON.parse(stringi)); // обратно в объект
-
-// JSON.parse()
-// Этот метод особенно полезен, когда необходимо обработать
-// данные, полученные от сервера в формате JSON.
-
-
-const object3 = {...object} //клонировали объект (у него другой 'адрес хранения')
-
-object.b = 'changeB'
-
-console.log(object);
-console.log(object3)// свойство в третьем объекте теперь не меняются;
-
-
-
-
-
-
-
-
-
-
-
 
 
 //!!!!!!!!!!!!!!!!! JS_PZ_Modul_1_Week_3_!!!!!!!!!!!!!!!!!!!!!!
@@ -2433,6 +2342,117 @@ function pairBrackets(num: number): any {
     }
 }
 console.log(pairBrackets(3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!1!!!!!!!!!!!!!!!!!!объекты!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+const object: any = {
+    a: 10,
+    b: 3,
+    c: 8,
+    3: 'ccc',
+    obj: {
+        z: '555'
+    },
+    'two words': 'имя/фамилия'
+}
+
+for (const key in object) {
+    console.log(object[key]); //! показывает значения
+    // console.log(key); //! показывает ключи
+}
+
+
+//! как выводить данные
+console.log(object.obj['z']);// обращаем внимание что 'z' строка
+console.log(object.a) // вывод ключа string
+console.log(object['a']) // вывод ключа string
+
+console.log(object[3]) // только так выводится number
+console.log(object['two words']);
+
+//! как добавить данные
+object.names = 'namesss'
+
+
+//! как удалить данные
+delete object.a
+delete object['two words']
+
+
+const object2 = object
+console.log(object2);
+
+console.log(object['c'] = 100); //ключ перезапишется (ссылается на одну ячейку)
+console.log(object2);
+console.log(object == object2);
+
+// let x = 1
+// console.log(x);
+
+// let z = x
+// console.log(z);
+
+// x = 5
+// console.log(x);
+// console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
+
+console.log(typeof object)
+
+let stringi = JSON.stringify(object) //  в строку
+
+//! JSON.stringify() - Это позволяет упростить и повысить 
+//! эффективность такие задачи, как хранение данных в 
+//! локальном хранилище, отправка данных в HTTP - запросах 
+//! или парсинг данных из ответов сервера.
+
+console.log(stringi);
+console.log(typeof stringi);
+
+console.log(JSON.parse(stringi)); // обратно в объект
+
+// JSON.parse()
+// Этот метод особенно полезен, когда необходимо обработать
+// данные, полученные от сервера в формате JSON.
+
+
+const object3 = {...object} //клонировали объект (у него другой 'адрес хранения')
+
+object.b = 'changeB'
+
+console.log(object);
+console.log(object3)// свойство в третьем объекте теперь не меняются;
+
+console.log(obj);
+
+let user = {
+    name: "John",
+    age: 30,
+    "likes birds": true  // имя свойства из нескольких слов должно быть в кавычках
+  };
+  delete user.age
+
+  console.log(user);
+  
+
+
 
 
 
