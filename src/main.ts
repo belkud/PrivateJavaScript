@@ -1636,58 +1636,7 @@ console.log(arrn);
 //! 2. Заходим в Pages, там где 'Branch(none)' ставим 'main'
 //! 3. Переходим обратно в Репозиторий и  там где About ставим галочку в 'Use your GitHub Pages website'
 //! Ссылка по идее должна создаться :)
-
-
-
-
-let mass1 = [123]
-console.log(mass1);
-
-let mass2 = [123]
-console.log(mass2);
-
-console.log(mass1==mass2);
-console.log(mass1[0]==mass2[0]);
-
-
-
-// mass2[1] = 555
-// console.log(mass1);
-// console.log(mass2);
-
-
-// let fruit = ["Яблоко", "Апельсин", "Слива"];
-// console.log(fruit.length);
-
-// проходит по значениям
-// for (let el of fruit) {
-//   console.log( el );
-// }
-
-// let array = []
-
-
-// function getMaxSubSum(arr:any) {
-//     let maxSum = 0;
-//     let partialSum = 0;
-
-// for (const el of arr) {
-//     partialSum+=el
-//     maxSum = Math.max(maxSum, partialSum)
-//     if (partialSum<0) {
-//         partialSum=0
-        
-//     }
-// }
-// return maxSum
-
-// }
-
-
-// console.log(getMaxSubSum([6, 2,-3, 5]));
-
-
-
+ 
 function getMaxSubSum(arr) {
     let maxSum = 0;
     let partialSum = 0;
@@ -1706,61 +1655,7 @@ function getMaxSubSum(arr) {
   
 
   console.log(getMaxSubSum([-1, 2, -3, -9, -8, 3]));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// число в степени
-function test(num:number, pow:number) {
-    let result = 1
-    for(let i = 0; i < pow; i++) {
-        result *= num
-    }
-    return result
-}
-console.log(test(5,2));
-
-
-// число в степени 2
-function test2(num:number, pow:number):any {
-    if (pow==1){
-        return num
-    }else {
-        return num * test2(num, pow-1) 
-
-    }
-
-}
-
-console.log(test2(5,1));
-console.log(test2(5,2));
-
-
-
-
-// вычислить факториал
-function factorial2(n:number):any {
-    if (n == 1){
-        return n
-    }
-    return n * factorial2(n - 1);
-  }
-
-  console.log(factorial2(5));
-  
-
+ 
 
   
 
@@ -2036,7 +1931,7 @@ return `данного элемента нет`
     
 }
 
-console.log(searchFruitsInArray(fruit));
+console.log(searchFruitsInArray('orange'));
 
 
  
@@ -2060,6 +1955,103 @@ function maxNumber2(num: number): any {
 }
 console.log(maxNumber2(15));
 
+
+
+
+//!!!!!!!!!!1!!!!!!!!!!!!!!!!!!объекты!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+const object: any = {
+    a: 10,
+    b: 3,
+    c: 8,
+    3: 'ccc',
+    obj: {
+        z: '555'
+    },
+    'two words': 'имя/фамилия'
+}
+
+for (const key in object) {
+    console.log(object[key]); //! показывает значения
+    // console.log(key); //! показывает ключи
+}
+
+
+//! как выводить данные
+console.log(object.obj['z']);// обращаем внимание что 'z' строка
+console.log(object.a) // вывод ключа string
+console.log(object['a']) // вывод ключа string
+
+console.log(object[3]) // только так выводится number
+console.log(object['two words']);
+
+//! как добавить данные
+object.names = 'namesss'
+
+
+//! как удалить данные
+delete object.a
+delete object['two words']
+
+
+const object2 = object
+console.log(object2);
+
+console.log(object['c'] = 100); //ключ перезапишется (ссылается на одну ячейку)
+console.log(object2);
+console.log(object == object2);
+
+// let x = 1
+// console.log(x);
+
+// let z = x
+// console.log(z);
+
+// x = 5
+// console.log(x);
+// console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
+
+console.log(typeof object)
+
+let stringi = JSON.stringify(object) //  в строку
+
+//! JSON.stringify() - Это позволяет упростить и повысить 
+//! эффективность такие задачи, как хранение данных в 
+//! локальном хранилище, отправка данных в HTTP - запросах 
+//! или парсинг данных из ответов сервера.
+
+console.log(stringi);
+console.log(typeof stringi);
+
+console.log(JSON.parse(stringi)); // обратно в объект
+
+// JSON.parse()
+// Этот метод особенно полезен, когда необходимо обработать
+// данные, полученные от сервера в формате JSON.
+
+
+const object3 = {...object} //клонировали объект (у него другой 'адрес хранения')
+
+object.b = 'changeB'
+
+console.log(object);
+console.log(object3)// свойство в третьем объекте теперь не меняются;
+
+console.log(obj);
+
+let user = {
+    name: "John",
+    age: 30,
+    "likes birds": true  // имя свойства из нескольких слов должно быть в кавычках
+  };
+
+  console.log(user);
+  
+
+
+  
 
 
 
@@ -2225,123 +2217,40 @@ findMiddlePrice(check)
 
 
 
+//!     Задание 3
+//!     Создать массив css-стилей (цвет, размер шрифта, выравнива
+//! ние, подчеркивание и т. д.). Каждый элемент массива – это объект, 
+//! состоящий из двух свойств: название стиля и значение стиля. 
+//!     Написать функцию, которая принимает массив стилей и 
+//! текст, и выводит этот текст с помощью document.write() в тегах 
+//! <p></p>, добавив в открывающий тег атрибут style со всеми стилями, 
+//! перечисленными в массиве. 
 
+let massStyle = [
+    {color: 'red'},
+    {background: 'lightgray'},
+    // textDecoration: 'underline',
+]
 
+let text = 'Написать функцию, которая принимает массив стилей и текст'
 
+let textWithStyles = document.getElementById('textWithStyles') as HTMLDivElement
 
-
-
-
-
-
-
-
-//! <=============JS_PZ_Modul_1_Week_5==================>
-
-
-//! 1. Написать функцию, которая вычисляет факториал задан
-//! ного числа.    
-
-
-function factorialNum(x: number): any {
-    if (x == 1) {
-        return x
-    } else {
-        return x * factorialNum(x - 1)
-    }
+function showTextInHTML (styles:any, text:string) {
+    return textWithStyles.innerHTML=`<div style="${massStyle[0]}">${text}</div>`
+    // return textWithStyles.innerHTML=`<div style="color: aliceblue; background-color: lightgray;">${text}</div>`
 }
-console.log(factorialNum(5));
-
-
-
-//! 2. Написать функцию, которая выводит все числа из заданного 
-//! пользователем диапазона в прямом порядке. И еще одну 
-//! функцию – для вывода в обратном порядке.
-
-
-function numberOfDiapazone(minNum: number, maxNum: number): any {
-    if (minNum == maxNum) {
-        return ''
-    } else {
-        return (minNum) + '' + numberOfDiapazone(minNum + 1, maxNum)
-    }
-}
-console.log(numberOfDiapazone(5, 10));
-
-
-function showReverseNumber(minNum: number, maxNum: number): any {
-    if (minNum == maxNum) {
-        return ''
-    } else {
-        return (maxNum - 1) + '' + showReverseNumber(minNum, maxNum - 1)
-    }
-}
-
-
-
-console.log(showReverseNumber(5, 10))
-
-
-
-
-//! 3. Написать функцию, которая выводит переданное ей число 
-//! задом наперед. 
-//! Например: число 1234 вывести как 4321.
-
-
-
-function getReverseNum(num: number): number {
-    if (num < 10) {
-        return num
-    } else {
-        return +(num % 10 + '' + getReverseNum(Math.floor(num / 10)))
-    }
-}
-console.log(getReverseNum(123));
-
-
-
-//! 4. Написать функцию, которая считает сумму цифр числа.
-//!  Например: число 1357, сумма 1 + 3 + 5 + 7 = 16.
+console.log(showTextInHTML(massStyle, text));
  
-//? 1-й способ. Через рекурсию
-// function getSUmmDigitsNum(num:number):number {
-//     if(num<10) {
-//         return num
-//     } else {
-//         return +(num % 10 + getSUmmDigitsNum(Math.floor(num/10)))
-//     }
-// }
-// console.log(getSUmmDigitsNum(523));
+let str2 = JSON.stringify(massStyle)
 
 
-//? 2-й способ. Через цикл
-// function funcSumm (num:number) {
-//     let arrayNum = num.toString().split('')
-//     let accum = 0 as number
-//     for (let i = 0; i < arrayNum.length; i++) {
-//         accum+= +arrayNum[i]
-
-//     }
-//     return accum
-
-// }
-// console.log(funcSumm(523));
+console.log(str2.split('').splice(3).splice(10));
 
 
-//! 5. Написать функцию, которая принимает число и выводит 
-//! соответствующее количество вложенных пар круглых скобок. 
-//! Например: число 4 – (((()))).
+// console.log(str2.split('[').join('').split('{').join(''));
 
-
-function pairBrackets(num: number): any {
-    if (!num) {
-        return ''
-    } else {
-        return '(' + pairBrackets(num - 1) + ')'
-    }
-}
-console.log(pairBrackets(3));
+// textWithStyles.innerHTML+=str2
 
 
 
@@ -2349,113 +2258,28 @@ console.log(pairBrackets(3));
 
 
 
+  //! Рассчитайте, сколько дней осталось до Нового года. 
+//   let d0 = new Date();
+//   let d1 = new Date('Jan 1 2026');
+//   let dt = (d1.getTime() - d0.getTime()) / 
+//   (1000*60*60*24);
 
-
-
-
-
-
-
-
-
-
-//!!!!!!!!!!1!!!!!!!!!!!!!!!!!!объекты!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-const object: any = {
-    a: 10,
-    b: 3,
-    c: 8,
-    3: 'ccc',
-    obj: {
-        z: '555'
-    },
-    'two words': 'имя/фамилия'
-}
-
-for (const key in object) {
-    console.log(object[key]); //! показывает значения
-    // console.log(key); //! показывает ключи
-}
-
-
-//! как выводить данные
-console.log(object.obj['z']);// обращаем внимание что 'z' строка
-console.log(object.a) // вывод ключа string
-console.log(object['a']) // вывод ключа string
-
-console.log(object[3]) // только так выводится number
-console.log(object['two words']);
-
-//! как добавить данные
-object.names = 'namesss'
-
-
-//! как удалить данные
-delete object.a
-delete object['two words']
-
-
-const object2 = object
-console.log(object2);
-
-console.log(object['c'] = 100); //ключ перезапишется (ссылается на одну ячейку)
-console.log(object2);
-console.log(object == object2);
-
-// let x = 1
-// console.log(x);
-
-// let z = x
-// console.log(z);
-
-// x = 5
-// console.log(x);
-// console.log(z); // переменная 'z' не перезапишется (разные ячейки памяти)
-
-console.log(typeof object)
-
-let stringi = JSON.stringify(object) //  в строку
-
-//! JSON.stringify() - Это позволяет упростить и повысить 
-//! эффективность такие задачи, как хранение данных в 
-//! локальном хранилище, отправка данных в HTTP - запросах 
-//! или парсинг данных из ответов сервера.
-
-console.log(stringi);
-console.log(typeof stringi);
-
-console.log(JSON.parse(stringi)); // обратно в объект
-
-// JSON.parse()
-// Этот метод особенно полезен, когда необходимо обработать
-// данные, полученные от сервера в формате JSON.
-
-
-const object3 = {...object} //клонировали объект (у него другой 'адрес хранения')
-
-object.b = 'changeB'
-
-console.log(object);
-console.log(object3)// свойство в третьем объекте теперь не меняются;
-
-console.log(obj);
-
-let user = {
-    name: "John",
-    age: 30,
-    "likes birds": true  // имя свойства из нескольких слов должно быть в кавычках
-  };
-  delete user.age
-
-  console.log(user);
+//   listWithProducts.innerHTML+=('До нового года осталось: ' + 
+//   Math.round(dt) + ' дней'); 
+  
   
 
+    
+// let pushInMassive = {js:'test', jq: 'hello', css: 'world'} as any
 
+// let massWithkey:string[] = []
+// for (const key in pushInMassive) {
+//         massWithkey.push(pushInMassive[key])    
+//         // console.log(object[key]); //! показывает значения
+// }
 
+// console.log(massWithkey);
 
-
-
+ 
 
 
