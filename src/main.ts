@@ -2243,7 +2243,6 @@ for (const el of massStyle) {
     }
     str2+='; '
 }
-// console.log(str2);
 
 
 function showTextInHTML (styles:any, text:string) {
@@ -2260,10 +2259,22 @@ console.log(showTextInHTML(massStyle, text));
 
 
 
+// let strTest = 'textDecoration'
 
+function addDash(str:string) {
+    let strTest2 = str.split('')
+    for (let i = 0; i < strTest2.length; i++) {
+        if (strTest2[i] == strTest2[i].toUpperCase()){
+            strTest2[i] = '-' + strTest2[i].toLowerCase()
+        }
+        
+    }
+    
+    return strTest2.join('');
+}
 
-
-
+console.log(addDash('textDecoration'));
+console.log(addDash('textAlign'));
 
 
 
