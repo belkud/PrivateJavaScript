@@ -2229,10 +2229,10 @@ findMiddlePrice(check)
 let massStyle = [
     {color: 'red'},
     {background: 'lightgray'},
-    // textDecoration: 'underline',
+    {'text-decoration': 'underline'},
 ]
 
-let text = 'Написать функцию, которая принимает массив стилей и текст'
+let text = `Написать функцию, которая принимает массив стилей и текст`
 
 let textWithStyles = document.getElementById('textWithStyles') as HTMLDivElement
 
@@ -2243,31 +2243,34 @@ for (const el of massStyle) {
     }
     str2+='; '
 }
-
-console.log(str2);
-
-
-function showTextInHTML (styles:any, text:string) {
-    return textWithStyles.innerHTML=`<div style="${str2}">${text}</div>`
-    // return textWithStyles.innerHTML=`<div style="color: aliceblue; background-color: lightgray;">${text}</div>`
-}
-console.log(showTextInHTML(massStyle, text));
- 
-    
-
-
-
-
-// let str2 = JSON.stringify(massStyle)
 // console.log(str2);
 
 
-// console.log(str2.split('[').join('').split('{').join(''));
+function showTextInHTML (styles:any, text:string) {
+    return (
+        textWithStyles.innerHTML+=`
+        <p style="${str2}">${text}</p>
+        <p style="${str2}">${text}</p>
+        `
+    )
+}
 
-// textWithStyles.innerHTML+=str2
+console.log(showTextInHTML(massStyle, text));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
