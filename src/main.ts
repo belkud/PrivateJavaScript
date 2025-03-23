@@ -2236,16 +2236,30 @@ let text = 'Написать функцию, которая принимает �
 
 let textWithStyles = document.getElementById('textWithStyles') as HTMLDivElement
 
+let str2 = ''
+for (const el of massStyle) {
+    for (const key in el) {
+        str2+=(`${key + ':' + el[key]}`)
+    }
+    str2+='; '
+}
+
+console.log(str2);
+
+
 function showTextInHTML (styles:any, text:string) {
-    return textWithStyles.innerHTML=`<div style="${massStyle[0]}">${text}</div>`
+    return textWithStyles.innerHTML=`<div style="${str2}">${text}</div>`
     // return textWithStyles.innerHTML=`<div style="color: aliceblue; background-color: lightgray;">${text}</div>`
 }
 console.log(showTextInHTML(massStyle, text));
  
-let str2 = JSON.stringify(massStyle)
+    
 
 
-console.log(str2.split('').splice(3).splice(10));
+
+
+// let str2 = JSON.stringify(massStyle)
+// console.log(str2);
 
 
 // console.log(str2.split('[').join('').split('{').join(''));
