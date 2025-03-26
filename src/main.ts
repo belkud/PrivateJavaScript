@@ -2414,3 +2414,30 @@ function deleteNewElement (mass:number[], elemIndex:number) {
 }
 console.log(deleteNewElement(mass, 1));
 
+
+
+mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+
+let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',] as any
+
+let newMass = mass.concat(birthMass) 
+console.log(newMass);
+
+
+
+
+
+//! Плавное_изменение_цвета_букв
+let changeColorOfLetters = document.getElementById('changeColorOfLetters') as HTMLDivElement
+let text = 'плавное_изменение_цвета_букв'
+let textMass = text.split('') as any
+console.log(textMass);
+
+let count = 0
+for (let i = 0; i < textMass.length; i++) {
+    count+=0.05   
+    let array = []
+    array.push(`<div style="color:  rgb(237, 12, 12, ${count});"> ${textMass[i]} <\div>`) 
+    changeColorOfLetters.innerHTML +=array
+
+}
