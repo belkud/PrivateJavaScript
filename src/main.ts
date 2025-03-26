@@ -2310,6 +2310,12 @@ console.log(maxNumber2(15));
 
 
 
+//! Задача с днём рождения :))))
+// let birthday = new Date('9-10-1988')
+// let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',]
+// console.log(birthMass[birthday.getDay()]);
+
+
 
 //!  <=========================JS_PZ_Modul_2_Week_2======================>
 
@@ -2407,10 +2413,4 @@ function deleteNewElement (mass:number[], elemIndex:number) {
     return mass
 }
 console.log(deleteNewElement(mass, 1));
-
-
-
-
-
-
 
