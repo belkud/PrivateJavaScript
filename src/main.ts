@@ -1425,304 +1425,6 @@ function getMaxSubSum(arr) {
 
   
 
-//!  <=========================JS_PZ_Modul_2_Week_2======================>
-
-//! Задание 1
-//! Создать массив из 10 случайных чисел и написать несколько 
-//! функций для работы с ним.
-
-let arr:number[] = [] 
-for (let i = 0; i < 10; i++) {
-    arr.push(Math.round(Math.random()*10))    
-}
-console.log(arr);
-
-
-
-//? 1. Функция принимает массив и выводит его на экран.
-
-// function showArr(arr:object) {
-//     return arr    
-// }
-// console.log(showArr(arr));
-
-
-
-//? 2. Функция принимает массив и выводит только четные 
-//? элементы.
-
-// function oddElOfMass(arr:any) {
-//     let mass = [] as any
-//     for (const el of arr) {
-//         if (el%2==0) {
-//             mass.push(el)
-//         }
-//     }
-//     return mass
-// }
-// console.log(oddElOfMass(arr));
-
-
-
-//? 3. Функция принимает массив и возвращает сумму всех 
-//? элементов массива.
-
-// function summOfElMass(arr:any) {
-//     let accum = 0
-//     for (const el of arr) {
-//         accum+=el        
-//     }
-//     return accum
-// }
-// console.log(summOfElMass(arr));
-
-
-
-
-//? 4. Функция принимает массив и возвращает его максималь
-//? ный элемент.
-
-// function maxElOfmass(arr:any) {
-//     return Math.max(...arr)
-// }
-// console.log(maxElOfmass(arr));
-
-
-
-
-//? 5. Функция добавления нового элемента в массив по ука
-//? занному индексу.
-
-
-// function addElInMass(index:number, num:number) {
-//     arr.splice(index, 0, num)
-//     return arr
-// }
-// console.log(addElInMass(3, 1000));
-
-
-
-
-//? 6. Функция удаления элемента из массива по указанному 
-//? индексу.
-
-// function delElInArr(index:number) {
-//     arr.splice(index,1)
-//     return arr
-// }
-
-// console.log(delElInArr(2));
-
-
-//! Задание 2
-//! Создать еще один массив из 5 случайных чисел и написать следующие функции.
-
-let arrSecond:number[] = []
-for (let i = 0; i < 5; i++) {
-    arrSecond.push(Math.round(Math.random()*10))    
-}
-console.log(arrSecond);
-
-
-//? 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
-//? все элементы из двух массивов без повторений.
-
-//! arr = [3, 2, 10, 1, 7, 10, 0, 1, 5, 10] //перезаписал массив!
-//! arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
-// (чтобы не работать с random для наглядности)
-
-
-//! console.log(arr.includes(6)); // включён ли элемент
-
-
-
-function findUniqElements(arr:number[], arrSecond:number[]) {
- let newArr:number[] = []
-
-//!  первый способ
-for (const el of arr) {
-    if (!newArr.includes(el)) {
-        newArr.push(el)
-    }
-}
-    
-for (const el of arrSecond) {
-    if (!newArr.includes(el)) {
-        newArr.push(el)
-    }
-}
-    
-
-return newArr
- 
-//!  второй способ
-    // let newMass:number[] = []
-    // let arrayWithNewNumbers:number[] = []
-    // newMass = arr.concat(arrSecond)
-
-    // for (let i = 0; i < newMass.length; i++) {
-    //     if(!arrayWithNewNumbers.includes(newMass[i])){
-    //         arrayWithNewNumbers.push(newMass[i])
-    //     } 
-    // } 
-
-    // return arrayWithNewNumbers
-}
-
-console.log(findUniqElements(arr, arrSecond))
-
-console.log('-----------');
-
-
-//? 2. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
-//? общие элементы (то есть элементы, которые встречаются и в первом и во втором 
-//? массивах) без повторений.
-
-
-console.log('первый массив = ' + arr);
-console.log('второй массив = ' + arrSecond);
-
-
-
-function  getGeneralElements (arr:number[],arrSecond:number[]) {
-    
-    //! первый способ
-    let mass:number[] = []
-    for (const el of arr) {
-        if(arr.includes(el) && arrSecond.includes(el)) {
-            if (!mass.includes(el)) {
-                mass.push(el)
-            }
-        }
-        
-    } return mass
-
-
-    
-    
-    //! второй способ
-    // let array:number[] = []
-    // for (let i = 0; i < arr.length; i++) {
-    //     for (let j = 0; j < arrSecond.length; j++) {
-    //        if (arr[i]==arrSecond[j]) {      
-    //            array.push(arr[i])
-    //        } 
-    //     }
-    //     }
-    //     return array
-    
-
-}
-    // getGeneralElements(arr, arrSecond)
-console.log(getGeneralElements(arr, arrSecond));
-
-
-
-
-
-console.log('-------------');
-
-arr = [3, 2, 10, 3, 7, 10, 0, 1, 5, 10] //перезаписал массив!
-arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
-
-
-
-//? 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
-//? все элементы из первого массива, которых нет во втором массиве.
-
-
-function getArrWithNewElement(arr:number[], arrSecond:number[]) {
-    let newMass:number[] = []
-    for (const el of arr) {
-        if(arr.includes(el) && !arrSecond.includes(el)){
-            if (!newMass.includes(el)) {
-                newMass.push(el)
-            }
-        }
-    }
-
-    return newMass
-}
-
-console.log(getArrWithNewElement(arr,arrSecond));
-
-
-//!  Задание 3
-//! Создать массив фруктов и отсортировать его по алфавиту. Написать следующие 
-//! функции.
-
-let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
-
-
-
-function sortByAlphabet(fruits:string[]) {
-    return fruits.sort()
-}
-
-console.log(sortByAlphabet(fruits));
-
-
-//? 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
-
-let inputInHTML = document.getElementById('fruit') as HTMLDivElement
-
-function showFruits (fruits:string[]) {
-    for (let i = 0; i < fruits.length; i++) {
-        inputInHTML.innerHTML+=`<li>${fruits[i]}</li>`
-    }
-
-}
-console.log(showFruits(fruits));
-
-
-
-//? 2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс 
-//? найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.
-
-let fruit= 'orangE' 
-
-fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
-
-
-
-function searchFruitsInArray(fruit:string){
-
-
-for (let i = 0; i < fruits.length; i++) {
-        if (fruit.toLowerCase() == fruits[i]) {
-            return `индекс элемента ${fruit} = ${i}` 
-        }
-    }
-return `данного элемента нет` 
-    
-}
-
-console.log(searchFruitsInArray('orange'));
-
-
- 
-
-
-
-
-
- 
-
-// макс. цифра в числе
-
-function maxNumber2(num: number): any {
-    if (num < 10) {
-        return num
-    } else {
-
-        return (Math.max(num))
-        // return (num + '' + maxNumber2(Math.floor(num/10)))
-    }
-}
-console.log(maxNumber2(15));
-
-
-
 
 //!!!!!!!!!!1!!!!!!!!!!!!!!!!!!объекты!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -2308,6 +2010,406 @@ function setHours() {
     return setMinutes()
 }
 console.log(setHours());
+
+//!  <=========================JS_PZ_Modul_2_Week_2======================>
+
+//! Задание 1
+//! Создать массив из 10 случайных чисел и написать несколько 
+//! функций для работы с ним.
+
+let arr:number[] = [] 
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random()*10))    
+}
+console.log(arr);
+
+
+
+//? 1. Функция принимает массив и выводит его на экран.
+
+// function showArr(arr:object) {
+//     return arr    
+// }
+// console.log(showArr(arr));
+
+
+
+//? 2. Функция принимает массив и выводит только четные 
+//? элементы.
+
+// function oddElOfMass(arr:any) {
+//     let mass = [] as any
+//     for (const el of arr) {
+//         if (el%2==0) {
+//             mass.push(el)
+//         }
+//     }
+//     return mass
+// }
+// console.log(oddElOfMass(arr));
+
+
+
+//? 3. Функция принимает массив и возвращает сумму всех 
+//? элементов массива.
+
+// function summOfElMass(arr:any) {
+//     let accum = 0
+//     for (const el of arr) {
+//         accum+=el        
+//     }
+//     return accum
+// }
+// console.log(summOfElMass(arr));
+
+
+
+
+//? 4. Функция принимает массив и возвращает его максималь
+//? ный элемент.
+
+// function maxElOfmass(arr:any) {
+//     return Math.max(...arr)
+// }
+// console.log(maxElOfmass(arr));
+
+
+
+
+//? 5. Функция добавления нового элемента в массив по ука
+//? занному индексу.
+
+
+// function addElInMass(index:number, num:number) {
+//     arr.splice(index, 0, num)
+//     return arr
+// }
+// console.log(addElInMass(3, 1000));
+
+
+
+
+//? 6. Функция удаления элемента из массива по указанному 
+//? индексу.
+
+// function delElInArr(index:number) {
+//     arr.splice(index,1)
+//     return arr
+// }
+
+// console.log(delElInArr(2));
+
+
+//! Задание 2
+//! Создать еще один массив из 5 случайных чисел и написать следующие функции.
+
+let arrSecond:number[] = []
+for (let i = 0; i < 5; i++) {
+    arrSecond.push(Math.round(Math.random()*10))    
+}
+console.log(arrSecond);
+
+
+//? 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? все элементы из двух массивов без повторений.
+
+//! arr = [3, 2, 10, 1, 7, 10, 0, 1, 5, 10] //перезаписал массив!
+//! arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
+// (чтобы не работать с random для наглядности)
+
+
+//! console.log(arr.includes(6)); // включён ли элемент
+
+
+
+function findUniqElements(arr:number[], arrSecond:number[]) {
+ let newArr:number[] = []
+
+//!  первый способ
+for (const el of arr) {
+    if (!newArr.includes(el)) {
+        newArr.push(el)
+    }
+}
+    
+for (const el of arrSecond) {
+    if (!newArr.includes(el)) {
+        newArr.push(el)
+    }
+}
+    
+
+return newArr
+ 
+//!  второй способ
+    // let newMass:number[] = []
+    // let arrayWithNewNumbers:number[] = []
+    // newMass = arr.concat(arrSecond)
+
+    // for (let i = 0; i < newMass.length; i++) {
+    //     if(!arrayWithNewNumbers.includes(newMass[i])){
+    //         arrayWithNewNumbers.push(newMass[i])
+    //     } 
+    // } 
+
+    // return arrayWithNewNumbers
+}
+
+console.log(findUniqElements(arr, arrSecond))
+
+console.log('-----------');
+
+
+//? 2. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? общие элементы (то есть элементы, которые встречаются и в первом и во втором 
+//? массивах) без повторений.
+
+
+console.log('первый массив = ' + arr);
+console.log('второй массив = ' + arrSecond);
+
+
+
+function  getGeneralElements (arr:number[],arrSecond:number[]) {
+    
+    //! первый способ
+    let mass:number[] = []
+    for (const el of arr) {
+        if(arr.includes(el) && arrSecond.includes(el)) {
+            if (!mass.includes(el)) {
+                mass.push(el)
+            }
+        }
+        
+    } return mass
+
+
+    
+    
+    //! второй способ
+    // let array:number[] = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arrSecond.length; j++) {
+    //        if (arr[i]==arrSecond[j]) {      
+    //            array.push(arr[i])
+    //        } 
+    //     }
+    //     }
+    //     return array
+    
+
+}
+    // getGeneralElements(arr, arrSecond)
+console.log(getGeneralElements(arr, arrSecond));
+
+
+
+
+
+console.log('-------------');
+
+arr = [3, 2, 10, 3, 7, 10, 0, 1, 5, 10] //перезаписал массив!
+arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
+
+
+
+//? 3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+//? все элементы из первого массива, которых нет во втором массиве.
+
+
+function getArrWithNewElement(arr:number[], arrSecond:number[]) {
+    let newMass:number[] = []
+    for (const el of arr) {
+        if(arr.includes(el) && !arrSecond.includes(el)){
+            if (!newMass.includes(el)) {
+                newMass.push(el)
+            }
+        }
+    }
+
+    return newMass
+}
+
+console.log(getArrWithNewElement(arr,arrSecond));
+
+
+//!  Задание 3
+//! Создать массив фруктов и отсортировать его по алфавиту. Написать следующие 
+//! функции.
+
+let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
+
+
+
+function sortByAlphabet(fruits:string[]) {
+    return fruits.sort()
+}
+
+console.log(sortByAlphabet(fruits));
+
+
+//? 1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li). 
+
+let inputInHTML = document.getElementById('fruit') as HTMLDivElement
+
+function showFruits (fruits:string[]) {
+    for (let i = 0; i < fruits.length; i++) {
+        inputInHTML.innerHTML+=`<li>${fruits[i]}</li>`
+    }
+
+}
+console.log(showFruits(fruits));
+
+
+
+//? 2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс 
+//? найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.
+
+let fruit= 'orangE' 
+
+fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
+
+
+
+function searchFruitsInArray(fruit:string){
+
+
+for (let i = 0; i < fruits.length; i++) {
+        if (fruit.toLowerCase() == fruits[i]) {
+            return `индекс элемента ${fruit} = ${i}` 
+        }
+    }
+return `данного элемента нет` 
+    
+}
+
+console.log(searchFruitsInArray('orange'));
+
+
+ 
+
+
+
+
+
+ 
+
+// макс. цифра в числе
+
+function maxNumber2(num: number): any {
+    if (num < 10) {
+        return num
+    } else {
+
+        return (Math.max(num))
+        // return (num + '' + maxNumber2(Math.floor(num/10)))
+    }
+}
+console.log(maxNumber2(15));
+
+
+
+
+
+//!  <=========================JS_PZ_Modul_2_Week_2======================>
+
+//! Задание 1
+//! Создать массив из 10 случайных чисел и написать несколько 
+//! функций для работы с ним.
+
+let mass = []
+for (let i = 0; i < 10; i++) {
+    let num = Math.trunc(Math.random()*10)
+    mass.push(num)
+}
+
+mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+// console.log(mass);
+
+
+//! 1. Функция принимает массив и выводит его на экран.
+
+function showMass(mass:number[]) {
+    return mass
+}
+console.log(showMass(mass));
+
+
+
+//! 2. Функция принимает массив и выводит только четные 
+//! элементы.
+
+function showOddNumbers(mass:number[]) {
+    let massOddNumbers = []
+    for (let i = 0; i < mass.length; i++) {
+            if (mass[i]%2==0) {
+                massOddNumbers.push(mass[i])
+            }        
+    }
+    return massOddNumbers
+}
+console.log(showOddNumbers(mass));
+
+
+
+//! 3. Функция принимает массив и возвращает сумму всех 
+//! элементов массива.
+
+function unionSum(mass:number[]) {
+    let accum = 0
+
+    for (let i = 0; i < mass.length; i++) {
+        accum+=mass[i]    
+    }
+
+    // for (const el of mass) {
+    //     accum+=el
+    // }
+    return accum
+}
+console.log(unionSum(mass));
+
+
+//! цикл for - для всего подходит
+//! цикл for of - для массивов
+//! цикл for in - для обектов
+
+
+
+//! 4. Функция принимает массив и возвращает его максималь
+//! ный элемент.
+
+function findMaxEl(mass:number[]) {
+    return Math.max(...mass)
+}
+console.log(findMaxEl(mass));
+
+
+
+//! 5. Функция добавления нового элемента в массив по ука
+//! занному индексу.
+
+function addNewElement (mass:number[], newElem:number, elemIndex:number) {
+    mass.splice(elemIndex, 0, newElem)
+    return mass
+}
+console.log(addNewElement(mass, 123, 3));
+
+
+
+
+//! 6. Функция удаления элемента из массива по указанному 
+//! индексу.
+
+
+function deleteNewElement (mass:number[], elemIndex:number) {
+    mass.splice(elemIndex, 1)
+    return mass
+}
+console.log(deleteNewElement(mass, 1));
+
+
+
 
 
 
