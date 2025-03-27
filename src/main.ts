@@ -2441,3 +2441,35 @@ for (let i = 0; i < textMass.length; i++) {
     changeColorOfLetters.innerHTML +=array
 
 }
+
+
+
+//! Создать массив фруктов и отсортировать его по алфавиту. 
+//! Написать следующие функции.
+//!  1. 
+//! Вывод на экран с помощью document.write() в виде списка 
+//! (с помощью тегов ul и li). 
+//! 2. Поиск фрукта в массиве. Функция принимает название 
+//! фрукта и возвращает индекс найденного элемента или -1, 
+//! если не найден. Поиск должен быть нерегистрозависимым. 
+
+let massFruct = ['apple', 'tomato', 'potato', 'orange', 'pineapple' ]
+let fruct = 'potato'
+function findFruct(massFruct:string[], fruct:string) {
+    for (let i = 0; i < massFruct.length; i++) {
+        if (massFruct[i]==fruct) {
+            return `индекс найденного элемента = ${i}`
+        }      
+    }
+    return -1
+    // for (const el of massFruct) {
+    //     if (el==fruct) {
+    //         return massFruct[0]
+    //     }
+    
+
+}
+
+console.log(findFruct(massFruct, fruct));
+
+
