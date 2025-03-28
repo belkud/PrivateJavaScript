@@ -2442,3 +2442,49 @@ for (let i = 0; i < textMass.length; i++) {
 
 
 
+//! 3. Написать функцию, которая заменяет в полученной строке 
+//! большие буквы на маленькие, маленькие – на большие, а 
+//! цифры – на знак нижнего подчеркивания. 
+
+let strr = 'HjjhdHFHJsfgFJsfgKGJFI'
+
+function changeRegisterOfLetters(string:string) {
+    let mass = []
+    for (let i = 0; i < strr.length; i++) {
+        if (strr[i]==strr[i].toLowerCase()) {
+            mass.push(strr[i].toUpperCase())
+        }
+        if (strr[i]==strr[i].toUpperCase()) {
+            mass.push(strr[i].toLowerCase())
+        }           
+    }
+    return mass.join('')
+}
+
+console.log(changeRegisterOfLetters(strr));
+console.log(strr);
+
+
+//! 5. Написать функцию, которая принимает словосочетание 
+//! и превращает его в аббревиатуру. 
+//! Например: cascading style sheets в CSS, объектно
+//! ориентированное программирование в ООП. 
+
+function writeAbbreviature (str:string) {
+    let mass = str.split(' ')
+    let newMass = [] as any
+    for (let i = 0; i < mass.length; i++) {
+            newMass.push(mass[i][0].toUpperCase())
+    }
+    return newMass.join('')
+}
+console.log(writeAbbreviature('cascading style sheets'));
+console.log(writeAbbreviature('font size'));
+
+
+
+
+
+
+
+
