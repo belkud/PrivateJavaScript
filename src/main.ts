@@ -2206,7 +2206,6 @@ console.log(getGeneralElements(arr, arrSecond));
 
 
 
-console.log('-------------');
 
 arr = [3, 2, 10, 3, 7, 10, 0, 1, 5, 10] //перезаписал массив!
 arrSecond =  [2, 0, 7, 3, 4] //перезаписал массив!
@@ -2238,7 +2237,6 @@ console.log(getArrWithNewElement(arr,arrSecond));
 //! функции.
 
 let fruits = ["apple", "pinia", "potato", "orange", "melon", "tomato"];
-
 
 
 function sortByAlphabet(fruits:string[]) {
@@ -2431,7 +2429,6 @@ console.log(newMass);
 let changeColorOfLetters = document.getElementById('changeColorOfLetters') as HTMLDivElement
 let text = 'плавное_изменение_цвета_букв'
 let textMass = text.split('') as any
-console.log(textMass);
 
 let count = 0
 for (let i = 0; i < textMass.length; i++) {
@@ -2443,33 +2440,5 @@ for (let i = 0; i < textMass.length; i++) {
 }
 
 
-
-//! Создать массив фруктов и отсортировать его по алфавиту. 
-//! Написать следующие функции.
-//!  1. 
-//! Вывод на экран с помощью document.write() в виде списка 
-//! (с помощью тегов ul и li). 
-//! 2. Поиск фрукта в массиве. Функция принимает название 
-//! фрукта и возвращает индекс найденного элемента или -1, 
-//! если не найден. Поиск должен быть нерегистрозависимым. 
-
-let massFruct = ['apple', 'tomato', 'potato', 'orange', 'pineapple' ]
-let fruct = 'potato'
-function findFruct(massFruct:string[], fruct:string) {
-    for (let i = 0; i < massFruct.length; i++) {
-        if (massFruct[i]==fruct) {
-            return `индекс найденного элемента = ${i}`
-        }      
-    }
-    return -1
-    // for (const el of massFruct) {
-    //     if (el==fruct) {
-    //         return massFruct[0]
-    //     }
-    
-
-}
-
-console.log(findFruct(massFruct, fruct));
 
 
