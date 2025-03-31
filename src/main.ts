@@ -2553,8 +2553,163 @@ console.log(massive5.toString().split(',').join('-'));
 
 
 
-let massive6 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+let massive6 = [1, 2, 3, 4, 5, 6, 7, 8, 9] as any
 
 massive6.splice(2,1, 'JS')
 console.log(massive6);
+
+
+const massive8 = [1, 2, 5, 11, 9, 4, 13, 4, 10]
+let mas2 = [] as any
+massive8.forEach((el,i)=> {
+    mas2.push(`${el} - ${i}`)
+    
+})
+console.log(mas2);
+
+// console.log(massive8.indexOf(4));
+
+
+// console.log(fruits.splice(3,3));
+// console.log(fruits);
+//! find() - возвращает лишь первый элемент, соответствующий условию
+let checkMass = massive8.find(el=>
+    el>8
+)
+console.log(checkMass);
+
+
+// ! filter() - возвращает ВСЕ элементы, соответствующие условию
+let checkMass2 = massive8.filter(el=>
+    el>8
+)
+console.log(checkMass2);
+
+let stuff = [
+    {name:'Ann', age: 17},
+    {name:'Sveta', age: 19},
+    {name:'Kate', age: 22},
+]
+
+let older18 = stuff.filter((el)=>
+    el.age>18
+)
+console.log(...older18);
+
+fruits = ["apple", "pinia", "potato", "orange", "apple", "melon", "tomato"];
+
+// ! indexOf - ищет индекс первого элемента по его названию 
+console.log(fruits.indexOf('apple'));
+
+// ! lastIndexOf - ищет индекс последнего элемента по его названию 
+console.log(fruits.lastIndexOf('apple'));
+
+
+// 1. Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощ
+// ью цикла for и оператора if выведите на экран столбец тех 
+// элементов массива, которые больше 3-х, но меньше 10.
+let useMetodFind = [2, 5, 9, 15, 0, 4,] 
+let newElem = useMetodFind.filter(el=>el>3 && el<10)
+console.log(newElem);
+
+// 2. Дан массив с числами. Числа могут быть положительн
+// ыми и отрицательными. Найдите сумму положительных элементов 
+// массива.
+
+let useMetodFilter = [2, 5, 9, -15, 0, 4,] 
+let filterAcc=0
+useMetodFilter.filter((el)=>{
+    if(el>0) 
+    filterAcc+=el
+})
+console.log(filterAcc);
+
+let useMetodReduce = [2, 5, 9, -15, 0, 4,]
+let reduce = useMetodReduce.reduce((acc, el)=>{
+    if(el>0){
+        return acc+=el
+    }
+    }, 0)
+console.log(reduce);
+
+
+
+// 3. Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. 
+// С помощью цикла for и оператора if проверьте есть ли в массиве элемент со значением, равным 4. Если есть - выведите на 
+// экран 'Есть!' и выйдите из цикла. Если нет - ничего делать не надо.
+// 4. Дан массив числами, например: [10, 20, 30, 50, 235
+// , 3000]. Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
+// 5. Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9.
+//  С помощью цикла for создайте строку ' 1-2-3-4-5-6-7-8-9-'.
+// 6. Составьте массив дней недели. С помощью цикла for 
+// выведите все дни недели.
+
+let courses = [
+    {course: 'JavaScript', price: 30000},
+    {course: 'React', price: 40000},
+    {course: 'HTML + CSS', price: 25000},
+  ] as any
+// подсчет сумму с помощью foreach и потом reduce
+
+let red = courses.reduce((acc, el)=>{
+    return (acc+=el.price)
+},0)
+console.log(red);
+
+
+let acc = 0
+courses.forEach((el)=>
+    console.log(acc+=el.price)
+    
+)
+console.log(acc);
+
+console.log(...courses);
+
+//! forEach -  не возвращает новый массив
+//! map - обязательно возвращает массив
+
+let mass2:number[] = [2, 5, 9, -15, 0, 4,]
+// mass2.forEach(el=>el*2)
+let map = mass2.map(el=>el*2)
+console.log(map);
+
+mass2 = [2, 5, 21, 9, -15, 0, 4,] 
+mass2.sort((a,b)=>a-b)
+console.log(mass2);
+
+let  word = 'World'
+console.log(word.split(''));
+
+
+
+
+
+
+
+
+let people = [
+    {name:'Alex', payment: 30000 },
+    {name:'John', payment: 20000 },
+    {name:'Gins', payment: 28000 },
+]
+
+// общую сумму
+// найти макс payment
+
+let unionPaym = people.reduce((acc,el)=>acc+=el.payment, 0)
+console.log(unionPaym);
+
+
+let massss:number[] = [] 
+people.forEach(el=>
+   massss.push(el.payment)
+)
+// console.log(Math.max(...massss));
+
+// console.log(massss.sort().pop());
+
+console.log(massss);
+
+console.log(massss);
 
