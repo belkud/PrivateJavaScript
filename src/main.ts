@@ -659,15 +659,15 @@ console.log(res);
 // '300', '400'. С помощью цикла for-in выведите на экран 
 // строки такого формата: 'Коля - зарплата 200 долларов.'. 
 
-let obj = {
-    'Коля':200,
-    'Вася':300,
-    'Петя':400
-} as any
+// let obj = {
+//     'Коля':200,
+//     'Вася':300,
+//     'Петя':400
+// } as any
 
-for (const key in obj) {
-    console.log(`${key} - зарплата ${obj[key]} долларов`);
-}
+// for (const key in obj) {
+//     console.log(`${key} - зарплата ${obj[key]} долларов`);
+// }
 
 
 //? Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощью цикла 
@@ -686,16 +686,16 @@ for (const key in obj) {
 //? Дан массив с числами. Числа могут быть положительными и отрицательными. 
 //? Найдите сумму положительных элементов массива. 
 
-let arr2 = [2, -5, 9, -15, 0, 4]
-let summPositiveElement = 0
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i]>0) {
-        summPositiveElement+=arr2[i]
-    }
-}
-console.log(summPositiveElement);
+// let arr2 = [2, -5, 9, -15, 0, 4]
+// let summPositiveElement = 0
+// for (let i = 0; i < arr2.length; i++) {
+//     if (arr2[i]>0) {
+//         summPositiveElement+=arr2[i]
+//     }
+// }
+// console.log(summPositiveElement);
 
-console.log('===========');
+// console.log('===========');
 
 
 //? Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. С помощью 
@@ -703,27 +703,27 @@ console.log('===========');
 //? со значением, равным 4. Если есть - выведите на экран 'Есть!' 
 //? и выйдите из цикла. Если нет - ничего делать не надо.
 
-let arr3 = [1, 2, 5, 9, 4, 13, 4, 10]
-for (let i = 0; i < arr3.length; i++) {
-    if (arr3[i]==4) {
-        console.log('Есть!');
-        break
-    }        
-}
+// let arr3 = [1, 2, 5, 9, 4, 13, 4, 10]
+// for (let i = 0; i < arr3.length; i++) {
+//     if (arr3[i]==4) {
+//         console.log('Есть!');
+//         break
+//     }        
+// }
 
 //! Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. 
 //! Выведите на экран только те числа из массива, которые начинаются 
 //! на цифру 1, 2 или 5. 
 
-let arr4 = [10, 20, 30, 50, 235, 3000]
+// let arr4 = [10, 20, 30, 50, 235, 3000]
 
-for (let i = 0; i < arr4.length; i++) {
-    let firstDigital = arr4[i].toString().slice(0,1) as any
-    if (firstDigital==1 || firstDigital==2 || firstDigital==5) {
-        console.log(arr4[i]);
-    }        
-}
-console.log('--------');
+// for (let i = 0; i < arr4.length; i++) {
+//     let firstDigital = arr4[i].toString().slice(0,1) as any
+//     if (firstDigital==1 || firstDigital==2 || firstDigital==5) {
+//         console.log(arr4[i]);
+//     }        
+// }
+// console.log('--------');
 
 //! Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью 
 //! цикла for создайте строку ' 1-2-3-4-5-6-7-8-9-'. 
@@ -731,12 +731,12 @@ console.log('--------');
 let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9] // первый способ
 console.log(arr5.toString().split(',').join('-') + '-');
  
-let str = ''  // второй способ
-for (let i = 0; i < arr5.length; i++) {
-    str+=arr5[i] + '-'
-}
-console.log(str.slice (0,length-1));//убрать последний дефис :D
-console.log(arr5.length);
+// let str = ''  // второй способ
+// for (let i = 0; i < arr5.length; i++) {
+//     str+=arr5[i] + '-'
+// }
+// console.log(str.slice (0,length-1));//убрать последний дефис :D
+// console.log(arr5.length);
 
 
 //! Составьте массив дней недели. С помощью цикла for выведите все дни 
@@ -1507,7 +1507,6 @@ object.b = 'changeB'
 console.log(object);
 console.log(object3)// свойство в третьем объекте теперь не меняются;
 
-console.log(obj);
 
 let user = {
     name: "John",
@@ -2711,7 +2710,6 @@ people.forEach(el=>
 
 console.log(massss);
 
-console.log(massss);
 
 
 
@@ -2746,3 +2744,111 @@ console.log(massss);
 //! Дополнительно:
 
 //! Array.isArray(arr) проверяет, является ли arr массивом.
+
+
+//! сколько раз повторяется элемент 5 и вывести его индексы
+mass2 = [2, 5, 21, 5, 9, -15, 0, 5, 4,] 
+
+let acccum = 0
+let masssss:any[] = [] 
+mass2.forEach((el,i)=>{
+    if (el==5) {
+        masssss.push(' ' + i)
+        acccum+=1
+}
+
+})
+console.log(`el 5 повторяется ${acccum} раза под индексами:${masssss}`);
+
+console.log(mass2.indexOf(5,4));
+
+people = [
+    {name:'Alex', payment: 30000 },
+    {name:'Ray', payment: 20000 },
+    {name:'Github', payment: 28000 },
+]
+
+let checkLenthName = people.find(el=>
+    el.name== 'Ray'
+)
+console.log(checkLenthName);
+
+
+
+
+let people2 = [
+    { job:true, name:'Alex', payment: 30000 },
+    { job:false, name:'Ray', payment: 20000 },
+    { job:true, name:'Github', payment: 28000 },
+    { job:false, name:'Sasha', payment: 23000 },
+    { job:true, name:'Evgeny', payment: 18000 },
+]
+// вывести с работой
+const peopleWithJob:any[] = []
+people2.sort((a, b)=>(+a.job - +b.job)).forEach(el=>peopleWithJob.push(el))
+console.log(...peopleWithJob);
+
+const mapEl = people2.map(()=>'Привет')
+console.log(mapEl);
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 filter 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 find
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 forEach(el,i)
+
+
+//! 1. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них.
+
+//! 2. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1] одной командой.
+
+//! 3. Отсортируйте 5 случайных чисел от 1 до 10 в порядке возрастания и затем в порядке убывания.
+
+//! 4. Есть 2 массива: let a = ['a', 'b', 'c']; let b = [1, 2, 3]; Объедините их, чтобы получилось: ['a', 'b', 'c', 1, 2, 3]
+
+//! 5. У нас есть некий массив с данными: const fruits = ["Banana", "Orange", "Apple", "Mango"]; Проверьте, есть ли в этом массиве значение Banana
+
+//! 6. Напишите программу, которая будет преобразовывать число от 1 до 12 в соответствующее название месяца (Январь, февраль, ...)
+
+//! 7. У нас есть объект: let obj = { 'name':['Вася', 'Петя', 'Коля'], 'age':[11, 30, 20], }; Получите Петю из массива arr. Посчитайте, сколько элементов находится в name.
+
+//! 8. Поиск по массиву объектов let arr = [{'id':'1','prop1':'val1'},{'id':'2','prop1':'val2'}] Этот набор данных формируется выборкой из базы данных. Нужно получить объект, у которого id=2.
+
+//! 9. У вас есть массив: var arr = [ "Hi", "Hello", "Bonjour"]; Добавьте к нему еще один элемент в конец, чтобы получился следующий массив [ "Hi", "Hello", "Bonjour", "Hola"]
+
+
+
+
+//! Задания повышенной сложности (по желанию)
+
+
+//! 11. Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.
+//! 1. Распечатка чека на экран.
+//! 2. Подсчет общей суммы покупки.
+//! 3. Получение самой дорогой покупки в чеке.
+//! 4. Подсчет средней стоимости одного товара в чеке.
+
+
+
+
+
+
+
+//! 10. У нас есть 3 товара. У каждого товара есть цена, название и стоимость доставки. Стоимость доставки для всех товаров одинаковая.
+
+
+let product = [
+    {name:'tomato', price: 120, delivery:50},
+    {name:'potato', price: 60, delivery:60},
+    {name:'carrot', price: 90, delivery:50},
+]
+
+//! 1. Выведите на экран общую стоимость всех товаров вместе со стоимостью доставки.
+let unionPrice = product.map(el=>el.price+el.delivery).reduce((acc,el)=>acc+=el,0)
+console.log(`общая стоимость всех продуктов = ${unionPrice}`);
+
+//! 2. Сделайте так, чтобы меняя стоимость доставки в одном месте, общая стоимость автоматически пересчитывалась.
+let maxDelivery = product.map(el=>el.delivery)
+let newUnionPrice = product.map(el=> el.price + Math.max(...maxDelivery)).reduce((acc,el)=> acc+=el,0)
+console.log(`общая сумма всех продуктов с обновленной доставкой = ${newUnionPrice}`);
+
