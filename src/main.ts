@@ -2799,22 +2799,61 @@ console.log(mapEl);
 
 
 //! 1. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них.
+let arr3 = [3, 6, 8, 2, 4]
+console.log(arr3.sort().pop());
+console.log(arr3.reverse().pop());
+
 
 //! 2. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1] одной командой.
+let reverse = [1, 2, 3]
+console.log(reverse.reverse());
+
 
 //! 3. Отсортируйте 5 случайных чисел от 1 до 10 в порядке возрастания и затем в порядке убывания.
+arr3 = [3, 6, 8, 2, 4]
+console.log(arr3.sort());
+console.log(arr3.reverse());
+
 
 //! 4. Есть 2 массива: let a = ['a', 'b', 'c']; let b = [1, 2, 3]; Объедините их, чтобы получилось: ['a', 'b', 'c', 1, 2, 3]
+let array1:any[] = ['a', 'b', 'c']
+let array2 = [1, 2, 3]
+console.log(array1.concat(array2));
 
 //! 5. У нас есть некий массив с данными: const fruits = ["Banana", "Orange", "Apple", "Mango"]; Проверьте, есть ли в этом массиве значение Banana
+const fruitss = ["Banana", "Orange", "Apple", "Mango"]
+console.log(fruitss.includes('Banana'));
+
 
 //! 6. Напишите программу, которая будет преобразовывать число от 1 до 12 в соответствующее название месяца (Январь, февраль, ...)
+let mounths = ['янв','февр','март','апр','май','июнь','июль','авг','сент','окт','нояб','дек',] 
+
+function writeNum (num:number) {
+    return mounths[num-1]
+}
+console.log(writeNum(1));
+ 
 
 //! 7. У нас есть объект: let obj = { 'name':['Вася', 'Петя', 'Коля'], 'age':[11, 30, 20], }; Получите Петю из массива arr. Посчитайте, сколько элементов находится в name.
+let obj = { 'name':['Вася', 'Петя', 'Коля'], 'age':[11, 30, 20], }
+
+let pete = (obj.name)
+console.log(pete[1]);
+console.log(obj.name.length);
+
 
 //! 8. Поиск по массиву объектов let arr = [{'id':'1','prop1':'val1'},{'id':'2','prop1':'val2'}] Этот набор данных формируется выборкой из базы данных. Нужно получить объект, у которого id=2.
+let arrays = [{'id':'1','prop1':'val1'},{'id':'2','prop1':'val2'}]
+console.log(arrays.find(el=>el.id==2))
+
 
 //! 9. У вас есть массив: var arr = [ "Hi", "Hello", "Bonjour"]; Добавьте к нему еще один элемент в конец, чтобы получился следующий массив [ "Hi", "Hello", "Bonjour", "Hola"]
+var arr2 = [ "Hi", "Hello", "Bonjour"]
+arr2.push("Hola")
+console.log(arr2);
+
+
+
 
 
 
@@ -2822,15 +2861,32 @@ console.log(mapEl);
 //! Задания повышенной сложности (по желанию)
 
 
-//! 11. Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.
+//! 11. Создать массив, описывающий чек в магазине. Каждый элемент массива 
+//! состоит из названия товара, количества и цены за единицу товара. 
+//! Написать следующие функции.
 //! 1. Распечатка чека на экран.
 //! 2. Подсчет общей суммы покупки.
 //! 3. Получение самой дорогой покупки в чеке.
 //! 4. Подсчет средней стоимости одного товара в чеке.
 
 
+let showCheck2 = document.getElementById('showCheck2') as HTMLDivElement
+let check2 = [
+    {name:'milk', price: 120, quantaty:2},
+    {name:'orange', price: 60, quantaty:3},
+    {name:'cheese', price: 90, quantaty:1},
+]
 
+check2.forEach(el=>showCheck2.innerHTML+=JSON.stringify(el) + '<br>')
 
+let union = check2.reduce((acc, el)=>acc+=el.price*el.quantaty,0)
+showCheck2.innerHTML+=`Общая сумма чека = ${union} <br>` 
+
+const expensiveItem = check2.map(el=>el.price)
+showCheck2.innerHTML+=`Самая дорогая покупка = ${Math.max(...expensiveItem)} <br>`
+
+const itemsInCheck2 = check2.reduce((acc,el)=>acc+=el.quantaty,0)
+showCheck2.innerHTML+=`средняя стоимость одного товара = ${union/itemsInCheck2} <br>` 
 
 
 
