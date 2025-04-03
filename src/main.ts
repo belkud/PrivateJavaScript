@@ -473,13 +473,6 @@ console.log(maxNumber(15));
 
 
 
-
-
-
-
-
-
-
 //! 3. Запросить число и степень. Возвести число в указанную 
 //! степень и вывести результат.
 // ????????????????????????
@@ -2323,57 +2316,57 @@ console.log(maxNumber2(15));
 //! Создать массив из 10 случайных чисел и написать несколько 
 //! функций для работы с ним.
 
-let mass = []
-for (let i = 0; i < 10; i++) {
-    let num = Math.trunc(Math.random()*10)
-    mass.push(num)
-}
+// let mass = []
+// for (let i = 0; i < 10; i++) {
+//     let num = Math.trunc(Math.random()*10)
+//     mass.push(num)
+// }
 
-mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+// mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
 // console.log(mass);
 
 
 //! 1. Функция принимает массив и выводит его на экран.
 
-function showMass(mass:number[]) {
-    return mass
-}
-console.log(showMass(mass));
+// function showMass(mass:number[]) {
+//     return mass
+// }
+// console.log(showMass(mass));
 
 
 
 //! 2. Функция принимает массив и выводит только четные 
 //! элементы.
 
-function showOddNumbers(mass:number[]) {
-    let massOddNumbers = []
-    for (let i = 0; i < mass.length; i++) {
-            if (mass[i]%2==0) {
-                massOddNumbers.push(mass[i])
-            }        
-    }
-    return massOddNumbers
-}
-console.log(showOddNumbers(mass));
+// function showOddNumbers(mass:number[]) {
+//     let massOddNumbers = []
+//     for (let i = 0; i < mass.length; i++) {
+//             if (mass[i]%2==0) {
+//                 massOddNumbers.push(mass[i])
+//             }        
+//     }
+//     return massOddNumbers
+// }
+// console.log(showOddNumbers(mass));
 
 
 
 //! 3. Функция принимает массив и возвращает сумму всех 
 //! элементов массива.
 
-function unionSum(mass:number[]) {
-    let accum = 0
+// function unionSum(mass:number[]) {
+//     let accum = 0
 
-    for (let i = 0; i < mass.length; i++) {
-        accum+=mass[i]    
-    }
+//     for (let i = 0; i < mass.length; i++) {
+//         accum+=mass[i]    
+//     }
 
-    // for (const el of mass) {
-    //     accum+=el
-    // }
-    return accum
-}
-console.log(unionSum(mass));
+//     // for (const el of mass) {
+//     //     accum+=el
+//     // }
+//     return accum
+// }
+// console.log(unionSum(mass));
 
 
 //! цикл for - для всего подходит
@@ -2385,21 +2378,21 @@ console.log(unionSum(mass));
 //! 4. Функция принимает массив и возвращает его максималь
 //! ный элемент.
 
-function findMaxEl(mass:number[]) {
-    return Math.max(...mass)
-}
-console.log(findMaxEl(mass));
+// function findMaxEl(mass:number[]) {
+//     return Math.max(...mass)
+// }
+// console.log(findMaxEl(mass));
 
 
 
 //! 5. Функция добавления нового элемента в массив по ука
 //! занному индексу.
 
-function addNewElement (mass:number[], newElem:number, elemIndex:number) {
-    mass.splice(elemIndex, 0, newElem)
-    return mass
-}
-console.log(addNewElement(mass, 123, 3));
+// function addNewElement (mass:number[], newElem:number, elemIndex:number) {
+//     mass.splice(elemIndex, 0, newElem)
+//     return mass
+// }
+// console.log(addNewElement(mass, 123, 3));
 
 
 
@@ -2408,20 +2401,20 @@ console.log(addNewElement(mass, 123, 3));
 //! индексу.
 
 
-function deleteNewElement (mass:number[], elemIndex:number) {
-    mass.splice(elemIndex, 1)
-    return mass
-}
-console.log(deleteNewElement(mass, 1));
+// function deleteNewElement (mass:number[], elemIndex:number) {
+//     mass.splice(elemIndex, 1)
+//     return mass
+// }
+// console.log(deleteNewElement(mass, 1));
 
 
 
-mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+// mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
 
-let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',] as any
+// let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',] as any
 
-let newMass = mass.concat(birthMass) 
-console.log(newMass);
+// let newMass = mass.concat(birthMass) 
+// console.log(newMass);
 
 
 
@@ -2671,17 +2664,17 @@ console.log(...courses);
 //! forEach -  не возвращает новый массив
 //! map - обязательно возвращает массив
 
-let mass2:number[] = [2, 5, 9, -15, 0, 4,]
+// let mass2:number[] = [2, 5, 9, -15, 0, 4,]
 // mass2.forEach(el=>el*2)
-let map = mass2.map(el=>el*2)
-console.log(map);
+// let map = mass2.map(el=>el*2)
+// console.log(map);
 
-mass2 = [2, 5, 21, 9, -15, 0, 4,] 
-mass2.sort((a,b)=>a-b)
-console.log(mass2);
+// mass2 = [2, 5, 21, 9, -15, 0, 4,] 
+// mass2.sort((a,b)=>a-b)
+// console.log(mass2);
 
-let  word = 'World'
-console.log(word.split(''));
+// let  word = 'World'
+// console.log(word.split(''));
 
 
 
@@ -2750,20 +2743,20 @@ console.log(massss);
 
 
 //! сколько раз повторяется элемент 5 и вывести его индексы
-mass2 = [2, 5, 21, 5, 9, -15, 0, 5, 4,] 
+// mass2 = [2, 5, 21, 5, 9, -15, 0, 5, 4,] 
 
-let acccum = 0
-let masssss:any[] = [] 
-mass2.forEach((el,i)=>{
-    if (el==5) {
-        masssss.push(' ' + i)
-        acccum+=1
-}
+// let acccum = 0
+// let masssss:any[] = [] 
+// mass2.forEach((el,i)=>{
+//     if (el==5) {
+//         masssss.push(' ' + i)
+//         acccum+=1
+// }
 
-})
-console.log(`el 5 повторяется ${acccum} раза под индексами:${masssss}`);
+// })
+// console.log(`el 5 повторяется ${acccum} раза под индексами:${masssss}`);
 
-console.log(mass2.indexOf(5,4));
+// console.log(mass2.indexOf(5,4));
 
 people = [
     {name:'Alex', payment: 30000 },
@@ -2911,3 +2904,40 @@ let maxDelivery = product.map(el=>el.delivery)
 let newUnionPrice = product.map(el=> el.price + Math.max(...maxDelivery)).reduce((acc,el)=> acc+=el,0)
 console.log(`общая сумма всех продуктов с обновленной доставкой = ${newUnionPrice}`);
 
+
+
+
+
+
+//!  <=========================JS_DZ_Modul_2_Week_3======================>
+
+//! Написать функцию, которая принимает двузначное число 
+//! и возвращает его в текстовом виде. 
+//! Например: 35 – тридцать пять, 89 – восемьдесят девять, 
+//! 12 – двенадцать. 
+
+let mass1 = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', ] 
+let mass2 = ['десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать',
+     'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать',] 
+let mass3 = ['двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто',] 
+
+
+function transformNumber (num:number) {
+    if (num<0 || num>99) {
+        return 'введите число от ноля до ста'
+    } else if (num<10) {
+        return mass1[num]
+    } else if (num<20) {
+        return mass2[num-10]
+    } else if (num<=99) {
+        let firstnum = String(num)[0] 
+        let secondnum = String(num)[1] 
+        return mass3[Number(firstnum)-2] + ' ' + mass1[Number(secondnum)]
+    }
+
+}
+
+console.log(transformNumber(-5))
+console.log(transformNumber(5))
+console.log(transformNumber(16))
+console.log(transformNumber(99))
