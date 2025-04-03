@@ -2975,7 +2975,7 @@ return 'введите число от ноля до ста'
 
 function changeRegister(str:any) {
     // let symbols = str.toLowerCase()
-let mass:any[] = []
+    let mass:any[] = []
     for (let i = 0; i < str.length; i++) {
         if (str[i]>=1) {
             mass.push('_')
@@ -2994,4 +2994,93 @@ console.log(changeRegister('БоЛьшИе 1 2 буКВы 3 нА 4 маЛеНь�
 //! стилей с дефисом в название в СamelСase стиле: font-size 
 //! в fontSize, background-color в backgroundColor, text
 //! align в textAlign.
+
+function camelСase (str:string) {
+    let arr = []
+    let underStr = str.split('-')
+    
+    for (let i = 0; i < underStr.length; i++) {
+        
+        if (underStr[i]==underStr[0]) {
+            arr.push(underStr[0].slice(0,1).toLowerCase())
+        } else {
+            arr.push(underStr[i].slice(0,1).toUpperCase())
+        }
+        
+        let str2 = underStr[i].slice(1)
+        arr.push(str2)
+    }
+    return arr.join('')
+}
+console.log(camelСase('background-color'));
+console.log(camelСase('font-feature-settings'));
+
+
+
+
+
+
+
+//!  <=========================JS_PZ_Modul_2_Week_3======================>
+
+//! 1.Написать функцию, которая принимает 2 строки и срав
+//! нивает их длину. Функция возвращает 1, если в первой 
+//! строке больше символов, чем во второй; -1 –  если во вто
+//! рой больше символов, чем в первой; или 0 – если строки 
+//! одинаковой длины.
+
+function compareStrings (str1:string, str2:string) {
+    if (str1.length>str2.length) {
+        return 1
+    }
+    if (str1.length<str2.length) {
+        return -1
+    }
+    return 0
+}
+
+console.log(compareStrings('qwdr', 'dssd'));
+
+
+
+//! 2. Написать функцию, которая переводит в верхний регистр 
+//! первый символ переданной строки.
+
+function changeFirstLetter (str:string) {
+
+    return str[0].toUpperCase() + str.slice(1)
+}
+console.log(changeFirstLetter('hello friend'));
+
+
+
+//! 3. Написать функцию, которая считает количество гласных 
+//! букв в переданной строке. 
+
+function countVowel (str:string) {
+    let count = 0
+    for (let i = 0; i < str.length; i++) {
+        let x = str[i]
+            if (x=='а' || x=='е' || x=='и'|| x=='о'|| x=='у'|| x=='ю'|| x=='я'|| x=='ы') {
+                count+=1
+            }        
+    }
+    return `${count} гласных`
+}
+console.log(countVowel('Написать функцию,  считает количество гласных'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
