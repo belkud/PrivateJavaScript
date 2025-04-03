@@ -2911,7 +2911,34 @@ console.log(`общая сумма всех продуктов с обновле
 
 //!  <=========================JS_DZ_Modul_2_Week_3======================>
 
-//! Написать функцию, которая принимает двузначное число 
+
+
+//! 1. Написать функцию, которая принимает строку и выводит 
+//! статистику о ней: количество букв, количество цифр и 
+//! количество других знаков.
+
+function showStringStatistic (str:string) {
+    
+    let strNum = str.split('').filter (el=>
+        Number(el)>=0 && Number(el)!='' )
+
+    let strLetter = str.split('').filter (el=>
+        el>='а' && el<='я' || el>='a' && el<='z')
+
+    return `
+    количество цифр: ${strNum.length}
+    количество букв: ${strLetter.length}
+    количество символов: ${str.length-strNum.length-strLetter.length}
+    `
+}
+console.log(showStringStatistic('ghfgh'));
+
+
+
+
+
+
+//! 2. Написать функцию, которая принимает двузначное число 
 //! и возвращает его в текстовом виде. 
 //! Например: 35 – тридцать пять, 89 – восемьдесят девять, 
 //! 12 – двенадцать. 
@@ -2923,21 +2950,21 @@ let mass3 = ['двадцать', 'тридцать', 'сорок', 'пятьде
 
 
 function transformNumber (num:number) {
-    if (num<0 || num>99) {
-        return 'введите число от ноля до ста'
-    } else if (num<10) {
-        return mass1[num]
-    } else if (num<20) {
-        return mass2[num-10]
-    } else if (num<=99) {
-        let firstnum = String(num)[0] 
-        let secondnum = String(num)[1] 
-        return mass3[Number(firstnum)-2] + ' ' + mass1[Number(secondnum)]
-    }
-
+if (num>0 && num<10) {
+    return mass1[num]
+} else if (num>10 && num<20) {
+    return mass2[num-10]
+} else if (num>20 && num<=99) {
+    let firstnum = String(num)[0] 
+    let secondnum = String(num)[1] 
+    return mass3[Number(firstnum)-2] + ' ' + mass1[Number(secondnum)]
+}
+return 'введите число от ноля до ста'
 }
 
-console.log(transformNumber(-5))
-console.log(transformNumber(5))
-console.log(transformNumber(16))
-console.log(transformNumber(99))
+// console.log(transformNumber(300))
+// console.log(transformNumber(-300))
+// console.log(transformNumber(5))
+// console.log(transformNumber(16))
+// console.log(transformNumber(99))
+
