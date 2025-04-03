@@ -2933,6 +2933,7 @@ function showStringStatistic (str:string) {
 }
 console.log(showStringStatistic('ghfgh'));
 
+console.log();
 
 
 
@@ -2967,4 +2968,30 @@ return 'введите число от ноля до ста'
 // console.log(transformNumber(5))
 // console.log(transformNumber(16))
 // console.log(transformNumber(99))
+
+//! 3. Написать функцию, которая заменяет в полученной строке 
+//! большие буквы на маленькие, маленькие – на большие, а 
+//! цифры – на знак нижнего подчеркивания. 
+
+function changeRegister(str:any) {
+    // let symbols = str.toLowerCase()
+let mass:any[] = []
+    for (let i = 0; i < str.length; i++) {
+        if (str[i]>=1) {
+            mass.push('_')
+        } else if (str[i]==str[i].toLowerCase()) {
+            mass.push(str[i].toUpperCase())
+        } else if (str[i]==str[i].toUpperCase()) {
+            mass.push(str[i].toLowerCase())
+        } 
+    }
+    return mass.join('')
+}
+console.log(changeRegister('БоЛьшИе 1 2 буКВы 3 нА 4 маЛеНькИе 5'));
+
+
+//! 4. Написать функцию, которая преобразует названия css- 
+//! стилей с дефисом в название в СamelСase стиле: font-size 
+//! в fontSize, background-color в backgroundColor, text
+//! align в textAlign.
 
