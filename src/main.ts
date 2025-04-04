@@ -3097,9 +3097,20 @@ console.log(checkSpam('текст прошел'));
 console.log(checkSpam('Спамом считать следующие слова: 100% бесплатно, увеличение продаж, только сегодня, не удаляйте, ххх. '));
 
 
+//! 5. Написать функцию сокращения строки. Функция прини
+//! мает строку и ее максимальную длину. Если длина строки 
+//! больше, чем максимальная, то необходимо отбросить 
+//! лишние символы, добавив вместо них троеточие. 
+//! Например: truncate(“Hello, world!”, 8) должна вернуть 
+//! “Hello...”.
 
+function reduceString (param:any, num:number) {
+let reduceStr = param.slice(0,num) 
 
-
+    return reduceStr + '...'
+}
+console.log(reduceString('Hello, world!', 10));
+console.log(reduceString('Добавив вместо них троеточие', 15));
 
 
 
