@@ -3071,9 +3071,84 @@ console.log(countVowel('Написать функцию,  считает кол�
 
 
 
+//! 4. Написать функцию для проверки спама в переданной 
+//! строке. Функция возвращает true, если строка содержит 
+//! спам. Спамом считать следующие слова: 100% бесплатно, 
+//! увеличение продаж, только сегодня, не удаляйте, ххх. 
+//! Функция должна быть нечувствительна к регистру.
+// let x = str[i].toLowerCase as any
+
+
+function checkSpam (param:string) {
+let str = param.toLowerCase()
+
+    if (str.includes('100% бесплатно') || 
+    str.includes('увеличение продаж') ||
+    str.includes('только сегодня') ||
+    str.includes('не удаляйте') ||
+    str.includes('ххх') 
+    ) {
+        return 'Спам!'
+    }
+    
+    return  param
+}
+console.log(checkSpam('текст прошел'));
+console.log(checkSpam('Спамом считать следующие слова: 100% бесплатно, увеличение продаж, только сегодня, не удаляйте, ххх. '));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!работа с числами!!!!!!!!!!!!!!!!!!!!!!
+
+// console.log(0.1+0.2);
+// console.log(0.3);
+
+// console.log(0.1+0.2 == 0.3);
+// console.log(Math.trunc(0.1+0.2) == Math.trunc(0.3));
+
+// //! перевод чисел в разные системы исчисления
+// console.log((255..toString(16)));
+// console.log((255..toString(2)));
+// console.log((255..toString(8)));
+// console.log((255..toString(10)));
+
+// let numd = 255
+// console.log(numd.toString(16));
+
+// //? калькулятор :)
+ 
+// console.log(parseInt('125poi'));
+// console.log(parseFloat('125poi'));
+
+
+// console.log(parseFloat('342.3323cvcxv'));
+// console.log(parseInt('342.3323cvcxv'));
+
+// console.log(1000 == 1_000);
+// console.log(1000 == 100_0);
+// console.log(1e3 == 1000);
+// console.log(1e-3 == 0.001);
+
+// console.log(5.1234.toFixed(2));
 
 
 
