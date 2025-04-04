@@ -3112,9 +3112,101 @@ let reduceStr = param.slice(0,num)
 console.log(reduceString('Hello, world!', 10));
 console.log(reduceString('Добавив вместо них троеточие', 15));
 
+//! 6. Написать функцию, которая проверяет, является ли пере
+//! данная строка палиндромом.
+
+function checkPalindrom (str:string) {
+    let pol = str.split('').reverse().join('')
+    return pol.toLowerCase()==str.toLowerCase() ? 'Число панидром' : 'Число не является палиндромом'
+    
+}
+console.log(checkPalindrom('сес'));
+console.log(checkPalindrom('сетс стеС'));
+
+
+//!  7. Написать функцию, которая считает количество слов в 
+//! предложении.
+
+function countWords(word:string) {
+    return `Предложение имеет ${word.split(' ').length} слов`
+}
+console.log(countWords('Написать функцию, которая считает количество слов'));
 
 
 
+//!  8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+function findLongWord (str:string) {
+    let mass = str.split(' ')
+    
+    //! первый способ
+
+    // let length = mass.map(el=>el.length).sort((a,b)=>b-a).slice(0,1)
+    // let xxx = mass.find(el=>(el.length == length) )
+    // return xxx
+    
+    //! второй способ
+
+    let length = mass.map(el=>el.length)
+    for (let i = 0; i < mass.length; i++) {
+        if (mass[i].length == Math.max(...length)) 
+            return mass[i] 
+    }
+    
+}
+
+console.log(findLongWord('Написать функцию, котоdfsdfdрая возвращает самое длинное'));
+
+
+//!  9. Написать функцию, которая считает среднюю длину слова 
+//! в предложении.
+
+function countAverageWordLength(str:string) {
+let words = str.split(' ').length
+let letters = str.split('')
+let strWithoutSpace = ''
+
+for (let i = 0; i < letters.length; i++) {
+    if (!letters[i].includes(' ') && !letters[i].includes(',')) {
+        strWithoutSpace+=letters[i]
+    }    
+}
+
+    return `средняя длина слова = ${(strWithoutSpace.length / words).toFixed(1)} символов`
+}
+
+console.log(countAverageWordLength('Написать функцию,'));
+console.log(countAverageWordLength('Написать функцию, которая считает среднюю длину слова'));
+
+
+
+//!  10. Написать функцию, которая принимает строку и символ 
+//! и выводит индексы, по которым находится этот символ в 
+//! строке. Также вывести, сколько всего раз встречается этот 
+//! символ в строке. 
+
+
+function countElemInString(str:string, e:string) {
+let countEl = str.split('')
+let acc = 0
+let massI:number[] = []
+
+for (let i = 0; i < countEl.length; i++) {
+    if (countEl[i]==e) {
+        acc++
+        massI.push(i)
+    }      
+}
+
+    return `
+    Индексы элемента '${e}': ${massI},
+    количество символов: ${acc}
+    `}
+
+console.log(countElemInString('сколько всего раз встречается этот', 'а'));
+console.log(countElemInString('сколько всего раз встречается этот', 'е'));
+console.log(countElemInString('сколько всего раз встречается этот', 'о'));
 
 
 
