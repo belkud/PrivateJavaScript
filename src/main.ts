@@ -3016,6 +3016,32 @@ console.log(camelСase('background-color'));
 console.log(camelСase('font-feature-settings'));
 
 
+//! 5. Написать функцию, которая принимает словосочетание 
+//! и превращает его в аббревиатуру. 
+//! Например: cascading style sheets в CSS, объектно
+//! ориентированное программирование в ООП. 
+
+
+function writeAbbreviation (str:string){
+    let mass:string[] = []
+    let newStr = str.split(' ')
+    for (let i = 0; i < newStr.length; i++) {
+        mass.push(newStr[i][0].toUpperCase())
+    }
+    return mass.join('')
+}
+
+console.log(writeAbbreviation('cascading style sheets'));
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3252,6 +3278,8 @@ console.log(countElemInString('сколько всего раз встречае
 // console.log(1e-3 == 0.001);
 
 // console.log(5.1234.toFixed(2));
+
+
 
 
 
