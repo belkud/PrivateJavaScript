@@ -3447,3 +3447,37 @@ console.log(addStrings('объединяет в одну длинную стро
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+function filterRange (mass:number[], num:number, num2:number) {
+    let filter = mass.filter(el=>el>num &&el<num2)
+    return filter
+}
+
+console.log(filterRange([5, 3, 8, 1], 1, 6));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
