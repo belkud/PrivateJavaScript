@@ -3290,3 +3290,27 @@ console.log(countElemInString('сколько всего раз встречае
 
 
 
+// Задача. Дана 
+// строка 'aaa@bbb@ccc'. 
+// помощью глобального поиска и замены. 
+// Замените 
+// все @ на '!' с 
+
+let accc2
+let strr2 =  'Написать функцию, которая принимает строку и символ'
+
+for (let i = 0; i < strr2.length; i++) {
+    
+    //! первый способ
+    if (strr2[i].indexOf('а')!=-1) {
+        console.log(i)    
+    }
+    
+    //! второй способ
+    if (strr2[i]=='а') {
+        console.log(i)    
+    }
+
+}
+
+// console.log(strr2.indexOf( 'Написать'))
