@@ -3289,18 +3289,20 @@ console.log(countElemInString('сколько всего раз встречае
 
 
 
-
-// Задача. Дана 
-// строка 'aaa@bbb@ccc'. 
-// помощью глобального поиска и замены. 
-// Замените 
-// все @ на '!' с 
-
 let accc2
 let strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.startsWith('Нап'));
+console.log(strr2.startsWith('п',2));
+
+strr2 =  'Написа'
+console.log(strr2.endsWith('Напи', 4));
+console.log(strr2.endsWith('и', 4));
+
+
+
 
 for (let i = 0; i < strr2.length; i++) {
-    
+
     //! первый способ
     if (strr2[i].indexOf('а')!=-1) {
         console.log(i)    
@@ -3312,5 +3314,105 @@ for (let i = 0; i < strr2.length; i++) {
     }
 
 }
+console.log(6+3);
+let str3 = strr2.replace('а', '*')
+// console.log()) //??? глобал проверить
+console.log(str3);
 
-// console.log(strr2.indexOf( 'Написать'))
+
+strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.substring(3,6));
+console.log(strr2.substr(3,6));
+console.log(strr2.slice(3,6));
+console.log(strr2.slice(-6,-3)); //считает с конца
+
+console.log(strr2.substring(2,5));
+console.log(strr2.slice(2,5));
+console.log(strr2.slice(2,5) == strr2.substring(2,5));
+
+//! slice вполне достаточно
+
+
+
+strr2 =  ' метод trim() - удаляет пробелы с обоих концов строки  '
+console.log(strr2.length);
+
+//! метод trim() - удаляет пробелы с обоих концов строки
+
+let strTrim = strr2.trim()
+console.log(strTrim.length);
+
+let accEl = ''
+for (let i = 0; i < strr2.length; i++) {
+    accEl+=strr2[i].trim()    
+}
+console.log(accEl);
+
+
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+
+let strCodePoint = 'codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.'
+console.log(strCodePoint);
+
+function showCodepointEl (str:string) {
+    let massWithCode= []
+    for (let i = 0; i < str.length; i++) {
+        massWithCode.push(str[i].codePointAt(0))            
+    }
+    return massWithCode
+}
+console.log(showCodepointEl('JavaScript'));
+
+
+// console.log('a'.codePointAt(0));
+
+
+let str = ''
+
+for (let i = 128513; i < 128600; i++) {
+    str+= String.fromCodePoint(i)    
+}
+console.log(str);
+
+console.log('🙂');
+
+let smile = '🙂'
+console.log(smile.codePointAt(0));
+
+
+console.log(String.fromCodePoint(128578));
+console.log('метод fromCodePoint преобразует в символ число с Unicode');
+
+
+let mass = []
+// str.
+// mass.
+
+
+
+
+//! slice вполне достаточно
+//! метод trim() - удаляет пробелы с обоих концов строки
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+//! 'метод fromCodePoint преобразует в символ число с Unicode'
+
+
+
+
+
+let smileMass = ['😍', '😊', '🥺']
+for (let i = 0; i < smileMass.length; i++) {
+    console.log(smileMass.toString().codePointAt(i));
+}
+
+
+console.log(String.fromCodePoint(128578));
+
+
+
+
+// Задача. Дана 
+// строка 'aaa@bbb@ccc'. 
+// помощью глобального поиска и замены. 
+// Замените 
+// все @ на '!' с 
