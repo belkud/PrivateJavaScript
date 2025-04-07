@@ -3252,41 +3252,6 @@ console.log(countElemInString('сколько всего раз встречае
 
 
 
-//!!!!!!!!!!!!!!!!!!работа с числами!!!!!!!!!!!!!!!!!!!!!!
-
-// console.log(0.1+0.2);
-// console.log(0.3);
-
-// console.log(0.1+0.2 == 0.3);
-// console.log(Math.trunc(0.1+0.2) == Math.trunc(0.3));
-
-// //! перевод чисел в разные системы исчисления
-// console.log((255..toString(16)));
-// console.log((255..toString(2)));
-// console.log((255..toString(8)));
-// console.log((255..toString(10)));
-
-// let numd = 255
-// console.log(numd.toString(16));
-
-// //? калькулятор :)
- 
-// console.log(parseInt('125poi'));
-// console.log(parseFloat('125poi'));
-
-
-// console.log(parseFloat('342.3323cvcxv'));
-// console.log(parseInt('342.3323cvcxv'));
-
-// console.log(1000 == 1_000);
-// console.log(1000 == 100_0);
-// console.log(1e3 == 1000);
-// console.log(1e-3 == 0.001);
-
-// console.log(5.1234.toFixed(2));
-
-
-
 
 
 
@@ -3325,6 +3290,164 @@ let str3 = strr2.replace('а', '*')
 // console.log()) //??? глобал проверить
 console.log(str3);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(String.fromCodePoint(128578));
+
+
+
+
+// Задача. Дана 
+// строка 'aaa@bbb@ccc'. 
+// помощью глобального поиска и замены. 
+// Замените 
+// все @ на '!' с 
+
+let string = 'aaa@bbb@ccc'
+
+console.log(string.replaceAll('@', '!'));
+
+
+
+
+//! 6. Написать функцию, которая принимает любое коли
+//! чество строк, объединяет их в одну длинную строку и 
+//! возвращает ее. 
+
+
+function addStrings (...mass:string[]) {
+    let str=String(mass)
+    return str
+}
+
+console.log(addStrings('объединяет в одну длинную строку1',
+' в одну длинную строку2',
+' в одну длинную строку3',
+));
+
+
+
+
+
+
+
+
+
+
+
+
+
+let massNum = [5, 3, 8, 1]
+
+function filterRange (mass:number[], num:number, num2:number) {
+    let filter = mass.filter(el=>el>num &&el<num2)
+    return filter
+}
+
+console.log(filterRange(massNum, 1, 6));
+console.log(massNum);
+
+let massNum2 = {
+    11:'ff'
+} as any
+console.log(massNum2);
+
+
+massNum2=null
+console.log(massNum2);
+
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!работа с числами!!!!!!!!!!!!!!!!!!!!!!
+
+// console.log(0.1+0.2);
+// console.log(0.3);
+
+// console.log(0.1+0.2 == 0.3);
+// console.log(Math.trunc(0.1+0.2) == Math.trunc(0.3));
+
+// //! перевод чисел в разные системы исчисления
+// console.log((255..toString(16)));
+// console.log((255..toString(2)));
+// console.log((255..toString(8)));
+// console.log((255..toString(10)));
+
+// let numd = 255
+// console.log(numd.toString(16));
+
+// //? калькулятор :)
+ 
+// console.log(parseInt('125poi'));
+// console.log(parseFloat('125poi'));
+
+
+// console.log(parseFloat('342.3323cvcxv'));
+// console.log(parseInt('342.3323cvcxv'));
+
+// console.log(1000 == 1_000);
+// console.log(1000 == 100_0);
+// console.log(1e3 == 1000);
+// console.log(1e-3 == 0.001);
+
+// console.log(5.1234.toFixed(2));
+
+
+
+
+//!!!!!!!!!!!!!!!!!!работа со строками!!!!!!!!!!!!!!!!!!!!!!
 
 strr2 =  'Написать функцию, которая принимает строку и символ'
 console.log(strr2.substring(3,6));
@@ -3403,81 +3526,7 @@ let mass = []
 //! 'метод fromCodePoint преобразует в символ число с Unicode'
 
 
-
-
-
 let smileMass = ['😍', '😊', '🥺']
 for (let i = 0; i < smileMass.length; i++) {
     console.log(smileMass.toString().codePointAt(i));
 }
-
-
-console.log(String.fromCodePoint(128578));
-
-
-
-
-// Задача. Дана 
-// строка 'aaa@bbb@ccc'. 
-// помощью глобального поиска и замены. 
-// Замените 
-// все @ на '!' с 
-
-let string = 'aaa@bbb@ccc'
-
-console.log(string.replaceAll('@', '!'));
-
-
-
-
-//! 6. Написать функцию, которая принимает любое коли
-//! чество строк, объединяет их в одну длинную строку и 
-//! возвращает ее. 
-
-
-function addStrings (...mass:string[]) {
-    let str=String(mass)
-    return str
-}
-
-console.log(addStrings('объединяет в одну длинную строку1',
-' в одну длинную строку2',
-' в одну длинную строку3',
-));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function filterRange (mass:number[], num:number, num2:number) {
-    let filter = mass.filter(el=>el>num &&el<num2)
-    return filter
-}
-
-console.log(filterRange([5, 3, 8, 1], 1, 6));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
