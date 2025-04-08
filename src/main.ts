@@ -3531,7 +3531,6 @@ for (let i = 0; i < smileMass.length; i++) {
     console.log(smileMass.toString().codePointAt(i));
 }
 
-console.log(5+7);
 
 
 
@@ -3554,3 +3553,31 @@ function findLowelLetters (str:string) {
 console.log(findLowelLetters('3. Написать функцию, которая считает количество гласных букв в переданной строке'));
 
 
+//! 8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+
+console.log(5+7);
+
+
+function testLongWOrd (str:any) {
+    let splitStr = str.split(' ')
+    let maxWordLength = Math.max(...splitStr.map(el=>el.length)) 
+
+    for (let i = 0; i < splitStr.length; i++) {
+        if(splitStr[i].length == maxWordLength) {
+            return splitStr[i]
+        }      
+            
+    }
+
+    return maxWordLength
+
+
+        
+    //     if (Math.max(...mass)==splitStr[i].length) {
+    //      return splitStr[i]
+    // }  
+}
+
+console.log(testLongWOrd('Написать функцию, которая возвращает самое длинное'));
