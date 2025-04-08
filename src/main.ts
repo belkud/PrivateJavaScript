@@ -3530,3 +3530,27 @@ let smileMass = ['😍', '😊', '🥺']
 for (let i = 0; i < smileMass.length; i++) {
     console.log(smileMass.toString().codePointAt(i));
 }
+
+console.log(5+7);
+
+
+
+
+// 3. Написать функцию, которая считает количество гласных 
+// букв в переданной строке. 
+
+function findLowelLetters (str:string) {
+    let mass = ['э','у','е','ы','а','о','я','и','ё','ю',]
+    let acc = 0
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < mass.length; j++) {
+            if (str[i]==mass[j]) {
+                acc++
+            }   
+        }        
+    }
+    return acc
+}
+console.log(findLowelLetters('3. Написать функцию, которая считает количество гласных букв в переданной строке'));
+
+
