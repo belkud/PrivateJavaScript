@@ -3016,6 +3016,38 @@ console.log(camelСase('background-color'));
 console.log(camelСase('font-feature-settings'));
 
 
+//! 5. Написать функцию, которая принимает словосочетание 
+//! и превращает его в аббревиатуру. 
+//! Например: cascading style sheets в CSS, объектно
+//! ориентированное программирование в ООП. 
+
+
+function writeAbbreviation (str:string){
+    let mass:string[] = []
+    let newStr = str.split(' ')
+    for (let i = 0; i < newStr.length; i++) {
+        mass.push(newStr[i][0].toUpperCase())
+    }
+    return mass.join('')
+}
+
+console.log(writeAbbreviation('cascading style sheets'));
+
+
+
+
+//! 9. Написать функцию, которая принимает строку и раздели
+//! тель и возвращает массив подстрок, разбитых с помощью 
+//! указанного разделителя. 
+//! Например: строка “10/08/2020”, разделитель “/”, результат: 
+//! “10”, “08”, “2020”. 
+
+let numOfDate = '10/08/2020'
+console.log('"' + numOfDate.replaceAll('/', '","') +'"');
+
+
+
+
 
 
 
@@ -3224,6 +3256,165 @@ console.log(countElemInString('сколько всего раз встречае
 
 
 
+
+
+
+
+
+
+
+
+let accc2
+let strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.startsWith('Нап'));
+console.log(strr2.startsWith('п',2));
+
+strr2 =  'Написа'
+console.log(strr2.endsWith('Напи', 4));
+console.log(strr2.endsWith('и', 4));
+
+
+
+
+for (let i = 0; i < strr2.length; i++) {
+
+    //! первый способ
+    if (strr2[i].indexOf('а')!=-1) {
+        console.log(i)    
+    }
+    
+    //! второй способ
+    if (strr2[i]=='а') {
+        console.log(i)    
+    }
+
+}
+console.log(6+3);
+let str3 = strr2.replace('а', '*')
+// console.log()) //??? глобал проверить
+console.log(str3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(String.fromCodePoint(128578));
+
+
+
+
+// Задача. Дана 
+// строка 'aaa@bbb@ccc'. 
+// помощью глобального поиска и замены. 
+// Замените 
+// все @ на '!' с 
+
+let string = 'aaa@bbb@ccc'
+
+console.log(string.replaceAll('@', '!'));
+
+
+
+
+//! 6. Написать функцию, которая принимает любое коли
+//! чество строк, объединяет их в одну длинную строку и 
+//! возвращает ее. 
+
+
+function addStrings (...mass:string[]) {
+    let str=String(mass)
+    return str
+}
+
+console.log(addStrings('объединяет в одну длинную строку1',
+' в одну длинную строку2',
+' в одну длинную строку3',
+));
+
+
+
+
+
+
+
+
+
+
+
+
+
+let massNum = [5, 3, 8, 1]
+
+function filterRange (mass:number[], num:number, num2:number) {
+    let filter = mass.filter(el=>el>num &&el<num2)
+    return filter
+}
+
+console.log(filterRange(massNum, 1, 6));
+console.log(massNum);
+
+let massNum2 = {
+    11:'ff'
+} as any
+console.log(massNum2);
+
+
+massNum2=null
+console.log(massNum2);
+
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //!!!!!!!!!!!!!!!!!!работа с числами!!!!!!!!!!!!!!!!!!!!!!
 
 // console.log(0.1+0.2);
@@ -3260,9 +3451,137 @@ console.log(countElemInString('сколько всего раз встречае
 
 
 
+//!!!!!!!!!!!!!!!!!!работа со строками!!!!!!!!!!!!!!!!!!!!!!
+
+strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.substring(3,6));
+console.log(strr2.substr(3,6));
+console.log(strr2.slice(3,6));
+console.log(strr2.slice(-6,-3)); //считает с конца
+
+console.log(strr2.substring(2,5));
+console.log(strr2.slice(2,5));
+console.log(strr2.slice(2,5) == strr2.substring(2,5));
+
+//! slice вполне достаточно
+
+
+
+strr2 =  ' метод trim() - удаляет пробелы с обоих концов строки  '
+console.log(strr2.length);
+
+//! метод trim() - удаляет пробелы с обоих концов строки
+
+let strTrim = strr2.trim()
+console.log(strTrim.length);
+
+let accEl = ''
+for (let i = 0; i < strr2.length; i++) {
+    accEl+=strr2[i].trim()    
+}
+console.log(accEl);
+
+
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+
+let strCodePoint = 'codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.'
+console.log(strCodePoint);
+
+function showCodepointEl (str:string) {
+    let massWithCode= []
+    for (let i = 0; i < str.length; i++) {
+        massWithCode.push(str[i].codePointAt(0))            
+    }
+    return massWithCode
+}
+console.log(showCodepointEl('JavaScript'));
+
+
+// console.log('a'.codePointAt(0));
+
+
+let str = ''
+
+for (let i = 128513; i < 128600; i++) {
+    str+= String.fromCodePoint(i)    
+}
+console.log(str);
+
+console.log('🙂');
+
+let smile = '🙂'
+console.log(smile.codePointAt(0));
+
+
+console.log(String.fromCodePoint(128578));
+console.log('метод fromCodePoint преобразует в символ число с Unicode');
+
+
+let mass = []
+// str.
+// mass.
+
+
+
+
+//! slice вполне достаточно
+//! метод trim() - удаляет пробелы с обоих концов строки
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+//! 'метод fromCodePoint преобразует в символ число с Unicode'
+
+
+let smileMass = ['😍', '😊', '🥺']
+for (let i = 0; i < smileMass.length; i++) {
+    console.log(smileMass.toString().codePointAt(i));
+}
 
 
 
 
 
+// 3. Написать функцию, которая считает количество гласных 
+// букв в переданной строке. 
 
+function findLowelLetters (str:string) {
+    let mass = ['э','у','е','ы','а','о','я','и','ё','ю',]
+    let acc = 0
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < mass.length; j++) {
+            if (str[i]==mass[j]) {
+                acc++
+            }   
+        }        
+    }
+    return acc
+}
+console.log(findLowelLetters('3. Написать функцию, которая считает количество гласных букв в переданной строке'));
+
+
+//! 8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+
+console.log(5+7);
+
+
+function testLongWOrd (str:any) {
+    let splitStr = str.split(' ')
+    let maxWordLength = Math.max(...splitStr.map(el=>el.length)) 
+
+    for (let i = 0; i < splitStr.length; i++) {
+        if(splitStr[i].length == maxWordLength) {
+            return splitStr[i]
+        }      
+            
+    }
+
+    return maxWordLength
+
+
+        
+    //     if (Math.max(...mass)==splitStr[i].length) {
+    //      return splitStr[i]
+    // }  
+}
+
+console.log(testLongWOrd('Написать функцию, которая возвращает самое длинное'));
