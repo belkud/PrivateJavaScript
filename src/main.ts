@@ -3076,7 +3076,6 @@ console.log(countVowel('Написать функцию,  считает кол�
 //! спам. Спамом считать следующие слова: 100% бесплатно, 
 //! увеличение продаж, только сегодня, не удаляйте, ххх. 
 //! Функция должна быть нечувствительна к регистру.
-// let x = str[i].toLowerCase as any
 
 
 function checkSpam (param:string) {
@@ -3159,6 +3158,9 @@ function findLongWord (str:string) {
 console.log(findLongWord('Написать функцию, котоdfsdfdрая возвращает самое длинное'));
 
 
+
+
+
 //!  9. Написать функцию, которая считает среднюю длину слова 
 //! в предложении.
 
@@ -3178,6 +3180,8 @@ for (let i = 0; i < letters.length; i++) {
 
 console.log(countAverageWordLength('Написать функцию,'));
 console.log(countAverageWordLength('Написать функцию, которая считает среднюю длину слова'));
+
+
 
 
 
