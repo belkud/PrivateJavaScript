@@ -3581,3 +3581,9 @@ function testLongWOrd (str:any) {
 }
 
 console.log(testLongWOrd('Написать функцию, которая возвращает самое длинное'));
+
+
+
+
+
+
