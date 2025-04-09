@@ -24,6 +24,9 @@ import '/src/style.scss'
 
 
 
+
+
+
 //! мини календари
 
 // 1-ый способ
@@ -470,13 +473,6 @@ console.log(maxNumber(15));
 
 
 
-
-
-
-
-
-
-
 //! 3. Запросить число и степень. Возвести число в указанную 
 //! степень и вывести результат.
 // ????????????????????????
@@ -659,15 +655,15 @@ console.log(res);
 // '300', '400'. С помощью цикла for-in выведите на экран 
 // строки такого формата: 'Коля - зарплата 200 долларов.'. 
 
-let obj = {
-    'Коля':200,
-    'Вася':300,
-    'Петя':400
-} as any
+// let obj = {
+//     'Коля':200,
+//     'Вася':300,
+//     'Петя':400
+// } as any
 
-for (const key in obj) {
-    console.log(`${key} - зарплата ${obj[key]} долларов`);
-}
+// for (const key in obj) {
+//     console.log(`${key} - зарплата ${obj[key]} долларов`);
+// }
 
 
 //? Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощью цикла 
@@ -686,16 +682,16 @@ for (const key in obj) {
 //? Дан массив с числами. Числа могут быть положительными и отрицательными. 
 //? Найдите сумму положительных элементов массива. 
 
-let arr2 = [2, -5, 9, -15, 0, 4]
-let summPositiveElement = 0
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i]>0) {
-        summPositiveElement+=arr2[i]
-    }
-}
-console.log(summPositiveElement);
+// let arr2 = [2, -5, 9, -15, 0, 4]
+// let summPositiveElement = 0
+// for (let i = 0; i < arr2.length; i++) {
+//     if (arr2[i]>0) {
+//         summPositiveElement+=arr2[i]
+//     }
+// }
+// console.log(summPositiveElement);
 
-console.log('===========');
+// console.log('===========');
 
 
 //? Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. С помощью 
@@ -703,27 +699,27 @@ console.log('===========');
 //? со значением, равным 4. Если есть - выведите на экран 'Есть!' 
 //? и выйдите из цикла. Если нет - ничего делать не надо.
 
-let arr3 = [1, 2, 5, 9, 4, 13, 4, 10]
-for (let i = 0; i < arr3.length; i++) {
-    if (arr3[i]==4) {
-        console.log('Есть!');
-        break
-    }        
-}
+// let arr3 = [1, 2, 5, 9, 4, 13, 4, 10]
+// for (let i = 0; i < arr3.length; i++) {
+//     if (arr3[i]==4) {
+//         console.log('Есть!');
+//         break
+//     }        
+// }
 
 //! Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. 
 //! Выведите на экран только те числа из массива, которые начинаются 
 //! на цифру 1, 2 или 5. 
 
-let arr4 = [10, 20, 30, 50, 235, 3000]
+// let arr4 = [10, 20, 30, 50, 235, 3000]
 
-for (let i = 0; i < arr4.length; i++) {
-    let firstDigital = arr4[i].toString().slice(0,1) as any
-    if (firstDigital==1 || firstDigital==2 || firstDigital==5) {
-        console.log(arr4[i]);
-    }        
-}
-console.log('--------');
+// for (let i = 0; i < arr4.length; i++) {
+//     let firstDigital = arr4[i].toString().slice(0,1) as any
+//     if (firstDigital==1 || firstDigital==2 || firstDigital==5) {
+//         console.log(arr4[i]);
+//     }        
+// }
+// console.log('--------');
 
 //! Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью 
 //! цикла for создайте строку ' 1-2-3-4-5-6-7-8-9-'. 
@@ -731,12 +727,12 @@ console.log('--------');
 let arr5 = [1, 2, 3, 4, 5, 6, 7, 8, 9] // первый способ
 console.log(arr5.toString().split(',').join('-') + '-');
  
-let str = ''  // второй способ
-for (let i = 0; i < arr5.length; i++) {
-    str+=arr5[i] + '-'
-}
-console.log(str.slice (0,length-1));//убрать последний дефис :D
-console.log(arr5.length);
+// let str = ''  // второй способ
+// for (let i = 0; i < arr5.length; i++) {
+//     str+=arr5[i] + '-'
+// }
+// console.log(str.slice (0,length-1));//убрать последний дефис :D
+// console.log(arr5.length);
 
 
 //! Составьте массив дней недели. С помощью цикла for выведите все дни 
@@ -1507,7 +1503,6 @@ object.b = 'changeB'
 console.log(object);
 console.log(object3)// свойство в третьем объекте теперь не меняются;
 
-console.log(obj);
 
 let user = {
     name: "John",
@@ -2321,57 +2316,57 @@ console.log(maxNumber2(15));
 //! Создать массив из 10 случайных чисел и написать несколько 
 //! функций для работы с ним.
 
-let mass = []
-for (let i = 0; i < 10; i++) {
-    let num = Math.trunc(Math.random()*10)
-    mass.push(num)
-}
+// let mass = []
+// for (let i = 0; i < 10; i++) {
+//     let num = Math.trunc(Math.random()*10)
+//     mass.push(num)
+// }
 
-mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+// mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
 // console.log(mass);
 
 
 //! 1. Функция принимает массив и выводит его на экран.
 
-function showMass(mass:number[]) {
-    return mass
-}
-console.log(showMass(mass));
+// function showMass(mass:number[]) {
+//     return mass
+// }
+// console.log(showMass(mass));
 
 
 
 //! 2. Функция принимает массив и выводит только четные 
 //! элементы.
 
-function showOddNumbers(mass:number[]) {
-    let massOddNumbers = []
-    for (let i = 0; i < mass.length; i++) {
-            if (mass[i]%2==0) {
-                massOddNumbers.push(mass[i])
-            }        
-    }
-    return massOddNumbers
-}
-console.log(showOddNumbers(mass));
+// function showOddNumbers(mass:number[]) {
+//     let massOddNumbers = []
+//     for (let i = 0; i < mass.length; i++) {
+//             if (mass[i]%2==0) {
+//                 massOddNumbers.push(mass[i])
+//             }        
+//     }
+//     return massOddNumbers
+// }
+// console.log(showOddNumbers(mass));
 
 
 
 //! 3. Функция принимает массив и возвращает сумму всех 
 //! элементов массива.
 
-function unionSum(mass:number[]) {
-    let accum = 0
+// function unionSum(mass:number[]) {
+//     let accum = 0
 
-    for (let i = 0; i < mass.length; i++) {
-        accum+=mass[i]    
-    }
+//     for (let i = 0; i < mass.length; i++) {
+//         accum+=mass[i]    
+//     }
 
-    // for (const el of mass) {
-    //     accum+=el
-    // }
-    return accum
-}
-console.log(unionSum(mass));
+//     // for (const el of mass) {
+//     //     accum+=el
+//     // }
+//     return accum
+// }
+// console.log(unionSum(mass));
 
 
 //! цикл for - для всего подходит
@@ -2383,21 +2378,21 @@ console.log(unionSum(mass));
 //! 4. Функция принимает массив и возвращает его максималь
 //! ный элемент.
 
-function findMaxEl(mass:number[]) {
-    return Math.max(...mass)
-}
-console.log(findMaxEl(mass));
+// function findMaxEl(mass:number[]) {
+//     return Math.max(...mass)
+// }
+// console.log(findMaxEl(mass));
 
 
 
 //! 5. Функция добавления нового элемента в массив по ука
 //! занному индексу.
 
-function addNewElement (mass:number[], newElem:number, elemIndex:number) {
-    mass.splice(elemIndex, 0, newElem)
-    return mass
-}
-console.log(addNewElement(mass, 123, 3));
+// function addNewElement (mass:number[], newElem:number, elemIndex:number) {
+//     mass.splice(elemIndex, 0, newElem)
+//     return mass
+// }
+// console.log(addNewElement(mass, 123, 3));
 
 
 
@@ -2406,20 +2401,20 @@ console.log(addNewElement(mass, 123, 3));
 //! индексу.
 
 
-function deleteNewElement (mass:number[], elemIndex:number) {
-    mass.splice(elemIndex, 1)
-    return mass
-}
-console.log(deleteNewElement(mass, 1));
+// function deleteNewElement (mass:number[], elemIndex:number) {
+//     mass.splice(elemIndex, 1)
+//     return mass
+// }
+// console.log(deleteNewElement(mass, 1));
 
 
 
-mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
+// mass = [4, 1, 8, 5, 6, 9, 5, 7, 9, 2]
 
-let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',] as any
+// let birthMass = ['воскр','понед','вторн','среда','четв','пятн','субб',] as any
 
-let newMass = mass.concat(birthMass) 
-console.log(newMass);
+// let newMass = mass.concat(birthMass) 
+// console.log(newMass);
 
 
 
@@ -2483,8 +2478,1105 @@ console.log(writeAbbreviature('font size'));
 
 
 
+//! Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощью цикла for и 
+//! оператора if выведите на экран столбец тех элементов массива, которые больше 3-х, 
+//! но меньше 10. 
+
+let massive = [2, 5, 9, 15, 0, 4]
+for (let i = 0; i < massive.length; i++) {
+    if (massive[i]>3 && massive[i]<10) {
+        console.log(massive[i]);
+    }
+}
+
+
+
+//! Дан массив с числами. Числа могут быть положительными и отрицательными. 
+//! Найдите сумму положительных элементов массива. 
+
+let massive2 = [2, -5, 9, -15, 0, 4]
+let ac = 0
+for (const el of massive2) {
+    if (el>0) {
+        ac+=el
+    }
+}
+
+console.log(ac);
+
+
+
+//! Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. С помощью цикла for и 
+//! оператора if проверьте есть ли в массиве элемент со значением, равным 4. Если есть - выведите на экран 'Есть!' и выйдите из цикла. Если нет - ничего делать не надо. 
+
+const massive3 = [1, 2, 5, 9, 4, 13, 4, 10]
+for (const e of massive3) {
+    if (e==4) {
+        console.log(e);
+        break        
+    }
+}
+
+massive3.forEach((el, i)=> {
+    if (el==4) {
+        console.log(`элемент el = ${el} (индекс ${i}) и сделан через forEach`);
+    }   
+})
+
+//! Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. Выведите на экран только 
+//! те числа из массива, которые начинаются на цифру 1, 2 или 5. 
+
+let massive4 = [10, 20, 30, 50, 235, 3000]
+for (const e of massive4) {
+    let num = String(e)[0] as any 
+    if(num==1 || num==2 || num==5) {
+        console.log(e);
+    }    
+}
+
+
+
+//! Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью цикла for создайте строку '
+//! 1-2-3-4-5-6-7-8-9-'. 
+let massive5 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(massive5.toString().split(',').join('-'));
+
+
+
+
+//! Составьте массив дней недели. С помощью цикла for выведите все дни недели. 
+
+
+
+let massive6 = [1, 2, 3, 4, 5, 6, 7, 8, 9] as any
+
+massive6.splice(2,1, 'JS')
+console.log(massive6);
+
+
+const massive8 = [1, 2, 5, 11, 9, 4, 13, 4, 10]
+let mas2 = [] as any
+massive8.forEach((el,i)=> {
+    mas2.push(`${el} - ${i}`)
+    
+})
+console.log(mas2);
+
+// console.log(massive8.indexOf(4));
+
+
+// console.log(fruits.splice(3,3));
+// console.log(fruits);
+//! find() - возвращает лишь первый элемент, соответствующий условию
+let checkMass = massive8.find(el=>
+    el>8
+)
+console.log(checkMass);
+
+
+// ! filter() - возвращает ВСЕ элементы, соответствующие условию
+let checkMass2 = massive8.filter(el=>
+    el>8
+)
+console.log(checkMass2);
+
+let stuff = [
+    {name:'Ann', age: 17},
+    {name:'Sveta', age: 19},
+    {name:'Kate', age: 22},
+]
+
+let older18 = stuff.filter((el)=>
+    el.age>18
+)
+console.log(...older18);
+
+fruits = ["apple", "pinia", "potato", "orange", "apple", "melon", "tomato"];
+
+// ! indexOf - ищет индекс первого элемента по его названию 
+console.log(fruits.indexOf('apple'));
+
+// ! lastIndexOf - ищет индекс последнего элемента по его названию 
+console.log(fruits.lastIndexOf('apple'));
+
+
+// 1. Дан массив с элементами 2, 5, 9, 15, 0, 4. С помощ
+// ью цикла for и оператора if выведите на экран столбец тех 
+// элементов массива, которые больше 3-х, но меньше 10.
+let useMetodFind = [2, 5, 9, 15, 0, 4,] 
+let newElem = useMetodFind.filter(el=>el>3 && el<10)
+console.log(newElem);
+
+// 2. Дан массив с числами. Числа могут быть положительн
+// ыми и отрицательными. Найдите сумму положительных элементов 
+// массива.
+
+let useMetodFilter = [2, 5, 9, -15, 0, 4,] 
+let filterAcc=0
+useMetodFilter.filter((el)=>{
+    if(el>0) 
+    filterAcc+=el
+})
+console.log(filterAcc);
+
+let useMetodReduce = [2, 5, 9, -15, 0, 4,]
+let reduce = useMetodReduce.reduce((acc, el)=>{
+    if(el>0){
+        return acc+=el
+    }
+    }, 0)
+console.log(reduce);
+
+
+
+// 3. Дан массив с элементами 1, 2, 5, 9, 4, 13, 4, 10. 
+// С помощью цикла for и оператора if проверьте есть ли в массиве элемент со значением, равным 4. Если есть - выведите на 
+// экран 'Есть!' и выйдите из цикла. Если нет - ничего делать не надо.
+// 4. Дан массив числами, например: [10, 20, 30, 50, 235
+// , 3000]. Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
+// 5. Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9.
+//  С помощью цикла for создайте строку ' 1-2-3-4-5-6-7-8-9-'.
+// 6. Составьте массив дней недели. С помощью цикла for 
+// выведите все дни недели.
+
+let courses = [
+    {course: 'JavaScript', price: 30000},
+    {course: 'React', price: 40000},
+    {course: 'HTML + CSS', price: 25000},
+  ] as any
+// подсчет сумму с помощью foreach и потом reduce
+
+let red = courses.reduce((acc, el)=>{
+    return (acc+=el.price)
+},0)
+console.log(red);
+
+
+let acc = 0
+courses.forEach((el)=>
+    console.log(acc+=el.price)
+    
+)
+console.log(acc);
+
+console.log(...courses);
+
+//! forEach -  не возвращает новый массив
+//! map - обязательно возвращает массив
+
+// let mass2:number[] = [2, 5, 9, -15, 0, 4,]
+// mass2.forEach(el=>el*2)
+// let map = mass2.map(el=>el*2)
+// console.log(map);
+
+// mass2 = [2, 5, 21, 9, -15, 0, 4,] 
+// mass2.sort((a,b)=>a-b)
+// console.log(mass2);
+
+// let  word = 'World'
+// console.log(word.split(''));
 
 
 
 
 
+
+
+
+let people = [
+    {name:'Alex', payment: 30000 },
+    {name:'John', payment: 20000 },
+    {name:'Gins', payment: 28000 },
+]
+
+// общую сумму
+// найти макс payment
+
+let unionPaym = people.reduce((acc,el)=>acc+=el.payment, 0)
+console.log(unionPaym);
+
+
+let massss:number[] = [] 
+people.forEach(el=>
+   massss.push(el.payment)
+)
+// console.log(Math.max(...massss));
+
+// console.log(massss.sort().pop());
+
+console.log(massss);
+
+
+
+
+//! Итого
+//! Шпаргалка по методам массива:
+
+//! Для добавления/удаления элементов:
+
+//! push(...items) – добавляет элементы в конец,
+//! pop() – извлекает элемент с конца,
+//! shift() – извлекает элемент с начала,
+//! unshift(...items) – добавляет элементы в начало.
+//! splice(pos, deleteCount, ...items) – начиная с индекса pos удаляет deleteCount элементов и вставляет items.
+//! slice(start, end) – создаёт новый массив, копируя в него элементы с индекса start до end (не включая end).
+//! concat(...items) – возвращает новый массив: копирует все члены текущего массива и добавляет к нему items. Если какой-то из items является массивом, тогда берутся его элементы.
+//! Для поиска среди элементов:
+
+//! indexOf/lastIndexOf(item, pos) – ищет item, начиная с позиции pos, и возвращает его индекс или -1, если ничего не найдено.
+//! includes(value) – возвращает true, если в массиве имеется элемент value, в противном случае false.
+//! find/filter(func) – фильтрует элементы через функцию и отдаёт первое/все значения, при прохождении которых через функцию возвращается true.
+//! findIndex похож на find, но возвращает индекс вместо значения.
+//! Для перебора элементов:
+
+//! forEach(func) – вызывает func для каждого элемента. Ничего не возвращает.
+//! Для преобразования массива:
+
+//! map(func) – создаёт новый массив из результатов вызова func для каждого элемента.
+//! sort(func) – сортирует массив «на месте», а потом возвращает его.
+//! reverse() – «на месте» меняет порядок следования элементов на противоположный и возвращает изменённый массив.
+//! split/join – преобразует строку в массив и обратно.
+//! reduce/reduceRight(func, initial) – вычисляет одно значение на основе всего массива, вызывая func для каждого элемента и передавая промежуточный результат между вызовами.
+//! Дополнительно:
+
+//! Array.isArray(arr) проверяет, является ли arr массивом.
+
+
+//! сколько раз повторяется элемент 5 и вывести его индексы
+// mass2 = [2, 5, 21, 5, 9, -15, 0, 5, 4,] 
+
+// let acccum = 0
+// let masssss:any[] = [] 
+// mass2.forEach((el,i)=>{
+//     if (el==5) {
+//         masssss.push(' ' + i)
+//         acccum+=1
+// }
+
+// })
+// console.log(`el 5 повторяется ${acccum} раза под индексами:${masssss}`);
+
+// console.log(mass2.indexOf(5,4));
+
+people = [
+    {name:'Alex', payment: 30000 },
+    {name:'Ray', payment: 20000 },
+    {name:'Github', payment: 28000 },
+]
+
+let checkLenthName = people.find(el=>
+    el.name== 'Ray'
+)
+console.log(checkLenthName);
+
+
+
+
+let people2 = [
+    { job:true, name:'Alex', payment: 30000 },
+    { job:false, name:'Ray', payment: 20000 },
+    { job:true, name:'Github', payment: 28000 },
+    { job:false, name:'Sasha', payment: 23000 },
+    { job:true, name:'Evgeny', payment: 18000 },
+]
+// вывести с работой
+const peopleWithJob:any[] = []
+people2.sort((a, b)=>(+a.job - +b.job)).forEach(el=>peopleWithJob.push(el))
+console.log(...peopleWithJob);
+
+const mapEl = people2.map(()=>'Привет')
+console.log(mapEl);
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 filter 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 find
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11 forEach(el,i)
+
+
+//! 1. У вас есть 5 чисел. Найдите наибольшее и наименьшее из них.
+let arr3 = [3, 6, 8, 2, 4]
+console.log(arr3.sort().pop());
+console.log(arr3.reverse().pop());
+
+
+//! 2. Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1] одной командой.
+let reverse = [1, 2, 3]
+console.log(reverse.reverse());
+
+
+//! 3. Отсортируйте 5 случайных чисел от 1 до 10 в порядке возрастания и затем в порядке убывания.
+arr3 = [3, 6, 8, 2, 4]
+console.log(arr3.sort());
+console.log(arr3.reverse());
+
+
+//! 4. Есть 2 массива: let a = ['a', 'b', 'c']; let b = [1, 2, 3]; Объедините их, чтобы получилось: ['a', 'b', 'c', 1, 2, 3]
+let array1:any[] = ['a', 'b', 'c']
+let array2 = [1, 2, 3]
+console.log(array1.concat(array2));
+
+//! 5. У нас есть некий массив с данными: const fruits = ["Banana", "Orange", "Apple", "Mango"]; Проверьте, есть ли в этом массиве значение Banana
+const fruitss = ["Banana", "Orange", "Apple", "Mango"]
+console.log(fruitss.includes('Banana'));
+
+
+//! 6. Напишите программу, которая будет преобразовывать число от 1 до 12 в соответствующее название месяца (Январь, февраль, ...)
+let mounths = ['янв','февр','март','апр','май','июнь','июль','авг','сент','окт','нояб','дек',] 
+
+function writeNum (num:number) {
+    return mounths[num-1]
+}
+console.log(writeNum(1));
+ 
+
+//! 7. У нас есть объект: let obj = { 'name':['Вася', 'Петя', 'Коля'], 'age':[11, 30, 20], }; Получите Петю из массива arr. Посчитайте, сколько элементов находится в name.
+let obj = { 'name':['Вася', 'Петя', 'Коля'], 'age':[11, 30, 20], }
+
+let pete = (obj.name)
+console.log(pete[1]);
+console.log(obj.name.length);
+
+
+//! 8. Поиск по массиву объектов let arr = [{'id':'1','prop1':'val1'},{'id':'2','prop1':'val2'}] Этот набор данных формируется выборкой из базы данных. Нужно получить объект, у которого id=2.
+let arrays = [{'id':'1','prop1':'val1'},{'id':'2','prop1':'val2'}]
+console.log(arrays.find(el=>el.id==2))
+
+
+//! 9. У вас есть массив: var arr = [ "Hi", "Hello", "Bonjour"]; Добавьте к нему еще один элемент в конец, чтобы получился следующий массив [ "Hi", "Hello", "Bonjour", "Hola"]
+var arr2 = [ "Hi", "Hello", "Bonjour"]
+arr2.push("Hola")
+console.log(arr2);
+
+
+
+
+
+
+
+//! Задания повышенной сложности (по желанию)
+
+
+//! 11. Создать массив, описывающий чек в магазине. Каждый элемент массива 
+//! состоит из названия товара, количества и цены за единицу товара. 
+//! Написать следующие функции.
+//! 1. Распечатка чека на экран.
+//! 2. Подсчет общей суммы покупки.
+//! 3. Получение самой дорогой покупки в чеке.
+//! 4. Подсчет средней стоимости одного товара в чеке.
+
+
+let showCheck2 = document.getElementById('showCheck2') as HTMLDivElement
+let check2 = [
+    {name:'milk', price: 120, quantaty:2},
+    {name:'orange', price: 60, quantaty:3},
+    {name:'cheese', price: 90, quantaty:1},
+]
+
+check2.forEach(el=>showCheck2.innerHTML+=JSON.stringify(el) + '<br>')
+
+let union = check2.reduce((acc, el)=>acc+=el.price*el.quantaty,0)
+showCheck2.innerHTML+=`Общая сумма чека = ${union} <br>` 
+
+const expensiveItem = check2.map(el=>el.price)
+showCheck2.innerHTML+=`Самая дорогая покупка = ${Math.max(...expensiveItem)} <br>`
+
+const itemsInCheck2 = check2.reduce((acc,el)=>acc+=el.quantaty,0)
+showCheck2.innerHTML+=`средняя стоимость одного товара = ${union/itemsInCheck2} <br>` 
+
+
+
+//! 10. У нас есть 3 товара. У каждого товара есть цена, название и стоимость доставки. Стоимость доставки для всех товаров одинаковая.
+
+
+let product = [
+    {name:'tomato', price: 120, delivery:50},
+    {name:'potato', price: 60, delivery:60},
+    {name:'carrot', price: 90, delivery:50},
+]
+
+//! 1. Выведите на экран общую стоимость всех товаров вместе со стоимостью доставки.
+let unionPrice = product.map(el=>el.price+el.delivery).reduce((acc,el)=>acc+=el,0)
+console.log(`общая стоимость всех продуктов = ${unionPrice}`);
+
+//! 2. Сделайте так, чтобы меняя стоимость доставки в одном месте, общая стоимость автоматически пересчитывалась.
+let maxDelivery = product.map(el=>el.delivery)
+let newUnionPrice = product.map(el=> el.price + Math.max(...maxDelivery)).reduce((acc,el)=> acc+=el,0)
+console.log(`общая сумма всех продуктов с обновленной доставкой = ${newUnionPrice}`);
+
+
+
+
+
+
+//!  <=========================JS_DZ_Modul_2_Week_3======================>
+
+
+
+//! 1. Написать функцию, которая принимает строку и выводит 
+//! статистику о ней: количество букв, количество цифр и 
+//! количество других знаков.
+
+function showStringStatistic (str:string) {
+    
+    let strNum = str.split('').filter (el=>
+        Number(el)>=0 && Number(el)!='' )
+
+    let strLetter = str.split('').filter (el=>
+        el>='а' && el<='я' || el>='a' && el<='z')
+
+    return `
+    количество цифр: ${strNum.length}
+    количество букв: ${strLetter.length}
+    количество символов: ${str.length-strNum.length-strLetter.length}
+    `
+}
+console.log(showStringStatistic('ghfgh'));
+
+console.log();
+
+
+
+
+
+//! 2. Написать функцию, которая принимает двузначное число 
+//! и возвращает его в текстовом виде. 
+//! Например: 35 – тридцать пять, 89 – восемьдесят девять, 
+//! 12 – двенадцать. 
+
+let mass1 = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять', ] 
+let mass2 = ['десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать',
+     'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать',] 
+let mass3 = ['двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто',] 
+
+
+function transformNumber (num:number) {
+if (num>0 && num<10) {
+    return mass1[num]
+} else if (num>10 && num<20) {
+    return mass2[num-10]
+} else if (num>20 && num<=99) {
+    let firstnum = String(num)[0] 
+    let secondnum = String(num)[1] 
+    return mass3[Number(firstnum)-2] + ' ' + mass1[Number(secondnum)]
+}
+return 'введите число от ноля до ста'
+}
+
+// console.log(transformNumber(300))
+// console.log(transformNumber(-300))
+// console.log(transformNumber(5))
+// console.log(transformNumber(16))
+// console.log(transformNumber(99))
+
+//! 3. Написать функцию, которая заменяет в полученной строке 
+//! большие буквы на маленькие, маленькие – на большие, а 
+//! цифры – на знак нижнего подчеркивания. 
+
+function changeRegister(str:any) {
+    // let symbols = str.toLowerCase()
+    let mass:any[] = []
+    for (let i = 0; i < str.length; i++) {
+        if (str[i]>=1) {
+            mass.push('_')
+        } else if (str[i]==str[i].toLowerCase()) {
+            mass.push(str[i].toUpperCase())
+        } else if (str[i]==str[i].toUpperCase()) {
+            mass.push(str[i].toLowerCase())
+        } 
+    }
+    return mass.join('')
+}
+console.log(changeRegister('БоЛьшИе 1 2 буКВы 3 нА 4 маЛеНькИе 5'));
+
+
+//! 4. Написать функцию, которая преобразует названия css- 
+//! стилей с дефисом в название в СamelСase стиле: font-size 
+//! в fontSize, background-color в backgroundColor, text
+//! align в textAlign.
+
+function camelСase (str:string) {
+    let arr = []
+    let underStr = str.split('-')
+    
+    for (let i = 0; i < underStr.length; i++) {
+        
+        if (underStr[i]==underStr[0]) {
+            arr.push(underStr[0].slice(0,1).toLowerCase())
+        } else {
+            arr.push(underStr[i].slice(0,1).toUpperCase())
+        }
+        
+        let str2 = underStr[i].slice(1)
+        arr.push(str2)
+    }
+    return arr.join('')
+}
+console.log(camelСase('background-color'));
+console.log(camelСase('font-feature-settings'));
+
+
+//! 5. Написать функцию, которая принимает словосочетание 
+//! и превращает его в аббревиатуру. 
+//! Например: cascading style sheets в CSS, объектно
+//! ориентированное программирование в ООП. 
+
+
+function writeAbbreviation (str:string){
+    let mass:string[] = []
+    let newStr = str.split(' ')
+    for (let i = 0; i < newStr.length; i++) {
+        mass.push(newStr[i][0].toUpperCase())
+    }
+    return mass.join('')
+}
+
+console.log(writeAbbreviation('cascading style sheets'));
+
+
+
+
+//! 9. Написать функцию, которая принимает строку и раздели
+//! тель и возвращает массив подстрок, разбитых с помощью 
+//! указанного разделителя. 
+//! Например: строка “10/08/2020”, разделитель “/”, результат: 
+//! “10”, “08”, “2020”. 
+
+let numOfDate = '10/08/2020'
+console.log('"' + numOfDate.replaceAll('/', '","') +'"');
+
+
+
+
+
+
+
+
+
+//!  <=========================JS_PZ_Modul_2_Week_3======================>
+
+//! 1.Написать функцию, которая принимает 2 строки и срав
+//! нивает их длину. Функция возвращает 1, если в первой 
+//! строке больше символов, чем во второй; -1 –  если во вто
+//! рой больше символов, чем в первой; или 0 – если строки 
+//! одинаковой длины.
+
+function compareStrings (str1:string, str2:string) {
+    if (str1.length>str2.length) {
+        return 1
+    }
+    if (str1.length<str2.length) {
+        return -1
+    }
+    return 0
+}
+
+console.log(compareStrings('qwdr', 'dssd'));
+
+
+
+//! 2. Написать функцию, которая переводит в верхний регистр 
+//! первый символ переданной строки.
+
+function changeFirstLetter (str:string) {
+
+    return str[0].toUpperCase() + str.slice(1)
+}
+console.log(changeFirstLetter('hello friend'));
+
+
+
+//! 3. Написать функцию, которая считает количество гласных 
+//! букв в переданной строке. 
+
+function countVowel (str:string) {
+    let count = 0
+    for (let i = 0; i < str.length; i++) {
+        let x = str[i]
+            if (x=='а' || x=='е' || x=='и'|| x=='о'|| x=='у'|| x=='ю'|| x=='я'|| x=='ы') {
+                count+=1
+            }        
+    }
+    return `${count} гласных`
+}
+console.log(countVowel('Написать функцию,  считает количество гласных'));
+
+
+
+//! 4. Написать функцию для проверки спама в переданной 
+//! строке. Функция возвращает true, если строка содержит 
+//! спам. Спамом считать следующие слова: 100% бесплатно, 
+//! увеличение продаж, только сегодня, не удаляйте, ххх. 
+//! Функция должна быть нечувствительна к регистру.
+// let x = str[i].toLowerCase as any
+
+
+function checkSpam (param:string) {
+let str = param.toLowerCase()
+
+    if (str.includes('100% бесплатно') || 
+    str.includes('увеличение продаж') ||
+    str.includes('только сегодня') ||
+    str.includes('не удаляйте') ||
+    str.includes('ххх') 
+    ) {
+        return 'Спам!'
+    }
+    
+    return  param
+}
+console.log(checkSpam('текст прошел'));
+console.log(checkSpam('Спамом считать следующие слова: 100% бесплатно, увеличение продаж, только сегодня, не удаляйте, ххх. '));
+
+
+//! 5. Написать функцию сокращения строки. Функция прини
+//! мает строку и ее максимальную длину. Если длина строки 
+//! больше, чем максимальная, то необходимо отбросить 
+//! лишние символы, добавив вместо них троеточие. 
+//! Например: truncate(“Hello, world!”, 8) должна вернуть 
+//! “Hello...”.
+
+function reduceString (param:any, num:number) {
+let reduceStr = param.slice(0,num) 
+
+    return reduceStr + '...'
+}
+console.log(reduceString('Hello, world!', 10));
+console.log(reduceString('Добавив вместо них троеточие', 15));
+
+//! 6. Написать функцию, которая проверяет, является ли пере
+//! данная строка палиндромом.
+
+function checkPalindrom (str:string) {
+    let pol = str.split('').reverse().join('')
+    return pol.toLowerCase()==str.toLowerCase() ? 'Число панидром' : 'Число не является палиндромом'
+    
+}
+console.log(checkPalindrom('сес'));
+console.log(checkPalindrom('сетс стеС'));
+
+
+//!  7. Написать функцию, которая считает количество слов в 
+//! предложении.
+
+function countWords(word:string) {
+    return `Предложение имеет ${word.split(' ').length} слов`
+}
+console.log(countWords('Написать функцию, которая считает количество слов'));
+
+
+
+//!  8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+function findLongWord (str:string) {
+    let mass = str.split(' ')
+    
+    //! первый способ
+
+    // let length = mass.map(el=>el.length).sort((a,b)=>b-a).slice(0,1)
+    // let xxx = mass.find(el=>(el.length == length) )
+    // return xxx
+    
+    //! второй способ
+
+    let length = mass.map(el=>el.length)
+    for (let i = 0; i < mass.length; i++) {
+        if (mass[i].length == Math.max(...length)) 
+            return mass[i] 
+    }
+    
+}
+
+console.log(findLongWord('Написать функцию, котоdfsdfdрая возвращает самое длинное'));
+
+
+//!  9. Написать функцию, которая считает среднюю длину слова 
+//! в предложении.
+
+function countAverageWordLength(str:string) {
+let words = str.split(' ').length
+let letters = str.split('')
+let strWithoutSpace = ''
+
+for (let i = 0; i < letters.length; i++) {
+    if (!letters[i].includes(' ') && !letters[i].includes(',')) {
+        strWithoutSpace+=letters[i]
+    }    
+}
+
+    return `средняя длина слова = ${(strWithoutSpace.length / words).toFixed(1)} символов`
+}
+
+console.log(countAverageWordLength('Написать функцию,'));
+console.log(countAverageWordLength('Написать функцию, которая считает среднюю длину слова'));
+
+
+
+//!  10. Написать функцию, которая принимает строку и символ 
+//! и выводит индексы, по которым находится этот символ в 
+//! строке. Также вывести, сколько всего раз встречается этот 
+//! символ в строке. 
+
+
+function countElemInString(str:string, e:string) {
+let countEl = str.split('')
+let acc = 0
+let massI:number[] = []
+
+for (let i = 0; i < countEl.length; i++) {
+    if (countEl[i]==e) {
+        acc++
+        massI.push(i)
+    }      
+}
+
+    return `
+    Индексы элемента '${e}': ${massI},
+    количество символов: ${acc}
+    `}
+
+console.log(countElemInString('сколько всего раз встречается этот', 'а'));
+console.log(countElemInString('сколько всего раз встречается этот', 'е'));
+console.log(countElemInString('сколько всего раз встречается этот', 'о'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let accc2
+let strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.startsWith('Нап'));
+console.log(strr2.startsWith('п',2));
+
+strr2 =  'Написа'
+console.log(strr2.endsWith('Напи', 4));
+console.log(strr2.endsWith('и', 4));
+
+
+
+
+for (let i = 0; i < strr2.length; i++) {
+
+    //! первый способ
+    if (strr2[i].indexOf('а')!=-1) {
+        console.log(i)    
+    }
+    
+    //! второй способ
+    if (strr2[i]=='а') {
+        console.log(i)    
+    }
+
+}
+console.log(6+3);
+let str3 = strr2.replace('а', '*')
+// console.log()) //??? глобал проверить
+console.log(str3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(String.fromCodePoint(128578));
+
+
+
+
+// Задача. Дана 
+// строка 'aaa@bbb@ccc'. 
+// помощью глобального поиска и замены. 
+// Замените 
+// все @ на '!' с 
+
+let string = 'aaa@bbb@ccc'
+
+console.log(string.replaceAll('@', '!'));
+
+
+
+
+//! 6. Написать функцию, которая принимает любое коли
+//! чество строк, объединяет их в одну длинную строку и 
+//! возвращает ее. 
+
+
+function addStrings (...mass:string[]) {
+    let str=String(mass)
+    return str
+}
+
+console.log(addStrings('объединяет в одну длинную строку1',
+' в одну длинную строку2',
+' в одну длинную строку3',
+));
+
+
+
+
+
+
+
+
+
+
+
+
+
+let massNum = [5, 3, 8, 1]
+
+function filterRange (mass:number[], num:number, num2:number) {
+    let filter = mass.filter(el=>el>num &&el<num2)
+    return filter
+}
+
+console.log(filterRange(massNum, 1, 6));
+console.log(massNum);
+
+let massNum2 = {
+    11:'ff'
+} as any
+console.log(massNum2);
+
+
+massNum2=null
+console.log(massNum2);
+
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+// function filterRangeInPlace (mass:number[], num:number, num2:number) {
+    
+//     return mass.splice()
+// }
+
+// console.log(filterRangeInPlace(massNum, 1, 6));
+// console.log(massNum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!работа с числами!!!!!!!!!!!!!!!!!!!!!!
+
+// console.log(0.1+0.2);
+// console.log(0.3);
+
+// console.log(0.1+0.2 == 0.3);
+// console.log(Math.trunc(0.1+0.2) == Math.trunc(0.3));
+
+// //! перевод чисел в разные системы исчисления
+// console.log((255..toString(16)));
+// console.log((255..toString(2)));
+// console.log((255..toString(8)));
+// console.log((255..toString(10)));
+
+// let numd = 255
+// console.log(numd.toString(16));
+
+// //? калькулятор :)
+ 
+// console.log(parseInt('125poi'));
+// console.log(parseFloat('125poi'));
+
+
+// console.log(parseFloat('342.3323cvcxv'));
+// console.log(parseInt('342.3323cvcxv'));
+
+// console.log(1000 == 1_000);
+// console.log(1000 == 100_0);
+// console.log(1e3 == 1000);
+// console.log(1e-3 == 0.001);
+
+// console.log(5.1234.toFixed(2));
+
+
+
+
+//!!!!!!!!!!!!!!!!!!работа со строками!!!!!!!!!!!!!!!!!!!!!!
+
+strr2 =  'Написать функцию, которая принимает строку и символ'
+console.log(strr2.substring(3,6));
+console.log(strr2.substr(3,6));
+console.log(strr2.slice(3,6));
+console.log(strr2.slice(-6,-3)); //считает с конца
+
+console.log(strr2.substring(2,5));
+console.log(strr2.slice(2,5));
+console.log(strr2.slice(2,5) == strr2.substring(2,5));
+
+//! slice вполне достаточно
+
+
+
+strr2 =  ' метод trim() - удаляет пробелы с обоих концов строки  '
+console.log(strr2.length);
+
+//! метод trim() - удаляет пробелы с обоих концов строки
+
+let strTrim = strr2.trim()
+console.log(strTrim.length);
+
+let accEl = ''
+for (let i = 0; i < strr2.length; i++) {
+    accEl+=strr2[i].trim()    
+}
+console.log(accEl);
+
+
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+
+let strCodePoint = 'codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.'
+console.log(strCodePoint);
+
+function showCodepointEl (str:string) {
+    let massWithCode= []
+    for (let i = 0; i < str.length; i++) {
+        massWithCode.push(str[i].codePointAt(0))            
+    }
+    return massWithCode
+}
+console.log(showCodepointEl('JavaScript'));
+
+
+// console.log('a'.codePointAt(0));
+
+
+let str = ''
+
+for (let i = 128513; i < 128600; i++) {
+    str+= String.fromCodePoint(i)    
+}
+console.log(str);
+
+console.log('🙂');
+
+let smile = '🙂'
+console.log(smile.codePointAt(0));
+
+
+console.log(String.fromCodePoint(128578));
+console.log('метод fromCodePoint преобразует в символ число с Unicode');
+
+
+let mass = []
+// str.
+// mass.
+
+
+
+
+//! slice вполне достаточно
+//! метод trim() - удаляет пробелы с обоих концов строки
+//! codePointAt() — метод строк в JavaScript, который возвращает целое число, обозначающее значение Unicode позиции символа в строке.
+//! 'метод fromCodePoint преобразует в символ число с Unicode'
+
+
+let smileMass = ['😍', '😊', '🥺']
+for (let i = 0; i < smileMass.length; i++) {
+    console.log(smileMass.toString().codePointAt(i));
+}
+
+
+
+
+
+// 3. Написать функцию, которая считает количество гласных 
+// букв в переданной строке. 
+
+function findLowelLetters (str:string) {
+    let mass = ['э','у','е','ы','а','о','я','и','ё','ю',]
+    let acc = 0
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < mass.length; j++) {
+            if (str[i]==mass[j]) {
+                acc++
+            }   
+        }        
+    }
+    return acc
+}
+console.log(findLowelLetters('3. Написать функцию, которая считает количество гласных букв в переданной строке'));
+
+
+//! 8. Написать функцию, которая возвращает самое длинное 
+//! слово из предложения.
+
+
+
+
+function testLongWOrd (str:any) {
+    let splitStr = str.split(' ')
+    let maxWordLength = Math.max(...splitStr.map(el=>el.length)) 
+
+    for (let i = 0; i < splitStr.length; i++) {
+        if(splitStr[i].length == maxWordLength) {
+            return splitStr[i]
+        }      
+            
+    }
+
+    return maxWordLength
+
+
+        
+    //     if (Math.max(...mass)==splitStr[i].length) {
+    //      return splitStr[i]
+    // }  
+}
+
+console.log(testLongWOrd('Написать функцию, которая возвращает самое длинное'));
